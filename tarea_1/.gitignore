@@ -1,0 +1,16 @@
+# Entorno virtual
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Pesos pesados del modelo (GitHub rechaza archivos > 100 MB)
+modelo/*.safetensors
+modelo/*.bin
+modelo/*.pt
+modelo/checkpoint-*/
+modelo/runs/
+resultados_trainer/
+
+# Credenciales
+.env
+*.key

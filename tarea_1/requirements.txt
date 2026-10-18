@@ -1,0 +1,17 @@
+requests
+beautifulsoup4
+lxml
+pandas
+plotly
+seaborn
+matplotlib
+scikit-learn
+torch
+transformers
+datasets
+accelerate
+sentencepiece
+protobuf
+streamlit
+jupyter
+nbformat
