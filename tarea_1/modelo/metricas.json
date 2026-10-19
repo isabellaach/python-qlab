@@ -1,0 +1,42 @@
+{
+  "f1_macro_test": 0.8496,
+  "accuracy_test": 0.8448,
+  "n_test": 58,
+  "f1_zero_shot_40": 0.5969,
+  "acc_zero_shot_40": 0.625,
+  "acuerdo_llm_humano": null,
+  "acuerdo_llm_humano_n": null,
+  "acuerdo_llm_seccion": 0.8464,
+  "comparativa": [
+    {
+      "modelo": "Zero-shot (BETO-XNLI)",
+      "entrenamiento": "Ninguno",
+      "entrada": "titular",
+      "accuracy_test": 0.655,
+      "f1_macro_test": 0.641,
+      "latencia_ms": 40.179,
+      "parametros_M": 109.853
+    },
+    {
+      "modelo": "LLM débil (Qwen2.5-3B)",
+      "entrenamiento": "Ninguno (prompt)",
+      "entrada": "titular + bajada",
+      "accuracy_test": 0.862,
+      "f1_macro_test": 0.859,
+      "latencia_ms": 1039.227,
+      "parametros_M": 3085.939
+    },
+    {
+      "modelo": "DistilBERT fine-tuned",
+      "entrenamiento": "3 épocas con etiquetas LLM",
+      "entrada": "titular",
+      "accuracy_test": 0.845,
+      "f1_macro_test": 0.85,
+      "latencia_ms": 5.331,
+      "parametros_M": 135.328
+    }
+  ],
+  "modelo_base": "distilbert/distilbert-base-multilingual-cased",
+  "modelo_llm": "Qwen/Qwen2.5-3B-Instruct",
+  "fecha": "2026-10-18"
+}
