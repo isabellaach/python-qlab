@@ -4,8 +4,8 @@
   "n_test": 58,
   "f1_zero_shot_40": 0.5969,
   "acc_zero_shot_40": 0.625,
-  "acuerdo_llm_humano": null,
-  "acuerdo_llm_humano_n": null,
+  "acuerdo_llm_humano": 0.95,
+  "acuerdo_llm_humano_n": 19,
   "acuerdo_llm_seccion": 0.8464,
   "comparativa": [
     {
@@ -14,7 +14,7 @@
       "entrada": "titular",
       "accuracy_test": 0.655,
       "f1_macro_test": 0.641,
-      "latencia_ms": 40.179,
+      "latencia_ms": 39.649,
       "parametros_M": 109.853
     },
     {
@@ -23,7 +23,7 @@
       "entrada": "titular + bajada",
       "accuracy_test": 0.862,
       "f1_macro_test": 0.859,
-      "latencia_ms": 1039.227,
+      "latencia_ms": 756.282,
       "parametros_M": 3085.939
     },
     {
@@ -32,7 +32,7 @@
       "entrada": "titular",
       "accuracy_test": 0.845,
       "f1_macro_test": 0.85,
-      "latencia_ms": 5.331,
+      "latencia_ms": 5.116,
       "parametros_M": 135.328
     }
   ],
