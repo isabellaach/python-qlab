@@ -86,17 +86,17 @@ else:
     fig = px.bar(conteo, x="Categoría", y="Noticias", color="Categoría", text="Noticias",
                  title=f"{len(filtrado)} noticias seleccionadas por categoría")
     fig.update_layout(showlegend=False)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 st.subheader("Explorar las noticias")
-st.dataframe(filtrado, use_container_width=True, hide_index=True,
+st.dataframe(filtrado, width="stretch", hide_index=True,
              column_config={"url": st.column_config.LinkColumn("url")})
 st.download_button("⬇️ Descargar CSV filtrado", filtrado.to_csv(index=False).encode("utf-8"),
                    file_name="noticias_filtradas.csv", mime="text/csv")
 
 if met.get("comparativa"):
     with st.expander("Comparativa de modelos en test"):
-        st.dataframe(pd.DataFrame(met["comparativa"]), use_container_width=True, hide_index=True)
+        st.dataframe(pd.DataFrame(met["comparativa"]), width="stretch", hide_index=True)
 
 # ---------- Probador en vivo ----------
 st.divider()
@@ -121,6 +121,6 @@ if st.button("Clasificar titular", type="primary"):
         fig = px.bar(probs, x="score", y="Categoría", orientation="h", range_x=[0, 1],
                      text=probs["score"].map("{:.1%}".format), title="Probabilidad por categoría")
         fig.update_layout(yaxis={"categoryorder": "total ascending"}, xaxis_title="Probabilidad")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
 st.caption("Tarea 1 – Data Science con Python · Datos: El Comercio (elcomercio.pe), uso académico.")
