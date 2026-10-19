@@ -6,6 +6,7 @@ Ejecutar desde la carpeta tarea_1/:
 import json
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -14,6 +15,8 @@ BASE = Path(__file__).parent
 DATOS = BASE / "datos" / "noticias.csv"
 MODELO = BASE / "modelo"
 METRICAS = MODELO / "metricas.json"
+EMBEDDINGS = BASE / "datos" / "embeddings.npy"
+EMB_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 NOMBRES = {"politica": "Política", "economia": "Economía",
            "deportes": "Deportes", "ciencia_tecnologia": "Ciencia y tecnología"}
 
@@ -34,6 +37,17 @@ def cargar_metricas():
 def cargar_clasificador():
     from transformers import pipeline
     return pipeline("text-classification", model=str(MODELO), tokenizer=str(MODELO), top_k=None)
+
+
+@st.cache_data
+def cargar_embeddings():
+    return np.load(EMBEDDINGS)
+
+
+@st.cache_resource
+def cargar_modelo_embeddings():
+    from sentence_transformers import SentenceTransformer
+    return SentenceTransformer(EMB_MODEL)
 
 
 def modelo_disponible():
@@ -122,5 +136,31 @@ if st.button("Clasificar titular", type="primary"):
                      text=probs["score"].map("{:.1%}".format), title="Probabilidad por categoría")
         fig.update_layout(yaxis={"categoryorder": "total ascending"}, xaxis_title="Probabilidad")
         st.plotly_chart(fig, width="stretch")
+
+# ---------- Innovación: buscador semántico ----------
+st.divider()
+st.subheader("🔎 Buscador semántico")
+st.markdown("Encuentra las noticias del dataset más parecidas **en significado** a lo que escribas, "
+            "aunque no compartan las mismas palabras (embeddings + similitud coseno).")
+consulta = st.text_input("¿Qué tema buscas?", placeholder="Ej.: riesgos de la inteligencia artificial")
+k = st.slider("Número de resultados", 3, 10, 5)
+if st.button("Buscar noticias similares"):
+    if not consulta.strip():
+        st.warning("Escribe un tema o titular primero.")
+    elif not EMBEDDINGS.exists():
+        st.error("No se encontró `datos/embeddings.npy`. Ejecuta `03_buscador_semantico.ipynb`.")
+    else:
+        with st.spinner("Buscando..."):
+            emb = cargar_embeddings()
+            q = cargar_modelo_embeddings().encode([consulta.strip()], normalize_embeddings=True)[0]
+            sim = emb @ q
+            top = np.argsort(-sim)[:k]
+        res = df.iloc[top][["titular", "etiqueta", "fecha", "url"]].assign(similitud=sim[top].round(3))
+        res["etiqueta"] = res["etiqueta"].map(NOMBRES)
+        if sim[top[0]] < 0.5:
+            st.info("Ninguna noticia es muy parecida: es posible que el tema no aparezca en el dataset.")
+        st.dataframe(res, width="stretch", hide_index=True,
+                     column_config={"url": st.column_config.LinkColumn("url"),
+                                    "similitud": st.column_config.ProgressColumn("similitud", min_value=0, max_value=1, format="%.2f")})
 
 st.caption("Tarea 1 – Data Science con Python · Datos: El Comercio (elcomercio.pe), uso académico.")

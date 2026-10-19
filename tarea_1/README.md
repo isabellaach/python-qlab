@@ -38,7 +38,7 @@
    - Auditoría humana de 20 casos (`datos/auditoria_humana.csv`).
    - Split estratificado 70/15/15 con `random_state=42`.
    - Fine-tuning de `distilbert-base-multilingual-cased` (3 épocas, batch 8, mejor época por F1 macro) **con las etiquetas del LLM**. La evaluación se hace contra la **sección editorial** del diario, independiente del LLM.
-3. **`app.py`**: dashboard Streamlit con filtros, métricas, gráfico, tabla descargable y probador en vivo.
+3. **`app.py`**: dashboard Streamlit con filtros, métricas, gráfico, tabla descargable, probador en vivo y buscador semántico.
 
 | Modelo | F1 macro test | Latencia / titular | Parámetros |
 | :--- | :---: | :---: | :---: |
@@ -54,6 +54,12 @@
 2. **Tecnología se confunde con economía.** `deportes` (F1 0.96) y `politica` (F1 0.93) tienen vocabulario muy propio (clubes, torneos; Congreso, Senado). `ciencia_tecnologia` es la peor (F1 0.75, recall 0.60): la sección *Tecnología* de El Comercio incluye **negocios de empresas tech y ecología/medio ambiente** (*"Finlandia frena centros de datos de Google"*, *"minería ilegal en Madre de Dios"*), que el modelo manda a `economia`. El LLM ya cometía esta confusión (18 de 95 noticias de tecnología etiquetadas como economía) y el modelo la heredó.
 
 Hallazgo adicional del EDA: deportes publicó sus 98 notas en solo 3 días, mientras ciencia y tecnología necesitó 13. Además, política usa los titulares más largos (mediana de 108 caracteres) porque suelen ser citas textuales.
+
+## Innovación: buscador semántico
+
+En **`03_buscador_semantico.ipynb`** y en la sección **🔎 Buscador semántico** del dashboard, cada noticia (titular + bajada) se convierte en un embedding con `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`. Al escribir un tema, se devuelven las noticias con mayor **similitud coseno**, aunque no compartan las mismas palabras. Por ejemplo, *"riesgos de la inteligencia artificial"* recupera *"Bill Gates: el verdadero peligro de la IA…"*. Los embeddings se guardan en `datos/embeddings.npy` (< 1 MB).
+
+La matriz de similitud muestra además que `ciencia_tecnologia` es la categoría **menos homogénea** (similitud interna 0.17, frente a ≈ 0.32 de política y deportes). Esto es coherente con que haya sido la de peor F1. Limitación: si un tema no existe en el dataset (p. ej. la selección en Eliminatorias), el buscador igual devuelve las noticias "menos lejanas", aunque no sean relevantes.
 
 ## 4. Limitaciones técnicas
 
@@ -79,6 +85,7 @@ pip install -r requirements.txt
 #    01 reutiliza el respaldo de datos/raw/; 02 reutiliza datos/etiquetas_llm.csv
 jupyter nbconvert --to notebook --execute --inplace 01_recoleccion.ipynb
 jupyter nbconvert --to notebook --execute --inplace 02_clasificacion.ipynb   # entrena y guarda modelo/
+jupyter nbconvert --to notebook --execute --inplace 03_buscador_semantico.ipynb   # embeddings del buscador
 
 # 5. Lanzar el dashboard
 streamlit run app.py
@@ -92,6 +99,7 @@ El dashboard se abre en `http://localhost:8501`. **Ejecución local comprobada.*
 tarea_1/
 ├── 01_recoleccion.ipynb       # Scraping, limpieza y EDA
 ├── 02_clasificacion.ipynb     # Zero-shot, LLM, fine-tuning y evaluación
+├── 03_buscador_semantico.ipynb  # Innovación: embeddings y búsqueda por similitud
 ├── app.py                     # Dashboard Streamlit
 ├── requirements.txt           # Dependencias con versiones exactas
 ├── README.md
@@ -100,6 +108,7 @@ tarea_1/
 │   ├── raw/                   # Respaldo crudo: robots.txt, sitemaps y notas (jsonl)
 │   ├── noticias.csv           # 384 noticias, 7 columnas
 │   ├── etiquetas_llm.csv      # Etiquetas de Qwen2.5-3B
-│   └── auditoria_humana.csv   # 20 casos revisados manualmente
+│   ├── auditoria_humana.csv   # 20 casos revisados manualmente
+│   └── embeddings.npy         # Embeddings para el buscador semántico
 └── modelo/                    # config, tokenizer y metricas.json (pesos excluidos)
 ```
