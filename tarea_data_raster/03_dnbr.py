@@ -120,3 +120,13 @@ json.dump({
     "post": f"{post.fecha:%Y-%m-%d}", "post_nubes_zona": post.nubes_zona, "quemado_ha": round(quemado_ha, 1),
     "huella_viirs_ha": inc.huella_ha, "pixeles_validos_pct": round(cobertura_valida, 1), "severidad": filas,
 }, open(RES / f"dnbr_{iid}.json", "w"), ensure_ascii=False, indent=2)
+
+# Rejilla reducida (bloques de 3 x 3 = 60 m) y focos en la misma rejilla, para el sitio web
+k = 3
+h, w = (shape[0] // k) * k, (shape[1] // k) * k
+with np.errstate(all="ignore"):
+    rej = np.nanmean(np.where(semilla, dnbr, np.nan)[:h, :w].reshape(h // k, k, w // k, k), axis=(1, 3))
+yy, xx = np.nonzero(np.isfinite(rej))
+pd.DataFrame({"fila": yy, "col": xx, "dnbr": rej[yy, xx].round(3)}).to_csv(RES / f"dnbr_{iid}_rejilla.csv", index=False)
+pd.DataFrame({"fila": ((fy - tr.f) / (tr.e * k)).round(1), "col": ((fx - tr.c) / (tr.a * k)).round(1),
+              "fecha_utc": focos.fecha_utc.dt.strftime("%Y-%m-%d %H:%M").values}).to_csv(RES / f"dnbr_{iid}_focos.csv", index=False)

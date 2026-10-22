@@ -10,6 +10,8 @@ Tarea de clase (Ciencia de Datos con Python, 21 oct 2026) · Reto propio que com
 
 **¿Por qué 24–72 h?** 0–24 h es el plazo operativo para evacuar, y el satélite VIIRS pasa cada ~12 h, así que se puede verificar al día siguiente. 24–72 h sirve para la alerta temprana. Más allá de 72 h, el pronóstico de viento y humedad ya no es confiable para decidir una evacuación.
 
+**Sitio web interactivo:** https://claude.ai/artifact/B6Xd7Qk5C5pGghCu1tjt68 (mapa, ranking, pronóstico hora a hora, distritos y dNBR). Dashboard local: `streamlit run app.py`.
+
 ![Mapa de corredores](resultados/mapa_corredores.png)
 
 ## Datos y fechas
