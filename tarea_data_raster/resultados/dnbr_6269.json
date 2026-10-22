@@ -1,0 +1,36 @@
+{
+  "incendio_id": 6269,
+  "distrito": "TAHUANIA",
+  "provincia": "ATALAYA",
+  "departamento": "UCAYALI",
+  "primer_foco_utc": "2026-10-15 18:32",
+  "pre": "2026-09-28",
+  "pre_nubes_zona": 0.0,
+  "post": "2026-10-20",
+  "post_nubes_zona": 18.9,
+  "quemado_ha": 100.9,
+  "huella_viirs_ha": 70.0,
+  "pixeles_validos_pct": 91.3,
+  "severidad": [
+    {
+      "severidad": "baja",
+      "dnbr_desde": 0.1,
+      "hectareas": 74.9
+    },
+    {
+      "severidad": "moderada-baja",
+      "dnbr_desde": 0.27,
+      "hectareas": 49.2
+    },
+    {
+      "severidad": "moderada-alta",
+      "dnbr_desde": 0.44,
+      "hectareas": 41.7
+    },
+    {
+      "severidad": "alta",
+      "dnbr_desde": 0.66,
+      "hectareas": 10.0
+    }
+  ]
+}

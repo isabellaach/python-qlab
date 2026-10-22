@@ -77,8 +77,8 @@ def nbr(item):
     return np.where(malo, np.nan, n), tr, crs, shape
 
 
-nbr_pre, tr, crs, shape = nbr(pre.item)
-nbr_post, *_ = nbr(post.item)
+nbr_pre, tr, crs, shape = nbr(pre["item"])
+nbr_post, *_ = nbr(post["item"])
 dnbr = nbr_pre - nbr_post
 
 # Semilla VIIRS: solo píxeles a <= 1,5 km de un foco del incendio
