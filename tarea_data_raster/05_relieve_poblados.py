@@ -21,7 +21,9 @@ from rasterio.merge import merge
 
 BASE = Path(__file__).parent
 DATOS, RES = BASE / "datos", BASE / "resultados"
-N = 110  # celdas por lado de la rejilla de relieve
+N = 110  # filas de la rejilla de relieve
+ASPECTO = 1.6  # recuadro apaisado (ancho / alto), como el mapa del sitio
+NC = round(N * ASPECTO)
 
 inc = pd.read_csv(RES / "exposicion_incendios.csv")
 inc = inc[~inc.semaforo.str.startswith("VERDE")].reset_index(drop=True)
@@ -43,20 +45,20 @@ relieve, poblados = [], []
 for _, f in inc.iterrows():
     iid = int(f.incendio_id)
     x0, y0, x1, y1 = corr[(corr.incendio_id == iid) & (corr.horizonte_h == 72)].total_bounds
-    # Caja cuadrada en km, al menos 16 km de lado, con 35 % de margen
+    # Caja apaisada (1,6 : 1) que contiene el corredor de 72 h, al menos 16 km de alto, con 35 % de margen
     kx = np.cos(np.radians(f.lat))
-    lado = max((x1 - x0) * kx, y1 - y0, 16 / 111.32) * 1.35
+    alto_g = max((x1 - x0) * kx / ASPECTO, y1 - y0, 16 / 111.32) * 1.35
     cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
-    caja = (cx - lado / 2 / kx, cy - lado / 2, cx + lado / 2 / kx, cy + lado / 2)
+    caja = (cx - alto_g * ASPECTO / 2 / kx, cy - alto_g / 2, cx + alto_g * ASPECTO / 2 / kx, cy + alto_g / 2)
 
     # Relieve
     items = cat.search(collections=["cop-dem-glo-30"], bbox=caja).item_collection()
     fuentes = [rasterio.open(it.assets["data"].href) for it in items]
-    res = ((caja[2] - caja[0]) / N, (caja[3] - caja[1]) / N)
+    res = ((caja[2] - caja[0]) / NC, (caja[3] - caja[1]) / N)
     mosaico, _ = merge(fuentes, bounds=caja, res=res, resampling=Resampling.bilinear, nodata=-9999)
     for s in fuentes:
         s.close()
-    elev = mosaico[0][:N, :N]
+    elev = mosaico[0][:N, :NC]
     relieve.append({"incendio_id": iid, "oeste": round(caja[0], 5), "norte": round(caja[3], 5),
                     "dlon": round(res[0], 7), "dlat": round(res[1], 7), "filas": elev.shape[0], "columnas": elev.shape[1],
                     "elev_m": [int(v) if v > -9000 else None for v in elev.ravel()]})
