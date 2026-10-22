@@ -6,6 +6,8 @@ Uso: python 03_dnbr.py <incendio_id>
 - NBR = (B08 - B12) / (B08 + B12); dNBR = NBR_pre - NBR_post.
 - Quemado = dNBR >= 0,27 (umbral usado por el profesor), sembrado: solo a <= 1,5 km de un foco VIIRS.
 """
+import base64
+import io
 import json
 import sys
 from pathlib import Path
@@ -17,6 +19,7 @@ import pandas as pd
 import planetary_computer
 import pystac_client
 import rasterio
+from PIL import Image
 from rasterio.features import rasterize
 from rasterio.warp import transform_bounds
 from rasterio.windows import from_bounds
@@ -121,12 +124,31 @@ json.dump({
     "huella_viirs_ha": inc.huella_ha, "pixeles_validos_pct": round(cobertura_valida, 1), "severidad": filas,
 }, open(RES / f"dnbr_{iid}.json", "w"), ensure_ascii=False, indent=2)
 
-# Rejilla reducida (bloques de 3 x 3 = 60 m) y focos en la misma rejilla, para el sitio web
-k = 3
-h, w = (shape[0] // k) * k, (shape[1] // k) * k
-with np.errstate(all="ignore"):
-    rej = np.nanmean(np.where(semilla, dnbr, np.nan)[:h, :w].reshape(h // k, k, w // k, k), axis=(1, 3))
-yy, xx = np.nonzero(np.isfinite(rej))
-pd.DataFrame({"fila": yy, "col": xx, "dnbr": rej[yy, xx].round(3)}).to_csv(RES / f"dnbr_{iid}_rejilla.csv", index=False)
-pd.DataFrame({"fila": ((fy - tr.f) / (tr.e * k)).round(1), "col": ((fx - tr.c) / (tr.a * k)).round(1),
+# Para el sitio web: dNBR a 20 m (resolución nativa de B12) y focos en la misma rejilla
+dz = np.where(semilla, dnbr, np.nan)
+yy, xx = np.nonzero(np.isfinite(dz))
+pd.DataFrame({"fila": yy, "col": xx, "dnbr": dz[yy, xx].round(3)}).to_csv(RES / f"dnbr_{iid}_rejilla.csv", index=False)
+pd.DataFrame({"fila": ((fy - tr.f) / tr.e).round(1), "col": ((fx - tr.c) / tr.a).round(1),
               "fecha_utc": focos.fecha_utc.dt.strftime("%Y-%m-%d %H:%M").values}).to_csv(RES / f"dnbr_{iid}_focos.csv", index=False)
+
+
+# Imágenes en falso color (R = B12 SWIR, G = B08 NIR, B = B04 rojo) en la misma rejilla:
+# vegetación verde, quemado marrón oscuro / magenta, nubes blancas
+def bandas(item):
+    return np.dstack([leer(item, b, ref=shape)[0] for b in ("B12", "B08", "B04")]).astype("float32") - 1000
+
+
+rgb_pre, rgb_post = bandas(pre["item"]), bandas(post["item"])
+validos = rgb_pre[(rgb_pre > 0).all(axis=2)]
+lo, hi = np.percentile(validos, 1, axis=0), np.percentile(validos, 99.5, axis=0)  # mismo estiramiento para ambas
+filas_img = []
+for momento, fecha, nubes, rgb in [("antes", pre.fecha, pre.nubes_zona, rgb_pre), ("despues", post.fecha, post.nubes_zona, rgb_post)]:
+    x = np.clip((rgb - lo) / (hi - lo), 0, 1)
+    x = 0.7 * x + 0.3 * x.mean(axis=2, keepdims=True)  # colores menos saturados
+    x[(rgb <= 0).any(axis=2)] = 0.82  # sin dato: gris neutro
+    img = (x * 255).astype("uint8")
+    buf = io.BytesIO()
+    Image.fromarray(img).save(buf, format="JPEG", quality=88)
+    filas_img.append({"momento": momento, "fecha": f"{fecha:%Y-%m-%d}", "nubes_zona": nubes, "ancho": img.shape[1], "alto": img.shape[0],
+                      "jpeg_base64": base64.b64encode(buf.getvalue()).decode()})
+json.dump(filas_img, open(RES / f"dnbr_{iid}_imagenes.json", "w"))
