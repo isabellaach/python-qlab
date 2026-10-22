@@ -218,3 +218,5 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+tarea_data_raster/datos/PE.txt
+tarea_data_raster/datos/PE.zip

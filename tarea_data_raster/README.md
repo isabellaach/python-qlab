@@ -34,13 +34,14 @@ Tarea de clase (Ciencia de Datos con Python, 21 oct 2026) · Reto propio que com
    - **Corredor:** la trayectoria hora a hora, con un ancho del 25 % del avance, a 24, 48 y 72 h. Las personas dentro se suman con WorldPop.
    - **Semáforo (umbral 500 personas):** 🔴 si hay ≥ 500 personas en el corredor de 24 h **y** el fuego está confirmado (≥ 3 focos en 24 h o ≥ 50 ha). 🟠 si hay ≥ 500 en 72 h, o si un solo foco amenaza a ≥ 500 personas (verificar en campo). 🟢 en el resto.
 3. **`03_dnbr.py <id>`**: dNBR con Sentinel-2. Mide el % de nubes **dentro de la zona** con la capa SCL y elige la imagen más clara antes y después del primer foco. NBR = (B08 − B12)/(B08 + B12). Cuenta como quemado un dNBR ≥ 0,27, solo a ≤ 1,5 km de focos VIIRS.
-4. **`04_mapa.py`**: mapa estático. **`app.py`**: dashboard en Streamlit.
+4. **`05_relieve_poblados.py`**: relieve con Copernicus DEM GLO-30 (Planetary Computer, **raster** de 30 m) y centros poblados de GeoNames alrededor de cada incendio en rojo o ámbar. Calcula a qué hora el corredor alcanzaría cada poblado, con la misma trayectoria hora a hora.
+5. **`04_mapa.py`**: mapa estático. **`app.py`**: dashboard en Streamlit.
 
 ![dNBR Tahuania](resultados/dnbr_6269.png)
 
 ## Tres hallazgos
 
-1. **De 161 incendios activos hoy, solo 1 justifica preparar una evacuación en 24 h: Juli (Puno).** Tiene 3 focos en 24 h, viento de hasta 20 km/h y humedad mínima de 32 %. Su avance estimado es de ~9 km hacia el sur-suroeste, y hay **3 372 personas en su corredor de 24 h** (5 793 en 72 h). Otros **23 incendios quedan en alerta temprana (ámbar)**, con **56 distritos** en el camino del fuego. Se descartaron 11 "incendios" que eran fuentes fijas o suelo desnudo.
+1. **De 161 incendios activos hoy, solo 1 justifica preparar una evacuación en 24 h: Juli (Puno).** Tiene 3 focos en 24 h, viento de hasta 20 km/h y humedad mínima de 32 %. Su avance estimado es de ~9 km hacia el sur-suroeste, y hay **3 372 personas en su corredor de 24 h** (5 793 en 72 h). El primer poblado en su camino sería **Suancata Cañi, en ~14 h** (luego Suancata Central y Suancata, entre 14 y 16 h). Otros **23 incendios quedan en alerta temprana (ámbar)**, con **56 distritos** en el camino del fuego. Se descartaron 11 "incendios" que eran fuentes fijas o suelo desnudo.
 2. **La dirección del viento cambia a quién hay que avisar.** En Candarave (Tacna), con aire muy seco (HR 25 %) y sin lluvia, el corredor de 72 h tiene **1 641 personas**, contra **201** en el círculo fijo de 5 km (×8). En Ticapampa (Áncash) son **2 583 contra 254** (×10). En cambio, en La Banda de Shilcayo (San Martín) el viento aleja el fuego de Tarapoto: **1 309 contra 27 523**. El círculo fijo sobreestima en 142 de 150 incendios y subestima justo en los más secos y ventosos.
 3. **El satélite térmico subestima el área quemada.** En Tahuania (Atalaya, Ucayali), el dNBR de Sentinel-2 mide **101 ha quemadas** (dNBR ≥ 0,27), frente a **70 ha de huella VIIRS** (+44 %). De ellas, **52 ha son de severidad moderada-alta o alta**.
 
@@ -63,6 +64,7 @@ pip install -r requirements.txt
 python 01_incendios_activos.py
 python 02_clima_exposicion.py      # ~1 min (WorldCover + Open-Meteo)
 python 03_dnbr.py 6269             # ~1 min (Sentinel-2)
+python 05_relieve_poblados.py      # ~2 min (Copernicus DEM + GeoNames PE.txt en datos/)
 python 04_mapa.py
 streamlit run app.py
 ```
