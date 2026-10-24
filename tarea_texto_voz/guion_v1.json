@@ -1,0 +1,40 @@
+{
+  "titulo": "¿A quién alcanzará el fuego?",
+  "escenas": [
+    {
+      "frase": "¿Qué poblaciones del Perú deberían prepararse para evacuar en las próximas setenta y dos horas, según el viento?",
+      "cifra": "",
+      "etiqueta": "Alerta por incendios en el Perú"
+    },
+    {
+      "frase": "De ciento sesenta y un incendios activos, solo Juli, en Puno, justifica preparar una evacuación: tres mil trescientas setenta y dos personas en su corredor de veinticuatro horas.",
+      "cifra": "3 372",
+      "etiqueta": "personas en el corredor de 24 h · Juli"
+    },
+    {
+      "frase": "En Candarave, el corredor del viento alcanza a mil seiscientas cuarenta y una personas en tres días: ocho veces más que un círculo fijo.",
+      "cifra": "1 641",
+      "etiqueta": "personas en 72 h · Candarave"
+    },
+    {
+      "frase": "En el caso de Tahuania, Sentinel dos mide ciento una hectáreas quemadas: cuarenta y cuatro por ciento más que el satélite térmico.",
+      "cifra": "101 ha",
+      "etiqueta": "hectáreas quemadas · Tahuania"
+    },
+    {
+      "frase": "Otros veintitrés incendios quedan en alerta temprana, y hay cincuenta y seis distritos en el camino del fuego.",
+      "cifra": "23",
+      "etiqueta": "incendios en alerta temprana"
+    },
+    {
+      "frase": "Es una regla empírica, aún sin validar: una herramienta académica que no reemplaza a INDECI.",
+      "cifra": "",
+      "etiqueta": "Herramienta académica"
+    }
+  ],
+  "posts": {
+    "linkedin": "¿A quién alcanzará el fuego? Hice en Python una herramienta académica que combina los focos de calor VIIRS (NASA FIRMS), el pronóstico de viento de Open-Meteo y la población de WorldPop para proyectar corredores de riesgo a 24, 48 y 72 horas. De 161 incendios activos, solo uno, Juli (Puno), justifica preparar una evacuación: 3 372 personas en su corredor de 24 h. La dirección del viento cambia a quién hay que avisar: en Candarave el corredor encuentra 8 veces más personas que un círculo fijo de 5 km, y en Ticapampa 10 veces más. Pero en 142 de 150 incendios el círculo cuenta más gente. Es una herramienta académica, sin validar: no reemplaza a INDECI ni a SERFOR.",
+    "x": "¿A quién alcanzará el fuego? 🔥 De 161 incendios activos en el Perú, solo Juli (Puno) justifica preparar una evacuación: 3 372 personas en su corredor de 24 h. El viento importa: en Candarave, 8 veces más gente que un círculo fijo. #CienciaDeDatos",
+    "instagram": "¿Qué poblaciones del Perú deberían prepararse para evacuar en las próximas 72 horas? Combiné satélites, pronóstico de viento y población: de 161 incendios activos, solo Juli (Puno) justifica preparar una evacuación. El viento cambia a quién hay que avisar. Herramienta académica, sin validar: no reemplaza a INDECI. #Peru #CienciaDeDatos #Incendios #Python"
+  }
+}

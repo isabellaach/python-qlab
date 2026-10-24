@@ -1,0 +1,9 @@
+.venv/
+salidas/_16k.wav
+salidas/escena_*.wav
+salidas/mi_voz.wav
+*.m4a
+__pycache__/
+mi_voz*
+salidas/mi_voz*.wav
+salidas/reel.wav

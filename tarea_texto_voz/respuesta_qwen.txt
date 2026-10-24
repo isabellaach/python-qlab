@@ -1,0 +1,40 @@
+{
+  "titulo": "¿A quién alcanzará el fuego? Alerta de evacuación por incendios en el Perú",
+  "escenas": [
+    {
+      "frase": "¿Qué poblaciones del Perú deberían evacuar en veinticuatro a setenta y dos horas según el viento y los incendios activos?",
+      "cifra": "",
+      "etiqueta": ""
+    },
+    {
+      "frase": "De ciento sesenta y un incendios activos, solo Juli en Puno justifica evacuación. Su corredor de veinticuatro horas alcanza a tres mil trescientas setenta y dos personas.",
+      "cifra": "3 372",
+      "etiqueta": "personas en corredor de 24h"
+    },
+    {
+      "frase": "La dirección del viento importa. En Candarave el corredor alcanza a mil seiscientas cuarenta y una personas, ocho veces más que el círculo fijo.",
+      "cifra": "1 641",
+      "etiqueta": "personas en Candarave"
+    },
+    {
+      "frase": "El satélite térmico subestima. En Tahuania Sentinel dos mide ciento una hectáreas quemadas, cuarenta y cuatro por ciento más que el VIIRS.",
+      "cifra": "101 ha",
+      "etiqueta": "hectáreas quemadas en Tahuania"
+    },
+    {
+      "frase": "Otros veintitrés incendios quedan en alerta temprana, con cincuenta y seis distritos en el camino del fuego en las próximas setenta y dos horas.",
+      "cifra": "23",
+      "etiqueta": "incendios en alerta temprana"
+    },
+    {
+      "frase": "Es una regla empírica sin validar, una herramienta académica. No reemplaza a las autoridades oficiales.",
+      "cifra": "",
+      "etiqueta": ""
+    }
+  ],
+  "posts": {
+    "linkedin": "En Perú, los incendios forestales amenazan poblaciones vulnerables. Desarrollé una herramienta académica en Python que combina datos satelitales VIIRS, pronósticos de viento de Open-Meteo y población de WorldPop para proyectar corredores de riesgo de evacuación en veinticuatro a setenta y dos horas. De ciento sesenta y un incendios activos, solo uno justifica evacuación inmediata. La herramienta muestra que considerar la dirección del viento multiplica hasta ocho veces las personas en riesgo comparado con el círculo fijo tradicional. Es una herramienta académica con pronósticos, no un sistema oficial. Los hallazgos buscan aportar a la ciencia de datos aplicada al riesgo climático en Perú.",
+    "x": "¿A quién alcanzará el fuego en Perú? 🌬️🔥 Desarrollé una herramienta académica que proyecta corredores de evacuación según el viento. De 161 incendios, solo 1 justifica evacuación. El viento multiplica x8 el riesgo vs círculo fijo. No es sistema oficial. #Peru #CienciaDeDatos #Incendios",
+    "instagram": "¿A quién alcanzará el fuego en Perú en las próximas veinticuatro a setenta y dos horas? Esta herramienta académica proyecta corredores de evacuación combinando satélites, pronóstico de viento y datos poblacionales. De ciento sesenta y un incendios activos, solo uno en Juli justifica evacuación inmediata. La dirección del viento cambia todo el panorama del riesgo. No reemplaza a las autoridades oficiales, es una herramienta académica con pronósticos. #Peru #CienciaDeDatos #IncendiosForestales #Datos"
+  }
+}
