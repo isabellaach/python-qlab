@@ -6,7 +6,7 @@ Tarea de clase (Ciencia de Datos con Python, sesión 15, 24 oct 2026). Convertí
 - **Entrega:** [`salidas/reel.mp4`](salidas/reel.mp4) y [`salidas/posts.md`](salidas/posts.md); además [`salidas/reel.srt`](salidas/reel.srt) y [`salidas/portada.png`](salidas/portada.png).
 - **Pipeline en un slide:** https://claude.ai/artifact/Kzp7SSZQBcPUVkc8b7vRSs
 
-![Portada del reel](salidas/portada.png)
+<img src="salidas/portada.png" alt="Portada del reel" width="220">
 
 ## El flujo
 
