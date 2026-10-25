@@ -1,0 +1,5 @@
+datos/raw/
+modelos/*.safetensors
+modelos/*.bin
+modelos/checkpoint-*/
+.DS_Store
