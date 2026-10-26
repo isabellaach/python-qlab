@@ -1,1 +1,1285 @@
-id,archivo,tipo,fuente,texto_ocr,modelo_ocr,texto_referencia
+id,archivo,tipo,fuente,texto_ocr,modelo_ocr,texto_referencia,confianza_media
+doc_001,datos/raw/documentos/doc_001.jpg,impreso,Wikimedia Commons (Public domain),"PERÚ
+Ministerio
+Oficina General
+de Salud
+de Comunicaciones
+COMUNICADO OFICIAL DE PRENSA N°21
+El Ministerio de Salud lamenta informar el sensible fallecimiento de
+dos personas por infección por COVID-19.
+Se trata de un varón de 47 años con antecedentes de viaje a España,
+que presentaba asma bronquial y obesidad. Fue internado en la
+unidad de cuidados intensivos del hospital 2 de Mayo, por presentar
+insuficiencia respiratoria y shock séptico. Su evolución fue
+desfavorable produciéndose su deceso a las 18.15 horas.
+El otro caso corresponde a un paciente de 69 años, con antecedente
+de viaje a España que fue atendido en el hospital Edgardo Rebagliati
+por un cuadro respiratorio y falleció en su domicilio.
+En nombre de todos los peruanos expresamos nuestras más sentidas
+condolencias a los familiares en este momento de dolor.
+Lima, 19 de marzo del 2020
+OFICINA DE INFORMACIÓN PÚBLICA
+OFICINA GENERAL DE COMUNICACIONES
+(Teléfono 315-6600 anexo 2948)
+0文","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.959
+doc_002,datos/raw/documentos/doc_002.jpg,impreso,Wikimedia Commons (Public domain),"EL COMERCIO
+826
+ras siendo el numero ultimo 183.
+Se está esperando un decreto del Gobierno
+una chispa eléctrica è incendió laa provincias de
+autorizando la plantifiencioo de un bolante para
+Tunja, Socerro, Veles, Pamplona,
+Casanare, Car.
+a nmedar plata menuda aqui
+tijena, Santa Marta,
+aun parte de
+LIMA.
+Ecuudor celebrar un tratado con
+uno de los je.
+PERU Y ECUADOR.
+nerales que sostenian la causa del
+gobierno Gri.
+nadino y entrar a Pasto como pacificador à media
+Parece que un destino fatal tiene condenado
+dos de Setiembre de 1841, con
+800 hombres de
+al lPerú a no vivir en paz; unns veces nuestros
+infanteria y 400 de caballeria, mientras tanto di.
+propios errores y otras la amhicion do nuestros
+vecinos, hace que hasta nhora podanos soltar las
+armas de la nano. Auo no so ha terminado
+sus fronteras, que el territorio granadino debia di
+la guerra en que esta nos envueltos por el sur
+y nos amenazi otra por el norte. ¿Como sor in-
+en el quien reunicra bastante
+para go.
+diferentes tratandose de intereses tan vitales à los
+bernar. El göbierno de la Nueva
+Granada repon.
+que está unido el bienestar de inas de dos millones
+ba, como era justo que reposase, on los tratudus ce.
+de habitantes? Nuestro deber y el de todos es
+lebrados en Pasto en 8 do
+Diciembre de 1832y
+ocuparse de una cuestion de la que depende nues-
+contaba con que el Ecuador obligado a respetarió,
+tra futura tranquilidad, discutan-sia con la fria
+no ocuparia con ningun pretesto ni una pulgada del
+razor para hacer cononer de parte de quien está
+territorio granadino, mucho mas cuando, como
+la justicia, para que ante el mundo triunfe y se
+dijo el Sr. D. Rufino Cuervo, enviado de aquel Go.
+eviten los estragos funestos de la fuerza, à no ser
+bíerno, ""no habia soli-itado, promovido ni men-
+que pueda ser in liferente el que so deguellen ó no
+digad el auxiio de la fuerza extrarjera para
+dosnacione-inocentes.
+terminar las cuestiones da la Nuuva Granada.
+El Janeral Fiores que tiene la suerte de re-
+Pero no sulo ocupó á Pasto y Tuquerres sin
+jir los destinos del Écuador cree que es muy
+que hizo que estas provincias estando bajo sus
+limitado el pais que gobierna, muy reducido
+ármas, declararan el 4 de Mayo de 1841, que
+teutro para su eminente genio, La idea de en-
+querian separurse de la asociacion Granadinay
+sanchar los linites del Écuador ha sid, para
+pertenecer al Ecuador, acojiendo solemnemente
+él un pensamiento fijo. y por eso hu mantenido
+este pronunciamiento el 10 del mismo mes el Con-
+un ejército que aniquila aquel pais consuniendo
+sejo de Gobierno Ecuatorian o. Mandó al coman.
+iinproductivainente sus escasas rentas; inirandolo
+dante Dario M-rales con pliegos parn que Borba-
+como la base de su engrandeciniento futuro ja-
+coas hiciera igual pronuncinmiento, en l. que tra.
+mas ha querido licenciarlo como debiera. Nus
+bajé personalmente dicho oficial cuunto pudo,
+planes estabun calculados de modo que podria
+segun consta de los dorumentos que tienelenu
+realizarlos con exito en un lado ó en otro de
+poder el Sr. Cuervo Ministro del Gobierno de la
+sus fronteras, el prinero de sus vecinos que à su
+Nueva Granada. Bitante feliz el Gbierno
+juicio le presentara ocasion favorable gebia de ser
+granadino, ha podido apnciguar las revueltas y
+el que diera el continjente para satisfacer su ambi-
+détener al jeneral Florez que iba ya u ocu-
+cion: tozóle en suerte principiar por la Nueva Gra-
+par a Popayan, haciendole devoiver à Paste.
+nada. A mediidos de Junio de 1839, los primeros
+Despues de haber hecho el Ecuador inmensos sa-
+alboroios de Pasto le persuadieron era llegado cl
+crificios t:ene hoy el jeneral Floresel sentiniento de
+m umento de empezar à realizar sus antiguas es-
+ver burladus sus planes de ambicion, y de haber da
+peranzas, y para conseguirlo trató de ganar à
+do a laA nérica y à todo el nund - una prueba cla-
+los dos caudillos Pastusos quo eutonces figura
+sica de la política que esta dispuesto à seguir
+ban, Nguera y E-paña, y con aste objeto se
+con sus vecinos. Respecto del Peru podrémos
+valiò de Saen y Ontaneda, que hacia dos años
+conocerla recordando la cunducta que ha obser-
+estaban en Quito espulsulos porque habian huido
+vudo en estos últimus uños con los asilados poli-
+vergonzosamente en la accion de Galilagua, los
+ticos que han llegado al Écuador.
+que unidos al gobernador de Imbabura publica-
+El jeneral Santa Cruz que intervino en 1835
+mente trataban do que Pasto se uniese al Ecua-
+à mano armada en el Perú para destruir su na-
+dor, Diaz logró entablar relaciones con Noguera
+cionalidad, y sostituir a la constitución que se
+y por medio del influjo de dos frailes francis-
+habían dado los pueblos los actus de su soberana
+cano, recibia este las comunicaciones y pertrechos
+voluntad, fué derrotado y proscripto del Peruy
+del Ecuador. Cuando en Junio de 1840 esta-
+Bolivia, refojiado en el Écuador con algunos de
+lló la revolucion en Pasto, las cosas se presentaban
+sus mua udeptos, el Jeneral Fiores miróen ellos
+en Quito con otro aspecto mas urjente, y por
+los combustibles de discordia con que debia incen-
+eso le fué necesario al jeneral Flores obrar de
+diarse alguna vez el Perù, por esó le interesaba","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.963
+doc_003,datos/raw/documentos/doc_003.jpg,impreso,Wikimedia Commons (Public domain),"EL
+0.
+Este periodico se publicará
+Telegrafo por un ejemplar to
+por ahora eventualmente; su
+das las veces que salga a luz.
+Admite comunicados siempre
+precio será la gratitud que
+puede recibir de cuantos lo
+que tiendan a morigerar las
+lean. Todos los artesanos tie-
+pasiones,conteniendo a los ene
+nen un derecho a él, y pue-
+migos del orden.
+den ocurrir á la imprenta del
+[GRATIS.
+NUM. 12]
+LIMA, SABADO 27 DE SETIEMBRE DE 1834
+Para muchos soy defensa
+recojer por fruto de tantos esfuerzos la
+Para pocos el azóte,
+tranquilidad que ancian los pueblos; pa-
+Y para la desverguenza
+rece como que el genio del mal incesan-
+Hago veces de garrote.
+te en nuestro daño, à cada paso prepa.
+rar quisiese nuevas borrascas, para di.
+sipar las esperanzas de los ciudadanos,
+INTERIOR.
+agoviados con los continuos desastres
+del estado.
+Nueve dias tardó en salir al público
+En efecto: el aparecimiento de un re-
+el bostezo del club criminal, conocido
+pentino choque en los poderes, y el apa-
+por el Cordelario: mas al fin rompió su
+rato de un ominoso desacuerdo entre las
+silencio sepulcral en 20 del corriente,
+autoridades, se presentan como presa-
+cuando el Montonero vivacaba por las
+gios de nuevos é inmensos males; cuan-
+costas con su partida, esperando llenar
+do un vil puñado de convulsos tornan-
+su deber á la ilegal aprocsimacion del
+do su quimérico amor patrio, en la prac-
+gefe de la Cordelaria. Es por esto que
+tica de la mas amagante licencia, á la
+suplica á sus suscritores se desentiendan
+sombra de circunstancias favorables pa-
+de una demora de quince dias ocasio-
+ra las facciones, ostentan atizar la divi-
+nada en razon del servicio. Ha llegado
+sion de las clases, y soplar el odio de
+algo bilioso por no haber logrado su pro-
+los partidos, por incendiar de hecho al
+pósito, y el furor dirige su pluma al no-
+esta lo, con el voráz fuego del mas en-
+tar los sendos vejigasos que han sufri-
+carnizado patricidio.
+do sus compatriotas en el número 29
+Muy envano se procuraria pues en
+y 30 del Limeño.
+un tal caso, reprimir incidencias tan fu-
+nestas, si en veidad poderosos conjura-
+dos contra la tranquilidad pública, di-
+EL MONTONERO
+seminados en los poderes mismos, nos
+condujeran al último infortunio. Si! los
+Cuando á impulsos de los grandiosos
+fautores de las calamidades de la nacion,
+sucesos que tuvieron lugar en los pri-
+armados de influjo, al poner en obra las
+meros dias de este año feliz, nos lison-
+tramas de sus crimimales atentaciones;
+jeábamos con el térnino de la pasada muy á su salvo, y sobre las mismas le-
+anarquia, creyendo llegada la vez de yes prodigarian á la patria desgracias","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.988
+doc_004,datos/raw/documentos/doc_004.png,impreso,Wikimedia Commons (Public domain),"EL PERUANO
+SE PUBLICA MIERCOLES Y SABADO DE CADA SEMANA.
+Vale
+Un real.
+N.°34.
+LIMA, MIERCOLES 10 DE ABRIL DE 1844.
+Tomo xi.
+INTERIOR.
+Gobierno é Intendencia de Policia de este dis-
+Prefectura del Departamento de Ancach-—
+trito-Carhuaz, á 1. de Marzo de 1844.
+Huaraz, á 7 de Marzo de 1844.
+Al Señor Coronel Sub-prefecto de esta Pro.
+Al Señor Coronel Sub-prefecto de esta Pro-
+vincia.
+HUARAZ.
+vineia.
+Contesto con sentimiento la estimable no.
+ta de US. de 5 del corriente, con que me
+El 27 del próximo pasado tuve el sen-
+(Del Observador.)
+ha remitido dos del Gobernador de la villa
+timiento de oficiar á US. hablándole de una
+de Carhuaz, en que da parte de las inunda-
+tempestad horrorosa que sufrió esta villa el
+Sub-prefectura de la Provincia—Huaraz, à
+ciones y estragos consiguientes que ha expe-
+26, y ahora me cabe el de anunciarle, que
+5 de Marzo de 1844.
+rimentado ese distrito en los dias 26 y 29 del
+ayer ha experimentado otra que principió á
+proximo pasado, asegurándole que, solo las
+las cinco de la tarde y concluyó á las cinco
+Benemérito Señor Prefecto del Departamento.
+cireunstancias públicas actuales, me hacen no
+y media, cuyos estragos habrian sido mas es.
+pasar personalmente á la mencionada villa á
+pantosos que lo han sido, si no hubiese que-
+tomar parte en la ejecucion de las medidas
+Incluyo á US. los dos partes que pasa á esta
+rido la Divina Providencia preservarnos de
+que su Gobernador ha adoptado, á fin de
+Sub-prefectura el Gobernador de Carhuaz so-
+ellos en parte, queriendo que las aguas que
+precaver en adelante estragos como los que
+bre inundaciones aeaecidas en la poblacion
+se precipitaban sobre la poblacion buscasen su
+han ocasionado las inundaciones indieadas.
+en los dias 26 del próximo pasado y 1 del
+curso divididas en dos porciones. A conse-
+corriente.
+Sirvase US. decirlo así al Gobernador men-
+cuencia de esta catástrofe han quedado por
+Dios guarde á US.—Señor Prefecto—Pe-
+cionado, previniendole que son de mi apro-
+tierra unas viviendas de la casa del vene-
+dro Izquierdo.
+bacion las medidas de que llevo hecha refe-
+ble Párroco de esta doctrina y de D. Lorenzo
+OUGE
+rencia, y que deseo queden efectuadas cuanto
+Solis, y los cercos de varias fábricas perte-
+antes.
+necientes á otras varias personas, y sumamen-
+to deteriorados los puentes de Hualcan, Obra.
+Dios guarde á US.—José Manuel Salas.
+Gobierno é Intendencia de Policia de este dis-
+je y Chucchun, siendo este último necesario
+trito—Carhuaz, à 27 de Febrero de 1844.
+para el transito jeneral, por lo que se está
+refaccionando. Al norte de la villa han que-
+Al Señor Coronel Sub-prefecto de esta Pro-
+dado los caminos destrozados-el puente de
+vincia.
+Tinco colocado sobre el rio de Buin ha de-
+saparecido-y el de Eco que se hallaba colo..
+Ayer á las tres de la tarde ha caido en
+cado sobre el rio grande, quedó tan desqui-
+esta villa una lluvia tan tempestuosa y formi-
+siado, que para que no se pierda la maderal
+dable, que los octojenarios y personas de mas
+invertida en su construccion, ha sido necesa--
+edad aseguran no haber tenido ni noticia de
+rio quitarlo por ahora.
+otra igual. Las casas construidas en los sitios
+Para precaver iguales desastres en ade-
+mas altos de la poblacion han sido inunda-
+lante, he acordado mandar abrir un tajo en las
+das hasta mas de una vara de alto. Las ca-
+quebradas de Huatupayoc y Pichiucayan, y
+lles que contiene, sin embargo de estar em-
+dispuesto en consecuencia, que el trabajo prin.
+pedradas casi todas, han quedado convertidas
+cipic el cuatro del corriente, oido el informe
+en fosos bastante profundos á consecuencia
+que el ciudadano D. Mateo Ruiz y los Sub-
+de haber corrido por todas ellas rios de agua
+inspectores D. Hermenejildo Arequipeño y
+que arrastraron vigas gruesas hasta de seis
+Don Pedro Alva me deben dar, prévio el res-
+varas de lonjitud, y porcion de crias domésticas
+pectivo reconocimiento, que les tengo ya en.
+y del campo.
+comendado.
+No es explicable la consternacion que es
+Sirvase US. poner este parte en conoci-
+te suceso ha difundido entre mis subordina-
+miento del Señor Prefecto del Departamento,
+dos, pues todos han sufrido por él perdidas
+para que si lo tiene á bien, se digne aprobar
+considerables en sus sementeras unos, y otros
+las medidas que dejo indicadas.
+en sus casas ; habiendo quedado reducidas a
+Dios guarde á US.—Francisco Vicente de
+escombros en su mayor parte las pertene-
+Torres.
+cientes á Vicente Caballero, Maria Teresa,
+y Dorotea Obregon, sitaadas en el barrio
+del Triunfo, y en el paraje denominado Ca-
+jamarquilla.
+Al dar á US. este parte con el senti-
+miento que es de suponerse, me cabe la sa-
+tisfaccion de asegurarle, que estoy tomando
+las medidas necesarias para que sean repara-
+dos en la parte posible los perjuicios expe-
+rimentados.
+Debo agregar á lo expuesto para el co.
+nocimiento de ÚS. que la tempestad de que
+hablo, duró tres cuartos de hora; es decir,
+hasta las tres y tres cuartos de la tarde: que
+el agua que descendia de las alturas inme-
+diatas á la villa, no cesó de correr hasta las
+cinco, y que los caminos han quedado así
+como las calles, destrozados é inutilizados.
+Dios guarde á US.--Francisco V. de Tor
+res.","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.99
+doc_005,datos/raw/documentos/doc_005.jpg,impreso,Wikimedia Commons (Public domain),"NO PODEMOS HABLAR
+LA-TRIBUNA
+DE RIQUEZAS NACIONA-
+CONTRA EL CIVILISMO
+LES, MIENTRAS ESTÈN
+EXTRANJERIZANTE: EL
+EN PODER DE MANOS
+EXTRANJERAS
+APRISMO PERUANIZADOR
+DIARIO APRISTA INFORMATIVO DE LA MAÑANA.—DIRECTOR: MANUEL SEOANE.
+Redacpión y Administración: Camaná No. 540. Telf. 30811.
+Precio: Cinco-centaves.
+no
+LIMA. SABADO 16 DE MAYO DE 1931.
+Número 1
+¿TRIUNFO LA CAUSA DE LOS CHOFERES?
+Créese aceptado el derecho
+MAS DE SIETE HORAS SESIONO
+¿AMENAZAS?
+de los autos ""colectivos"" para
+AYER EL TRIBUNAL ARBITRAL
+Se- rumorea que. a raís el
+fallo del Tribuual, que le os dos
+realizar el servicio urbano
+tavoratle. la Metropolitan Bu». s€
+decdarará en quiebra. Es precisé
+no'dejarse impresionar por 
+HASTA LAS TRES HORAS DE HOY IGNORASE EL FALLO
+LAS DELIBERACIONES FUERON SECRETAS
+gesto, recurso desesperadp de
+última', hora. El Gobierno dabe
+DEL TRIBUNAL ARBITRAL
+De acuerdo con lo dispues.
+pondiéndonos dicho caballe.
+Investigat severamente las cau-
+ro que en ella sólo se había
+sas do tal actitud. Y proet
+to el día anterior los compo-
+nentes del Tribunal Arbitral
+armonizado los puntos pri-
+en consecuencia, con la emergía
+Hasta las tres horas de esta dis las interioridades del debate.
+nombrado por el Gobierno
+marios de la reclamación,
+que sea necesaria.
+madrugada no hemos podido ob-: en el que los representantes o
+para resolver el conflicto
+quedando por resolver, en la
+ pais no es un frwdo coq-
+tener el fallo del Tribunal Arbi-' breros arrollaron los argumentos
+surgido entre los chofores
+reunión de la tarde, cuestio-
+quietado a favor de los extraulée.
+tral. Las largas deliberaciones de lo: representantes de las em-
+del ""cólectivo"" y la Metro.
+nes pscundarias y proceder
+La empresà que durante viitos
+de esté organiomo, que coneluye- presas, , tuvo la convicción de
+politan Bus"", se reunieron el
+a la expedición del fallo.
+afños obtuvo utilidades deapro.,
+ron pasádaís las cuce de la no-
+quo e? fallo iba a ser favorable.
+dl de ayer a las 11 a m. 
+porcicnadas debe dumerse
+che, pareció que concluirian con
+'seslonaron continuadamente
+LA SESION DE LA TARDE
+dste lindero. Y comprender q
+la expedición dul fallo. Asi se
+Ernere. el deveonocimiuto de
+hasta la 1 y 45 p. m. A esta
+el país ya no eomulga con 10.
+anunció, tambiéu, a los perio-
+los detalles, no sabiéndose cuau-
+reunión no se permitió la
+Ardua sin duda fuá la la
+das de molino.
+distam. Desgraciadamente no he-s puttiu de! pliego de reclainoa
+asistencia de los periodistas
+bor que desempeñó en esta
+Coneigumentemente, dybe
+mos podido obteñer el documen- hah:a, eldo nceptados. suscitó
+ni de la delegación de los
+begunda sesión el Tribunal
+ditar mudho antes de dar um 
+to ni tampoco adquirir una im- una curiosidad que tu acrecen
+Arbitral. Reunidos, a las 6
+co de la gravedad del que s= 
+premiću vegura sobre loe térmi- tárccir eu el curso de las horus.
+choferes que esperaba en uno
+de los compartimentol: de la
+p. m. solo salleron a dae 10
+nuncia, pues, en caso contrarim
+nos en gaq está rodactado el
+Cámara, con el objeto de ab-
+y medla p. m. despuéa 'de
+habrá de atcuerse a la b
+mismo.
+Ni en el Ministerio de Go-
+solver alguna 'duda a dicho
+cuatro horas y media de de.
+: queacias que acargeará su a-
+bievmo n1 21 la cusa de Pizarro.
+Tribunal en los puntos disdu-
+liberación.
+tud de iasubordinación moral
+Empero, todos los rumores
+ni en la Cámara de Diputados se
+tidd; en la renión anterior
+Antes de terminar la se-
+aunque pretenda esconderse
+desprendidos del dubate, y de loa
+pudo obtener noticlas concretaa.
+o,n la concurrenoia de las
+plón ya se (susurraba por.los
+rás de transparentes . disfraco
+sequéfoa ""dotalles que no escapan
+partesen díscordia.
+pualtlos de la Cámira ofi-
+juridicos.
+pérepituciaperiodtstica.
+Por fin, pàsadas Ias tres de
+coínciden en uinmur que os ca
+A- la salida de la reunión
+ciosamiente que el fallo que
+La  drueada, se tuvo ge seguí
+expodiria ésta saria favora-
+nodista; y choferes, se co.
+maradaa del vojante obcendrán
+dad de que à doc.umenio sólo're
+nor ac!rrcamo: al doctor En.
+cinas in el oojeto de que dos
+bi- 1 ia cranda del gremio
+mentaba y digcutíá, animeda-
+un triundo en au legítima causa.
+conceeria cn tas prinoras horas
+mente al fallo por produc
+Y no podía ser menos. Fren-
+informase sobre los puntos
+de chojferes. Reunidos en el
+中
+se. Cuanção las personas que
+te a las excesivac prutcisiones
+tratadà; en la sesión, res-
+talón de la coyejerla pe-
+integran-el Tribunad salle.
+de una émpresa, que aspiraba a
+ron, fueron rodeddàs por t
+mantener, en la ciudad de Lima.
+LA ASAMBLEA DE CHOFERES
+dos e inquiridos mobre ef fa.
+un intusto moropolio, obtenido à
+eapaldas del país, en la época de
+EF doctor Encinas mani-
+la oprobioma tiranía loguiísta, ha
+fáitó a los delegados y po-
+insurvtido con mpresionasito una-
+riodistas alli presentes qua
+nimidad el uuovo sentido nacio-
+ol fallo que al prespecto habío
+malista que va plasmando. lu
+pronunciado el Tribunal se.
+c.ncicncia del Perù.
+ría dado a conocer en el Mi-
+nisterio de Gobierno, pudlen-
+Para nosotroa la victoria con..
+de si adelantar que él favo.
+titalría un motivo de legitimo
+recia  los choferes en eus
+orzullo. El aprismo ha ve,váidi
+;tan reclamacionen, pues
+cado, siemore. la causa de los
+concedia el derecho a efed
+trabajadores nacionales. El m
+Tuar cl servíeio coloatiwo.
+nopolio a favor de la Metropoli-
+Los numerosos choferis que
+tan Bus conatitay? un serio'per-
+nentemenfehablan ape.
+juieio mo volamente contra loe
+rado notickas sobre la reso-
+trabadsdores del volante sino
+i ón estacionados, en la-
+contma las ex-compañiías nacio
+zuela de la Inquisielón, em
+nales de omoibuses contra los
+conccimiento de este date lo
+poqueos propietarios de grifos
+comentsron entuslastarme
+vendedores de gasolina. contra
+te, retirándose en el magor
+todas Jas pequeñas actividades
+orden.
+que podean el servicio del'tras-
+porte. la cuales están amena.
+UNA FIEBRE SOSPECHOSA
+ahdaa da extinguirse si subsiste
+el absorbente privilogio de la
+@mpaass extranjera. Y sobre to
+Apenas- conoluyó su
+o, periudica al público de la ca
+sición el delegado obrere
+pital, que anaía un cómodo, ba.
+Sindicato de Trabajadóres d 
+rato y rápido servieio de tras-
+tobuses, que argumentó elm
+ponte, gaè lo libre de la incó-
+mente sobre la situaión 
+moda esclavitud de lon autobu-
+los asistente al Tribánal 
+ses antihigiédicos y estrechos.
+raron la respuésta del Geremte o
+que ai míquiera trafican en nú-
+la Mgtrogelitan Bus, sefiór 
+dero apropiado para satisfacor
+co.
+las elementales necesidad del
+Pero-oh cmepstided-
+tralporte
+instante el weor Frane
+a la coneuprencia ques
+ESPECTATIVA POR BL FALLO
+ba por encontrarve endermo.
+flebre sübits, sghe Hegabe
+Bosén qua se lovantó la sn-
+40 gradod, lo obligaba al
+Ofrecemos dos vlstas de la asamblbea que, en a tarde de ayer, verificaron
+cia. Latémperatura  la
+sé Ed Tráamat Arbitral, pasd
+los choferer para escuchar el Informe de sus delegados ante el Tribu-
+nal Arbltral. — ARRIBA: una parte de loe asahbleietas. ABAJO; la
+obcortodaden. Murto
+posielóa causaron corpresa.
+éd Ja mnon do la mocba se creé
+Ma Jt ppecativa Conol.
+Mesa Directiva de la Federación.","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.902
+doc_006,datos/raw/documentos/doc_006.jpg,impreso,Wikimedia Commons (Public domain),"El Comercio
+EDICION DE LA TARDE
+FUSDADO EN 1835
+DIRECTOR
+Antonio Miró Quesada
+Lima me s S/. 2.5. Proviacias trimesire S/. 150
+SUSCRIPCION EN EL PERU
+SUMERO 4.17
+LDMA, MIERCOLES 15 DE MAYO DE 18:5
+SUSCRIPCION EN EL EXTRANJERO
+EDICION DE 4 PAGINA
+5 cts.
+Al semestre, 8/, 14.00
+[EIAQuDEE，
+ysuseñora,ueronasesinadosaa5mdhy
+EL ASESINO, UN JOVEN APRISTA, TRATO DE SUICIDARSE
+DESPUES DE COMETIDO ESTÉ DOBLE ASESINATO
+Tres disparos por la espalda recibió el Dr. Miró Quesada, y dos la señora
+María Laos de Miró Quesada
+El hecho ocurrió delante del Teatro Colón, a poca distancia del Club Nacional, al
+que iban a pie las dos víctimas
+LOS CADAVERES FUERON CONDUCIDOS AL LOCAL DE ESTE DIARIO
+Estupor e indignación produjo la noticia de este cobarde crímen
+Numerosas personas desfilan por la casa de esta Empresa Editora
+Gl Comercio
+Lima, 15 de mayo de 1935.
+El paír recibirá con horror la noticia del asesinato de
+nuestro Director: de su señora esposa, ocurrido en la tarde de hoy,
+en momentos en que salian ambos del Hotel Bolivar en dirección
+al Club Nacional. Una mano aleve y cobarde, ejecutó por la espal-
+da de las victimas, su trágico designio. La campaña de odio y de
+vergienza, de furia salvaje y descontrolada, ineuleada eo nuestras
+masas por sectarios de partidos internacionales, fructifica en el eri-
+men, el motin y la asonada rebelde, en que se depreda, se asesina
+en nombre de ums engañora redención social.
+Con el espiritu quebrantado por el más amargo de los dolores,
+heridos en lo más hondo de nuestro corazón, señalamos a la con-
+ciencia honrada del Perú, de ese Perú ai cual nuestro llorado Direc=
+tor consagró todas sus energías de gran patricta, y en cuya defenss
+ha caído, la monstruoss barbarie de quienes convierten el crimen
+en instramento de sus inconfesables apetitos. ""El Comereio"", inspi-
+rado y orientado pos el espiritu y la pluma de Don Antonio Mizó
+Quesada, asumió desde los primeros momentos la honrosa res-
+ponsabilidad de sostener inconmovible, contra los ataques disocia
+dores, el erden jorid co del país y el funcionamiento normal de sus
+instituciones tutelares. En este puesto de avanzada, en este lugar de
+sacrificio, tuvimos el ergullo de vernos capitaneados por el hombre
+que hizo de su vída un culto al honor, la honradez y el patriotismo.
+Contra él se estrellaron las pasiones de odio y rencor que desatan
+lo: migos del orden, pero él sabía y supo hasta el último mo.
+memio resistirlas impávido, convencido de que contribuir a desba-
+rutarlas era trabajar eficazmente por el bien nacional.
+Estamos orgullosos de él y seremos fieles a sus enseñanzas. El
+plomo homicida de un sectario ha cortado esa vida fecunda, esa
+mente preclara, ese corazón valeroso que desafió todos los riesgos
+e hizo frente a todos los peligros, sin otra mira que la grandezs del
+Perá; pero no ha podido matar sa espíritu que vive y vivirá siems-
+Doctor Antonio Miró Quesada
+Señora Maria Laos de Miró Qmesada
+pre con nosotr s y en nosotros, su espiritu que hoy se levanta ante
+Unánime sentimiento de condenación y de protesta contra la
+mortalmente en tres sitios diferentes. Uno de estos disparos hirió al
+el pais sublimizado por el martirio. La sangre y el luto que han caido
+zobardía y el ensañamiento del atentado, salió hoy de todos los la-
+doctor Miró Quesada en la cabeza. 
+sobre nuestra casa, se extienden sobre la nación entera; pero las sal-
+bios, al conocerse la imfausta y dolorosa noticia que damos a los
+( La señora Laos de Miró Quesada fue herida en los mismos ins-
+picaduras de aquélla manchan indeleblemente la frente de quienes,
+lectores de ""El Comercio"".
+tantes, por el propio criminal, dos veces. Uno de estos proyectiles
+sgazapados en la sombra, arman el brazo de fanáticos y les empu-
+El Director de este diario, señcr docter don Antonio Miró Quc
+atravesó tambión la cabeza de la señora Miró Quesada.
+jan al crimen, no sólo contra sus adversarios politicos, sino tambión
+contra la abnegada esposa, noble compañera de una vida de es-
+sada y su señora doña Marís Laos de Miró Quesada, fueron asesi-
+nades a la una y cuarenticinco minutos de la tarde de hoy. 
+LOS DISPAROS
+fuerzo y de pureza.
+( El docior Miró Qursada, después de la cotidiana reunión con el
+(Como hemos dieho, el asesino hizo einco disparos sobre el se-
+Recogemos y salremos conservar dignamente la herencia de va-
+flor y la señora Miró Quesada. A juzgar por el orificio de entrada
+lor, honradez y patriotismo que nos deja nuestro Director. Si él no
+personal de redacción de ""El Comercio"", salió de la imprenta y se
+de los proyectiles, el criminal atacó al Director de ""El Comercio""
+flaqueó nunca en la lucha, y ofrendó su existencia en aras del bien
+dirigió al Hotel Belivar, lugar de su alojamiento. Alli recogió a su
+por la espalda. El doctor Miró Quesada fus herido en mitad de
+de la Patria, nosotros continuaremos su ejemplo y siempfe nos vol
+señora, y con ella, a pie, serenamente, cómo todos los días, se fus
+In espalds, en la suca y a la altura de la base del cráneo y, fi-
+veremos a sa recuerdo pidiéndole inspiración y ayuda en los tran-
+hacia el Club Nacional, donde ambos solian almorzar. J
+malmente, en el costado derecho.'
+/La distancia entre la puerta principal del Hotel Bolivar y la del
+ces más dificiles que eslamos decididos a afrontar en salvaguardia
+/ La señora Laos de Miró Quesada. que iba del brazo de su
+del presente y el porvenir del Perú, a pesar de cualesquiera ase-
+Club Nacional, es, como se sabe, de menos de cien metros. 
+marido, ocapando el lado Interior de la acera, que en este caso
+(El señor y la señora Miró Quesada, después de cruzar la calzada
+chanzas e intimidaciones.
+correspondia a su derecha, al oir las dos dytonaciones primeras
+Cuando escribimos estas líneas, arriba, en el Salón de Actos de
+de la primera cuadra de la Avenida Nicolás de Piérola, recorrieron
+y sentir que el doctor Miró Quesada había sido herido, volvió
+""El Comercio"", están los dos cadáveres amados. Todo cuanto Liva
+el pequeño trozo de acera que está delante del edificio Giacoletti;
+el rostro y el cuerpo hacia atrás, girando sobre el lado izquier-
+tomando en aeguids la vereda de la ealle Belén, donde está rituado
+do. En este instante el cobarde agresor, que acababa de hacet
+tiene de más representativo desfila ante ellos expresándonos sus
+el Club Nacional. Al comienzo de esta cuadra, se encuentra, como le
+su tereer disparo sobre el Director de ""El Comerclo"" hizo fuego
+seatimientos de condolencia y dejando oir su más vibrante protes
+sabe, el Teatro Colón: Frente a este edificio, se produjo sorpresiva-
+sobre la señora Maria Laos, hiriéndola dos veces mortalmente.)
+la. La voz se nos quiebra bajo el peso del dolor, mientras lena nues.
+mente y a mansalva el cobarde ataque al señor y señora Miró
+( Uno de estos disparos hizo blanco en el rostro de la seño
+tros corazones la voluntad inquebrantable de ser dignos siempre de
+Quesada. 1
+ra Miró Quesada. |
+la vida y de la muerte de Don Antonio Miró Quesada.
+(Un sujeto que evidentemente conocía las costumbres del docter
+LA NOTICIA EN EL CLUB NACIONAL
+Antonio Miró Qunsada, esperó su salida del Hotel Bolívar y, en
+El doetor Miró Quesada y su señora iban casi todos los
+criminal acecho, siguió al Director de ""El Comercio"" y a su señora,
+dias a almorzar en el comedor de socic, de este centro social
+unos cuantos metros. Y cuando tuvo la seguridad de que sua homi-
+Hoy, como de costumbre, se dirigieron, faltando un cuarto pa-
+cidas disparos harían blanco en los cuerpos de las personas que he-
+ra las dos de la tarde, hacia el Ciub, cuando furron asesinados.
+bía escogido para victimas suyas, disparó tranquilamente, según se
+Dos o tres socios se encontraban conversando a las puer-
+nos dice sin demostrar ofuscamiento, su arma sobre el doctor Miró
+tas del edificio. Al ver caer, después de la rápida agresión de
+Quesada y su señora, a quienes había dejado adelantarse unos
+que fuoron vietimas, al señor y señora Miró Quesada, corrie
+pasos.)
+ron velozmente hacis ellos, con el objeto de poderles prestar el
+(Primero disparó sobre el docter Miró Quesada, a quien hirió
+auxilio que necesitaraa. Fataimezte ya se habia producido lo","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.961
+doc_007,datos/raw/documentos/doc_007.jpg,impreso,Wikimedia Commons (Public domain),"SANTIAGO
+PROCLAMA.
+DON JOSEF FERNANDO DE ABASCAL Y
+Sousa Caballero del Hábito de Santiago, Ma-
+riscal de Campo de los Reales Exércitos, Virey,
+Gobernador y Capitan General del Perú, Pre-
+sidente de la Real Audiencia de Lima, Super-
+intendente Subdelegado de Real Hacienda &c.
+SANTIAGO
+SANTAGO
+Desde que los valerosos militares de FER-
+NANDO el Católico, y Cárlos V trasplantá-
+ron con su sangre al Nuevo Mundo las virtudes
+de Castilla, prendiéron estas, y brotáron felizmen-
+te en el fértil suelo del Perú, sobresaliendo con
+especialidad el amor, lealtad, y gencrosidad
+para sus augustos soberanos. Así muy desde los
+principios de la conquista se celebró la corona-
+cion del Sr. Felipe Il por una de sus provincias,
+con una magnificencia y profusion, de las qua-
+les no se encuentran exemplos en las memorias
+de los otros pueblos de la tierra. Al nmismo
+Monarca, que pidió un donativo para subvenir
+á los crecidos gastos de las guerras que sos-","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.98
+doc_008,datos/raw/documentos/doc_008.jpg,impreso,Wikimedia Commons (CC0),"Maldonado, 4 de julio de 1914.
+Señor Don Rioardo Palme.
+111
+Muy distinguido señor y respetado emigo:
+Siento inmenso placer al dirigirle le presente, mensejera
+de mis más efusivas y cordieles felicitaciones por el acto de jus-
+te reperación que acabe de darle el Gobierno Provisorio con su de-
+creto de 26 de mayo dltimo. Su nombramiento de director honorerio
+de le BibliotecaNacional que U. reorganizara con tento tezón, celo
+é inteligencia, es más que un acto de desagravio y de justicia, com-
+pensación débilá lo mucho que ol Perá y sus intelectuales le doben.
+Apenabe mi alma considerar que á mi regreso á Lima, después
+de més de tres años de ausencia, no iba á hallar el noble y patrio-
+te anoiano, padre de las letres peruanas, en su sala de trabajo de
+la Bibliotaca, donde tuve el honor de conocerle ahora 24 eños; y
+mucho me contristabe tembién, si acaso vuelvoé le Socieded Geogré-
+fica, no ver oon le frecuencia á que estabe acostumbredo al ilustre
+tradicionista, cuyos consejos y lecciones escuché siempre con inte-
+rgsy aamiracion.
+Ya esta U., respetedo don Ricardo, nuevamente entre sus es-
+tantos y libros pere U. tan queridos; ya esté U. nuevamente entre
+sus emigos predilectos que piensen sin cerebro y hablen sin boce;
+ye esté U. nuevamente en su oasa, porque case suye es, indiscuti-
+blemente, ese viejo palecio de las ciencies y las letras. Alli os-
+pero derle pronto cariñoso ebrazo, y miemtras tal sucede, hego fer-","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.947
+doc_009,datos/raw/documentos/doc_009.jpg,foto,Wikimedia Commons (CC BY-SA 4.0),"EDIFICIOFENIX
+EL EDIFICIO FENIX FVE CONSTRVIDO EN 1934 POR LA FIRMA FRED T. LEY
+CIA. LTD. POR ENCARCO DE LA COMPAÑIA DE SEGVROS LA FENIX PERVANA
+PARA ALBERGAR SV SEDE SOCIAL.
+EL ENCARCO CONSISTIO EN ANADIR DOS PISOS Y VNA AZOTEA DE
+DEPARTAMENTOS A VNA FINCA EXISTENTE DE VN SOLO PISO DONDE
+FVNCIONABAN ALMACENES Y COMERCIOS EN RENTA. EN LA JEGVNDA PLANTA
+FVNCIONARON LAS OFICINAS DE LA COMPANÍA DE SEGVROS Y EN LA
+TERCERA PLANTA EL CLVB SOCIAL DE LA COMPANÍA (PHOENIX CLVB).
+INSTALACIONES DEL PHOENIX CLVB AL EDIFICIO COLINDANTE (FENIX ENCAR
+NCON
+EN EL ANO OS ES ADIVIRIDO POR ARTE EXPRESS Y COMPANIA SAC Y SOMETIDO
+VNA REHABILITACION INTEGRAL COMO EDIFICIO DE OFICINAS EN AL9VILER
+POR INICUATIVA DE SV GERENTE GENERAL FERNANDO PALAZVELO
+SEGÁN DROVECTO DE LA ARY.-LVCIANA SOLDI.","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.953
+doc_010,datos/raw/documentos/doc_010.jpg,foto,Wikimedia Commons (CC BY-SA 4.0),"B300932
+ALAVTY
+NUM.
+SEMESTRE.
+DZAUHIHNE
+10
+VIVA LA REPUBLICA.
+ELPERUANO
+WAIZ OKASOMA2
+MATRIZDEPLOMO
+DEL PRIMER EJEMPLAR DEL
+29420
+DIARIO OFICIAL EL PERUANO
+DEL SABADO 13DEMAYO DE 1826.
+LOS EDITORES
+por colcto del Mimitira da Vobtre. Voomcian l da es
+Nuts dl S-. Pmlo à S. E. el LiaEnTdDon, dejits
+DOTFPREO
+Cosado un puelo ha eoperedo grantes coteate po
+locionat esteriarcs.
+ésgo à espens repotaris coliand ee adiniacion, es
+SuÑon.-Cusoda soio egoedla en Passtoa
+un deer segada stnsa, deorolsieno lon prnipe de
+pueis y atided coman que sirieren de tase a las relur
+mas Égptes los prrildicos, que son los iganos de la upi
+mion, pemnden coeipave solrtmeneta a is y diricila re-
+rapital eo socmnia de lus smpremat truos de V, Éo
+sa folis, a próvee a tree le represedo a esta
+dibpale la loas pota mota l l poa con
+Énla ee ls tencare ren qos es empetie de na ata ls ms
+lae publieo. o cos be la eule d l sere de im.
+prenta ae difotes iargitioner pi, y staan sl golne
+aie ecemminar si pus protideacis s hurss à otls, i ton
+cottraries à un a la ley, ti estio à un en la esices de vus
+oruoss leioio, asopun en sonpona mmaia compatalle eon
+Sucultden, lomodistamee se cosvicrion e drotares de
+PRIMER EJE
+la mncia.
+Ée ba diche, y enn raana, que las cets beditios
+DIARIO OFICI
+probucro comeconcian mas hoiler que la gue, poro
+iton lus pasi de la maltal, perce al edno
+que salió a la huz
+preperan la srade s la seope, No asl los delacsicos que
+oqoe, e ben oe me eourote, luns e sls sie loapualla
+devarman a le smaineciaa de sue podes dal a l trpaile
+de lon cmsiomy al miome lempe que posen ee eerae el
+isterinaente deepashé al Meoelera de iooons, ma diaa
+à Éaroe de ms lata ua tels bien pan y srlesle pot a
+petomomoe, somnoa sn smagoos, y cmn sia erta
+1
+sin siua sale let comotide ca volt ag seetos
+e ée selliiony emapustinio del dese soiaite te
+enntn a la Amtri, sepusin impredememo spica
+ves melerslnie, corrtameste los marerila, he tresone pe
+wwwwwww
+eí ee es  pp g al
+aehe de ls eviciony ée ls sierarla Mengon es el elle
+pílemaie dse recorler Msras par la tiala
+pg le s o, y dp po  ptà
+coms sse d éin viptan, émeola toe la Éete, n mal
+mgee ss seres al pes d seimme,  a los to
+rommsrto que el suecimeese de eoa costincia pooe, y la cete
+sgioe de la losacia
+úhooes s s mprio m ma, apé 
+oe de s petrs s soe, pessle hatier el répns eslà
+Be peasa ps la apoa afoo, cas moria sae
+a cd V. E le sus, , tere pmeple me vcé ée
+potn pots de me mt,  la p yl po lajas
+s ss pore valoree à le vile pollice. rola pa prree
+p e t
+ Vire hoe dae a comaon de lé calom que
+sm le pomle ségotoe que aon s s s d sn
+sé mas soron sue npoates- Erite tretarts de asere
+JOCOT
+poton, sl fae le nuntnn spinatoo, y si momste de sone
+son lue ds loroon, se pucie gaograe la conasar putoa
+5
+ame seom  se s laraon ais toa somta
+La seaison derliés de les reiatie eirirn le la e
+scon la soae inporinameie, el iutopeaat catat o
+aeloqies
+las sg, mn spnis maiosin iee es la e
+Sae, saria cigos à s smpesio, a s lptte
+sa y ss hehée prtaie a é prs song mescal serion,
+EFTEIOL.
+m
+a olti Mce e M
+Se he propite sl Caioe la sosatuttion de as
+some he lore susis sl pute ge Coliat é sota septil
+o ougeae gur qostson somar e l eootin é s
+pomaria lotoe é soée sisn sn ponpuntinin
+sulimuo a m moto, nto  ste sl si
+pe s sortt, paclisie mir lus sogos se al mome
+s l smmn D. d Duy à Fse qus
+  s  qn    pi","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.56
+doc_011,datos/raw/documentos/doc_011.jpg,foto,Wikimedia Commons (CC BY 2.0),"Nomuts ""Hmasoae
+Armada del Pert.
+ESTADO GENERAL
+en el mes de la focha.
+Ofleiales de guerãa.
+Guardias Marinas.
+Oficiales mayores y mnquinistas.
+Armamento.
+Municionesy mrtificios.
+Trasporte.
+ Ae Egith
+Firients
+FER2
+TPaan
+n o d
+PP
+Trout
+Total
+Repite dtt an
+Adinea d gr
+Epalici dr pa
+fenion
+H
+12
+f
+67
+1
+H
+A0
+Dimensiones y calado.
+e
+Casco, blindages y cubiertn.
+Máquinas, prineipal y necesovins.
+Jávcin y arboladura.
+Velámen.
+Udlen aeol aisgle pp
+200
+Pentta
+0
+H
+de Sos Setalles
+Cated
+M
+blenday
+Jet
+nri 
+ntede
+Embareaciones.
+Anclas y nmarras.
+Instrumentos de navegacion.
+Vasijerin.
+Viveres, ngun y carbon.
+Orrmemeta Bouned n
+Al-
+porp re 2s Anole de
+Shan tognt  
+12
+lempers de Wtaee
+]
+Bins pan
+be dias
+Onaldi
+d.150 lld
+pan sonG
+14
+Azua pas
+3 dias
+J0
+Rass de sespect
+Cadma de 1yhpuly!
+boaga
+thha d 
+Weden temelades
+230 toucledy
+lypii de juliy!
+NG[
+En  masies an meluided einte y de indiidund de le a Denusin
+Al anle Della S  d 18","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.685
+doc_012,datos/raw/documentos/doc_012.jpg,foto,Wikimedia Commons (CC BY-SA 4.0),"CARTA ESCRITA PORELGENERAL
+FELIPESANTIAGO SALAVERRY
+HORASANTESDE SUMUERTE
+AREOUIPA,FEBRERO 17-1886
+MIQUERIDA
+ESPOSA
+DENTRO DE POCOS MOMENTOS VOY A SER
+PASADO POR LAS ARMAS, Y TE DEBO EL ULTIMO
+ADIOS: ES ESTE.
+TU CONOCIAS BIEN MI CORAZON Y NO PUEDES
+DUDAR DE QUE MIS INTENGIONES, EN TODA MI VIDA
+PUBLICA,HAN SIDO MUY PURAS: ELLAS SE HAN
+DIRIGIDO A LA FELICIDAD YA LA GLORIA DE MI PAIS
+NO OBSTANTE,EL DESTINO ME PREPARABA UN
+TERMINO HORRIBLE:CONFORMEMONOSA EL.
+SOLO SIENTO.AL MORIR,NO HABER LABRADO
+LA FORTUNA DE LA MEJOR MUJER QUEHANACIDO
+PERO TU JUICIO,Y TU TALENTO VALEN MAS QUE
+TODO,Y ESTAS DOS BRILLANTES DOTES TE
+QUEDAN FORTIFICADAS Y MEJORADAS POR LAS
+DESGRACIAS.NO TE DEJES ENVOLVER EN ELLA
+TRANQUILIZATE.CONSUELATE Y VIVE PARA MIS
+INFORTUNADOS HIJOS QUE NO TENDRAN OTRO
+APOYO.TU LOS EDUCARAS PARA LA VIRTUD Y LES
+HARAS CONOCER MIS INMERECIDAS DESGRACIAS.
+HE PEDIDO PERMISO PARA HACER UN CORTO
+TESTAMENTO,QUE TE ENTREGARAMIHERMANO
+JUAN.CONSERVATE ETERNAMENTE EN ARMONIA
+CON ESTE BUEN MUCHACHO,QUE TE AYUDARA
+A SOBRELLEVARTUS PENAS
+ADIOS QUERIDA JUANA:RECIBE EL CORAZON
+DETUDESVENTURADOESPOSO
+FELIPESANTIAGO
+SALAVERRY","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.975
+doc_013,datos/raw/documentos/doc_013.jpg,foto,Wikimedia Commons (CC BY-SA 3.0),"MIRAFLORES
+CIUDAD
+HEROICA
+El máximo héroe naval del Perú nació en Piura el 27 de julio de 1834, hijo del Teniente Coronel
+Juan Manuel Grau y Berrio, natural de Cartagena de Indias, que llego al Perú formando parte del
+ejercito del Libertador Bolivar, y de Doña Maria Luisa Seminario y del Castillo, descendiente de
+antiguas familias piuranas.
+Forjado desde niño en las rudas faenas de los barcos, recorrió los mas diversos mares. Obtuvo
+como hombre de mar una insuperada experiencia, que le serviría luego como oficial de la
+Armada Nacional y como diputado por Paita, ingreso al servicio de la Armada a los 19 años.
+Combatió a la flota española en la guerra de 1866. Durante la Guerra con Chile no rehuyó el
+combate. En Iquique, al mando del monitor ""Huáscar"", hunde a la corbeta ""Esmeralda"", en la que
+sucumbe su Comandante, el Capitán de Fragata Arturo Prat.
+Su magnanimidad con los chilenos náufragos y heridos suplicantes, es reconocida con el grito
+""Viva el Perú generoso"".
+Grau recorria impávido las costas septentrionales de Chile, apresaba buques y lanchas, y con
+osadiay destreza burlaba la persecución de los poderosos blindados chilenos. Dice de él Riva
+Aguero: ""Era el alma y el brazo, la espada eficaz y la milagrosa armadura, el denodado ariete y
+el único sólido valladar del Perú""
+En la mañana del & de octubre de 1879, se vio rodeado por toda la escuadra Chilena, frente a
+Punta Angamos. La superioridad de la artilleria enemiga aceleró el combate; duró menos de dos
+horas, Los disparos del ""Cochrane"" arrasaron la torre de mando del Monitor. El cuerpo de Grau
+voló en pedazos, A su lado murieron sucesivamente el héroe lambayecano Teniente 1º Diego
+Ferré, ayudante de Grau; su segundo, el Capitán de Corbeta Elias Aguirre, tambien lambayecano
+y el Teniente 1º Melitón Rodriguez. Cayó con graves heridas el Teniente 1º Enrique Palacios,
+muerto pocos dias después. El mando recayó en el Teniente 1º Pedro Gárezon, quien dio la
+orden de hundir la nave. Ya el ""Huascar"" se sumergía cuando fue capturado por los chilenos.
+Grau pasó a la inmortalidad como marino, estratega, valiente y generoso. Cumplió su palabra:
+""Si el ""Huáscar"" no regresa triunfante al Callao, tampoco yo regresare"".
+Casado con Dolores Cabero tuvo diez hijos. Es un ejemplo como esposo, padre, militar y politico.
+Su vida y su muerte, constituyen un sublime legado para la juventud de la Patria y para la Marina
+de Guerra del Perú.
+""PARA HACERNOS DIGNOS DE SU BENDITA HERENCIA, JUREMOS TODOS TRABAJAR
+POR EL ENGRANDECIMIENTO DEL PERÚ CON LA AUSTERIDAD, LA PUREZA DE MIRAS.
+LA ABNEGACIÓN Y EL VALOR DE LOS QUE NOS DIO TAN MAGNIFICO EJEMPLO""
+Dr.JORGE MUNOZ WELLS
+Cap. de Nav. (r) JORGE GUERRERO LANG
+Alcalde de Miraflores
+Presidente de la Asociación Nacional Pro Marina del Perú
+23 de octubre de 2012 con ocasión de la colocación de la nueva efigie a Don Miguel Grau Seminario","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.989
+doc_014,datos/raw/documentos/doc_014.jpg,foto,Wikimedia Commons (CC BY-SA 3.0),"TODO SER HUMANO TIENE EN EL CAMINO SU PEDESTAL DE HEROE
+EL MERITO CONSISTE EN QUE LLEGADO EL MOMENTO
+TENGA EL CORAJE SUFICIENTE PARA SUBIR A EL
+J.QUUey-
+QUINONES","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.929
+doc_015,datos/raw/documentos/doc_015.jpg,foto,Wikimedia Commons (CC BY-SA 4.0),"CAÑON DEL COLCA
+FALLA DELA CORTEZA TERRESTRE EN
+TRE LOS GRANDES COLOSOS VOLCAL
+COROPUNA DE 6.425 YAMPATO DE 6,310
+LOMFN SU MAYOR
+ND
+100 KM.DELONGITUD","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.913
+doc_016,datos/raw/documentos/doc_016.jpg,foto,Wikimedia Commons (CC BY-SA 4.0),"EDIFICÓ ESTA CASA
+EL GENERAL DON JUAN MANUEL DE
+ITURREGUI Y AGUILARTE, ALCALÉ D ESPA
+ÑOLES EN EL PUEBLO D LAMBAYEQUE
+DONDE NACIO. Y ROGR D L& EMANGRGON
+ALLL PROCLAMADA DESDE LOS BALCONES
+D SU MORADA PROPIA EL AÑO D 1820.
+SIRVIO A LA NACON ©MO GENERAL DEL
+EJERCTO MINISTRO D HACIENDA EN 1835
+MINISTRO RENIPOTENGARIO DEL RRU EN CHILE
+EL AÑO D 1823 Y EN La GRAN BRETAÑA
+DESDE EL AÑO D 1827 HASTA EL D 1834
+Y D 1845 A 1849. SENADOR D La RERBLLC
+EN 1851 Y PREFEcTo DEL DEPARTAMENTO
+D-L LIBERTAD EN 1854.-©MO TESTMONIO
+Y RÉCUERDO D SUS VIRTuDES RBLICAS
+Y RIVADAS SE CLOCA LA INSCIRION PESENTE","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.961
+doc_017,datos/raw/documentos/doc_017.jpg,manuscrito,Wikimedia Commons (Public domain),"Fugill, 29 de pili 917
+ot. oni lai Egut
+SAannnco.
+homvcmente coumovid bé se alut cart
+eugos tinins e ageadyeo"" de visas. Elh me ke
+Aeanimad nencho,n sets dias n gue ee san
+tim tan anal, fues agi kay guimes ome alacon
+core trt rudega.! bil grsios, seen Ege
+som;  gtil a y bot. one hm kech am
+l bin; milgrais.
+En ateo bias, atnt a hrisi canivn do Ue,
+invini a l renisth tnccini t a Evagauil
+algermos oe suis versos; y dhis pisa gue gait.
+slle peruiti teegal al pecllisiat l cnnte
+sid a n eit cte, al el solintue
+me lieion de el,-  prne, -Noy  avvi
+four sste niom mpor in minon I L Aoor
+nn"" in gun pui udlicae.
+Hay nt gonint for du oalt, one
+ncit, L U an afuti
+a
+Carta de César Vallejo a José María Eguren.","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.658
+doc_018,datos/raw/documentos/doc_018.jpg,manuscrito,Wikimedia Commons (CC0),"17
+wwww
+whuth
+Sener dom Ricardo Palma
+htm
+Livng
+Mi respetado g querido maestro:
+Desde estao apartades co-
+Da a
+marcas deses manifestar a al. el profimdo dolor que he
+pentido al infornmarme que eapiritus estrechis, vengativos,
+han arrascado a' ll, por la fuerza, de la caea que U reedi-
+ficara,-pam honra die Periis- a coeta de tants esfuerzos
+Dean Ja 
+Jamas hubiena ereido gue mandataris
+algimo se atrevrera a turbar el posiego que aual ningimo
+Tiene U. merecido, deskuis de tants aos de labor patrio-
+ 
+tica, fecunda g benefiin; Jamas hubiera peneado que
+hombre algimo osara faltar las canas de tan insigue lite-
+rato, canas resketadas siempre peer profirs g extraños, por
+jovenes g crejio, por ruicos g pobres.
+ndne
+Desde 1888, que se firndo la Sociedad Geografia
+g. oaupo im departament en la tarty alta de la Bibliateen
+National, es decir quatro anis destoues que al, la hiciera
+renacer con sus esfuerzos, reputacion  influencias, he si-
+a
+do puedo decir testigo de sm innmenen labor de su asidui
+Todo su tiempo era absorbido for","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.811
+doc_019,datos/raw/documentos/doc_019.jpg,manuscrito,Wikimedia Commons (Public domain),"honit Husssi Gercuanse y Chilenas Su pode, y gue son las
+the figurah in la liatit
+dente. l be s
+espeko il Sapitan d
+heu induodableont de
+Dipameins des
+Crapata D Setuast
+abun egnnir lonsul
+CoundF o to Temsal.
+Uu Sageado dlebee
+sherrboho dhsnseea
+da"" fne lano od nolo
+ dt i adisifi
+Misgesns, y porme
+gubraca ya, rictime a
+h antia a sumi
+o a EdI Sintepeo.
+Isn teuneksrio auago, in
+solu.
+fundanlnt pul ssts
+lfnra y glashs de
+Aritisamshale mis ten
+isute p Le touhee
+ba banbelea oh Su
+tmimts de loncto
+foe Oes ee ln
+Patrie
+lis, lupo dis la ore
+ttiuge inntt se
+Pplarando Sincesa
+tnxla paea opible
+shatae f hy sthenent
+menltt Lan infaueto
+u , 
+acoteumnt,y
+stoke otgeihateta.
+acosnondalain
+Lu ol lombet na
+su Otulo, lurnplr
+al et  l rse
+con il ely tis.
+passde e te biyar
+te ade oh whaisl
+un las aquse of gei
+I ar pase Vol. inssti
+Lia da Garml IaMat
+ue, inte a d
+me 
+Fiybosae
+Ai meutarn in","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.571
+doc_020,datos/raw/documentos/doc_020.jpg,manuscrito,Wikimedia Commons (Public domain),"h D Joming Fristan
+VeralguaOnarze 2de1822
+0
+Mi mafon Amiga inclayo'a v d van
+igineon e
+ad aabelyl ofico l lomanSorales
+qe enlenad comer las ventaas qvamor
+à pever i paxalicamor nrtaa movimintor
+ddo un momento g virter tantor inidenten
+Vin xa murtro Trotecton con murtur delibexa
+comes aon la inaunitancia g i pedeor un mago
+ao tan coecelente g? poc vee re prerenta tal.
+ver le penderomor ? ciempoe.
+Ai mi agDigae 
+aliviado dla teniana y mare o aru Deaina
+Gammage
+Mrchar coas ami Vicaris y Echenign","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.646
+doc_021,datos/raw/documentos/doc_021.jpg,manuscrito,Wikimedia Commons (Public domain),"Eeme G Agurtin Samarsa
+Suniti 12 wa Agostk wuteo
+Mi repetaba hal y Padrino.
+him embargo de hallaame bien enferme ton
+la diventinia a. he lontraido in mi confi
+macion de tbaneay, me he lituado in ente
+ma- li ui mab, lomo y probable, i agza-
+ba, me sena permitid Eajar, a Oubambay
+afir de upaxar mi talnd- Eppno mi Jhat,
+No me eansare in zecomemdan a le, In
+honraades l Comandante tiabena-Ate Jege
+eh katallon bmeo- tl hasn al. enta
+inrticacion, ieo eumptin con lw prusticin
+periana de lo
+Seseas a t. may buenai Labnd in
+decidids alrigad e inbariable dexvicon
+1.
+Abigha Fooman","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.732
+doc_022,datos/raw/documentos/doc_022.jpg,manuscrito,Wikimedia Commons (Public domain),"$30
+r I M. Rodiguer R.
+Prefecto del Dept?3
+Lambayeque
+Mi querido Fr Frefecto:
+El Ir Pedro Adolfo Espinoza,
+despues de conversar conmigo, regresa a Mbotu-
+pe lugar de su pesidencia para ocuparse de eus a-
+suntos particulares.
+Recomindolo mui especialmente a su
+distinguida considevacion i a la de ins auto-
+ridades suballermas.
+fectuosamente lrge
+lverol","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.9
+doc_023,datos/raw/documentos/doc_023.jpg,manuscrito,Wikimedia Commons (Public domain),"$30.
+S Por! A. Antene Red Rame
+reguipa
+Chirrils, abril o fe
+IRrel lpootaiora te esta quie
+debe instrir a V. acerca de
+Siempre Srye
+aafme amige.
+Palta","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.746
+doc_024,datos/raw/documentos/doc_024.jpg,manuscrito,Wikimedia Commons (Public domain),"Grd. D.Sran. C de Cundece
+Chomillor 10. de Ahril 1862.
+Aliestemuble Panehita
+Srl mo. Bareto enn
+yo Aavor Meatla O. en du estemieda
+desta Jhe. Mubira eaerito Le meco
+menducion, que ee to que corientem
+Re uta entre mosotrop, mo la hutoin
+eeritonfon
+Em el derpiecho de este Jobno.
+a nyo Arent sstoy yo mo son muy fa
+ciles tas dorpresus  el atuso de alto
+Auneionurios contra empleudor Subal
+Tlees.
+El unics pues que Pudiira re
+puturse enemigo de Baseto sesie yo
+po unto e mion.es que se ha oue
+dudo indefiniry he dudo esta on.
+por hubesla tomuda infragunti delito,
+conipirundo a se modo con los ""eme
+gal delrepodo putlico; pero mr mece
+sit esstame mch para ersua
+dir, ghe mis poocelicentos  hone
+do legales, mi' que ee aomtre simo","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.68
+doc_025,datos/raw/documentos/doc_025.jpg,manuscrito,Wikimedia Commons (Public domain),"11-54(2)
+Gi
+REPÚBLICA DEL PERÚ.
+Guaman meno Bo-de 1825.
+Prefectura del
+Departamento
+t fo
+Jenon hond.
+Ninvare lis. mmmaa abonae en
+ua Yiten. al capit.d rnumel
+rupo la luanta pante re una pa
+ga, en Naron be que o ha ya
+maacha dera dno 
+abomauele aulafunenia
+Dig queals
+S0rbegore
+U
+aguere p:mi a marian Lica
+lante Aaph. I1ir E.1
+Men.zerpol","PaddleOCR 3.7.0 (PP-OCRv6 medium det+rec, engine=transformers, mps, sin preprocesamiento)",,0.682
