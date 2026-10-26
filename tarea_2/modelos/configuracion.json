@@ -1,0 +1,21 @@
+{
+  "descripcion": "Configuración de todos los modelos usados en la Tarea 2. Los pesos no se versionan: se descargan de Hugging Face / PaddleX la primera vez.",
+  "ocr": {
+    "base": {"modelo": "PaddleOCR 3.7.0 – PP-OCRv6 medium (det + rec)", "motor": "transformers (PyTorch)", "dispositivo": "mps",
+             "use_doc_orientation_classify": false, "use_doc_unwarping": false, "use_textline_orientation": false, "preprocesamiento": "ninguno"},
+    "alternativa": {"modelo": "PaddleOCR-VL 1.6 (0.9B) + PP-DocLayoutV3", "motor": "transformers", "dispositivo": "mps",
+                    "use_doc_orientation_classify": false, "use_doc_unwarping": false, "max_new_tokens": 2048}
+  },
+  "asr": {
+    "comun": {"idioma": "es", "vad": "Silero (faster-whisper), pausas de 0,3 s",
+              "regla_respaldo_vad": "si el VAD reconoce voz en menos del 30 % del clip: Whisper sin VAD / Qwen en ventanas de 12 s"},
+    "base": {"modelo": "faster-whisper 1.2.1 – small", "compute_type": "int8", "dispositivo": "cpu", "beam_size": 5},
+    "corpus": {"modelo": "faster-whisper 1.2.1 – mobiuslabsgmbh/faster-whisper-large-v3-turbo", "compute_type": "int8", "dispositivo": "cpu", "beam_size": 5},
+    "alternativa": {"modelo": "Qwen/Qwen3-ASR-0.6B-hf", "dtype": "bfloat16", "dispositivo": "mps"}
+  },
+  "diarizacion": {"modelo": "pyannote/wespeaker-voxceleb-resnet34-LM (pyannote.audio 4.0.7)", "agrupamiento": "jerárquico, coseno, umbral 0,7, sin fijar n_hablantes"},
+  "seudonimizacion": {"funcion": "voz.seudonimizar (rapidfuzz)", "parecido_nombres_completos": 80, "parecido_nombres_sueltos": 90,
+                      "lista": "datos/raw/seudonimos.json (no se versiona)"},
+  "llm": {"modelo": "Qwen/Qwen2.5-3B-Instruct", "dtype": "bfloat16", "dispositivo": "mps", "decodificacion": "greedy", "max_new_tokens": 400,
+          "max_caracteres_entrada": 6000}
+}

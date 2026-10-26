@@ -1,0 +1,314 @@
+id,tipo,modelo,cer,segundos,texto
+doc_001,impreso,PP-OCRv6 (base),0.022,0.97,"PERÚ
+Ministerio
+Oficina General
+de Salud
+de Comunicaciones
+COMUNICADO OFICIAL DE PRENSA N°21
+El Ministerio de Salud lamenta informar el sensible fallecimiento de
+dos personas por infección por COVID-19.
+Se trata de un varón de 47 años con antecedentes de viaje a España,
+que presentaba asma bronquial y obesidad. Fue internado en la
+unidad de cuidados intensivos del hospital 2 de Mayo, por presentar
+insuficiencia respiratoria y shock séptico. Su evolución fue
+desfavorable produciéndose su deceso a las 18.15 horas.
+El otro caso corresponde a un paciente de 69 años, con antecedente
+de viaje a España que fue atendido en el hospital Edgardo Rebagliati
+por un cuadro respiratorio y falleció en su domicilio.
+En nombre de todos los peruanos expresamos nuestras más sentidas
+condolencias a los familiares en este momento de dolor.
+Lima, 19 de marzo del 2020
+OFICINA DE INFORMACIÓN PÚBLICA
+OFICINA GENERAL DE COMUNICACIONES
+(Teléfono 315-6600 anexo 2948)
+0文"
+doc_001,impreso,PaddleOCR-VL 1.6,0.063,5.58,"COMUNICADO OFICIAL DE PRENSA N°21
+
+El Ministerio de Salud lamenta informar el sensible fallecimiento de dos personas por infección por COVID-19.
+
+Se trata de un varón de 47 años con antecedentes de viaje a España, que presentaba asma bronquial y obesidad. Fue internado en la unidad de cuidados intensivos del hospital 2 de Mayo, por presentar insuficiencia respiratoria y shock séptico. Su evolución fue desfavorable produciéndose su deceso a las 18.15 horas.
+
+El otro caso corresponde a un paciente de 69 años, con antecedente de viaje a España que fue atendido en el hospital Edgardo Rebagliati por un cuadro respiratorio y falleció en su domicilio.
+
+En nombre de todos los peruanos expresamos nuestras más sentidas condolencias a los familiares en este momento de dolor.
+
+Lima, 19 de marzo del 2020
+
+OFICINA DE INFORMACIÓN PÚBLICA
+
+OFICINA GENERAL DE COMUNICACIONES
+
+(Teléfono 315-6600 anexo 2948)"
+doc_007,impreso,PP-OCRv6 (base),0.033,2.27,"SANTIAGO
+PROCLAMA.
+DON JOSEF FERNANDO DE ABASCAL Y
+Sousa Caballero del Hábito de Santiago, Ma-
+riscal de Campo de los Reales Exércitos, Virey,
+Gobernador y Capitan General del Perú, Pre-
+sidente de la Real Audiencia de Lima, Super-
+intendente Subdelegado de Real Hacienda &c.
+SANTIAGO
+SANTAGO
+Desde que los valerosos militares de FER-
+NANDO el Católico, y Cárlos V trasplantá-
+ron con su sangre al Nuevo Mundo las virtudes
+de Castilla, prendiéron estas, y brotáron felizmen-
+te en el fértil suelo del Perú, sobresaliendo con
+especialidad el amor, lealtad, y gencrosidad
+para sus augustos soberanos. Así muy desde los
+principios de la conquista se celebró la corona-
+cion del Sr. Felipe Il por una de sus provincias,
+con una magnificencia y profusion, de las qua-
+les no se encuentran exemplos en las memorias
+de los otros pueblos de la tierra. Al nmismo
+Monarca, que pidió un donativo para subvenir
+á los crecidos gastos de las guerras que sos-"
+doc_007,impreso,PaddleOCR-VL 1.6,0.014,6.37,"PROCLAMA.
+
+DON JOSEF FERNANDO DE ABASCAL Y Sousa Caballero del Hábito de Santiago, Mariscal de Campo de los Reales Exércitos, Virey, Gobernador y Capitan General del Perú, Presidente de la Real Audiencia de Lima, Superintendente Subdelegado de Real Hacienda &c.
+
+   
+
+
+   
+
+
+Desde que los valerosos militares de FER-NANDO el Católico, y Cárlos V trasplantaron con su sangre al Nuevo Mundo las virtudes de Castilla, prendieron estas, y brotaron felizmente en el fértil suelo del Perú, sobresaliendo con especialidad el amor, lealtad, y generosidad para sus augustos soberanos. Así muy desde los principios de la conquista se celebró la coronación del Sr. Felipe II por una de sus provincias, con una magnificencia y profusion, de las quales no se encuentran exemplos en las memorias de los otros pueblos de la tierra. Al mismo Monarca, que pidió un donativo para subvenir a los crecidos gastos de las guerras que sos"
+doc_008,impreso,PP-OCRv6 (base),0.047,3.71,"Maldonado, 4 de julio de 1914.
+Señor Don Rioardo Palme.
+111
+Muy distinguido señor y respetado emigo:
+Siento inmenso placer al dirigirle le presente, mensejera
+de mis más efusivas y cordieles felicitaciones por el acto de jus-
+te reperación que acabe de darle el Gobierno Provisorio con su de-
+creto de 26 de mayo dltimo. Su nombramiento de director honorerio
+de le BibliotecaNacional que U. reorganizara con tento tezón, celo
+é inteligencia, es más que un acto de desagravio y de justicia, com-
+pensación débilá lo mucho que ol Perá y sus intelectuales le doben.
+Apenabe mi alma considerar que á mi regreso á Lima, después
+de més de tres años de ausencia, no iba á hallar el noble y patrio-
+te anoiano, padre de las letres peruanas, en su sala de trabajo de
+la Bibliotaca, donde tuve el honor de conocerle ahora 24 eños; y
+mucho me contristabe tembién, si acaso vuelvoé le Socieded Geogré-
+fica, no ver oon le frecuencia á que estabe acostumbredo al ilustre
+tradicionista, cuyos consejos y lecciones escuché siempre con inte-
+rgsy aamiracion.
+Ya esta U., respetedo don Ricardo, nuevamente entre sus es-
+tantos y libros pere U. tan queridos; ya esté U. nuevamente entre
+sus emigos predilectos que piensen sin cerebro y hablen sin boce;
+ye esté U. nuevamente en su oasa, porque case suye es, indiscuti-
+blemente, ese viejo palecio de las ciencies y las letras. Alli os-
+pero derle pronto cariñoso ebrazo, y miemtras tal sucede, hego fer-"
+doc_008,impreso,PaddleOCR-VL 1.6,0.043,9.42,"Señor Don Ricardo Palma,
+
+time.
+
+Muy distinguido señor y respetado emigo:
+
+Siento inmenso placer el dirigirle la presente, mensajera de mis más efusivas y cordiales felicitaciones por el acto de jus-te reparación que acaba de darle el Gobierno Provisorio con su decreto de 26 de mayo último. Su nombramiento de director honorario de la Biblioteca Nacional que U. reorganizara con tanto tezón, celo é inteligencia, es más que un acto de desagravio y de justicia, compensación débilá lo mucho que el Pertú y sus intelectuales le deben.
+
+Apenabe mi alma considerar que é mi regreso à Lima, después de más de tres años de ausencia, no iba a hallar el noble y patrio-te anciano, padre de las letras peruanas, en su sala de trabajo de la Biblioteca, donde tuve el honor de conocerle ahora 24 años; y mucho me contristaba también, si acaso vuelvo la Sociedad Geográ-fica, no ver con la frecuencia é que estaba acostumbrado el ilustre tradicionista, cuyos consejos y lecciones escuché siempre con inte-res y admiración.
+
+Ya está U., respetado don Ricardo, nuevamente entre sus espantos y libros para U. tan queridos; ya está U. nuevamente entre sus amigos predilectos que piensen sin cérebro y hablan sin boca; ya está U. nuevamente en su casa, porque casa suya es, indiscutiblemente, ese viejo palacio de las ciencias y las letras. Allí espero derle pronto cariñoso ebrazo, y miembros tal sucede, hago fer-"
+doc_009,foto,PP-OCRv6 (base),0.133,3.51,"EDIFICIOFENIX
+EL EDIFICIO FENIX FVE CONSTRVIDO EN 1934 POR LA FIRMA FRED T. LEY
+CIA. LTD. POR ENCARCO DE LA COMPAÑIA DE SEGVROS LA FENIX PERVANA
+PARA ALBERGAR SV SEDE SOCIAL.
+EL ENCARCO CONSISTIO EN ANADIR DOS PISOS Y VNA AZOTEA DE
+DEPARTAMENTOS A VNA FINCA EXISTENTE DE VN SOLO PISO DONDE
+FVNCIONABAN ALMACENES Y COMERCIOS EN RENTA. EN LA JEGVNDA PLANTA
+FVNCIONARON LAS OFICINAS DE LA COMPANÍA DE SEGVROS Y EN LA
+TERCERA PLANTA EL CLVB SOCIAL DE LA COMPANÍA (PHOENIX CLVB).
+INSTALACIONES DEL PHOENIX CLVB AL EDIFICIO COLINDANTE (FENIX ENCAR
+NCON
+EN EL ANO OS ES ADIVIRIDO POR ARTE EXPRESS Y COMPANIA SAC Y SOMETIDO
+VNA REHABILITACION INTEGRAL COMO EDIFICIO DE OFICINAS EN AL9VILER
+POR INICUATIVA DE SV GERENTE GENERAL FERNANDO PALAZVELO
+SEGÁN DROVECTO DE LA ARY.-LVCIANA SOLDI."
+doc_009,foto,PaddleOCR-VL 1.6,0.092,6.9,"EDIFICIO FENIX
+
+EDIFICIO
+
+EL EDIFICIO FENIX FVE CONSTRVIDO EN 1934 POR LA FIRMA PERVANA
+
+CIA. LTD. POR ENCARGO DE LA COMPANÍA DE SEGVROS LA FENIX DONDE
+
+PARA ALBERGAR SV SEDE SOCIAL.
+
+EL ENCARGO CONSISTIO EN ANADIR DOS PISOS Y VNA AZOTEA DE
+
+DEPARTAMENTOS A VNA FINCA EXISTENTE DE VN SOLO PISO DONDE
+
+FONCIONABAN ALMACENES Y COMERCIOS EN RENTA. EN LA SEGVNDA PLANTA
+
+FONCIONARON LAS OFICINAS DE LA COMPANÍA DE SEGVROS Y EN LA
+
+TERCERA PLANTA EL CLVB SOCIAL DE LA COMPANÍA (PHOENIX CLVB)
+
+EL EDIFICIO ES INTERVENIDO NVEVAMENTE EN 1947 PARA AMPLIAR LAS
+
+INSTALACIONES DEL PHOENIX CLVB AL EDIFICIO GOLINDANTE FENIX ENCAR.
+
+EN EL AÑO 2015 ES ADVIRIDO POR ARTE EXPRESS Y COMPANÍA SAC Y SOMECIDO
+
+A VAREHABILITACION INTEGRAL COMO EDIFICIO DE OFICINAS EN ALQVILER
+
+POR INCIATIVA DE SV - GERENTE GENERAL FERNANDO PALAZVELO Y
+
+KEGIN PROJECTO DE LA ARI - LIVCIANA SOLID."
+doc_014,foto,PP-OCRv6 (base),0.037,2.48,"TODO SER HUMANO TIENE EN EL CAMINO SU PEDESTAL DE HEROE
+EL MERITO CONSISTE EN QUE LLEGADO EL MOMENTO
+TENGA EL CORAJE SUFICIENTE PARA SUBIR A EL
+J.QUUey-
+QUINONES"
+doc_014,foto,PaddleOCR-VL 1.6,0.049,1.91,"""TODO SER HUMANO TIENE EN EL CAMINO SU PEDESTAL DE HEROE EL MERITO CONSISTE EN QUE LLEGADO EL MOMENTO TENGA EL CORAJE SUFICIENTE PARA SUBIR A EL ""Quinnowesly-QUINONES"
+doc_015,foto,PP-OCRv6 (base),0.124,3.74,"CAÑON DEL COLCA
+FALLA DELA CORTEZA TERRESTRE EN
+TRE LOS GRANDES COLOSOS VOLCAL
+COROPUNA DE 6.425 YAMPATO DE 6,310
+LOMFN SU MAYOR
+ND
+100 KM.DELONGITUD"
+doc_015,foto,PaddleOCR-VL 1.6,0.099,3.26,"CANON DEL COLCA
+
+FALLA DELA CORTEZA TERRESTRE EN
+
+THE LOS GRANDES COLOSOS VOLCANES
+
+COROPUNA DE 6.425 YAMPATO DE 6.310
+
+3 L 2 M FIN SU MAVOR PROFUNDIDAD
+
+100 KM. DE LOAIGITUD"
+doc_016,foto,PP-OCRv6 (base),0.066,2.97,"EDIFICÓ ESTA CASA
+EL GENERAL DON JUAN MANUEL DE
+ITURREGUI Y AGUILARTE, ALCALÉ D ESPA
+ÑOLES EN EL PUEBLO D LAMBAYEQUE
+DONDE NACIO. Y ROGR D L& EMANGRGON
+ALLL PROCLAMADA DESDE LOS BALCONES
+D SU MORADA PROPIA EL AÑO D 1820.
+SIRVIO A LA NACON ©MO GENERAL DEL
+EJERCTO MINISTRO D HACIENDA EN 1835
+MINISTRO RENIPOTENGARIO DEL RRU EN CHILE
+EL AÑO D 1823 Y EN La GRAN BRETAÑA
+DESDE EL AÑO D 1827 HASTA EL D 1834
+Y D 1845 A 1849. SENADOR D La RERBLLC
+EN 1851 Y PREFEcTo DEL DEPARTAMENTO
+D-L LIBERTAD EN 1854.-©MO TESTMONIO
+Y RÉCUERDO D SUS VIRTuDES RBLICAS
+Y RIVADAS SE CLOCA LA INSCIRION PESENTE"
+doc_016,foto,PaddleOCR-VL 1.6,0.137,4.78,"EDIFICO ESTA CASA
+
+EDIFICO ESTA CASA
+
+EL GENERAL DON JUAN MANUEL DE ITURREGUI Y AGUILARTE, ALACE DE ESPAÑOLES EN EL PUEBLO D LAMBAYEQUE, DONDE NACIO, Y ROGR D L EMANCRGON ALLE PROCLAMADA DESDE IOS BAICONES D SU MORADA PROPIA EL AÑO D 1820 SIRVIO A LA NACON GMO GENERAL DEL EJERGTO MINIRO D HACIENDA EN 1835 MINIRO RENPIGENCARIO DEL BRU EN CHILE EL AÑO D 1823 Y EN LA GRAN BREANA DESDE EL AÑO D 1827 HASTA EL D 1834 Y D 1845 A 1849 SENADOR D L PERBLG EN 1851 Y PREFECO DEL DEPARTAMENTO D L LBEJAD EN 1854 - GMO TESTMONIO Y RECUEERDO D SUS VIRTEDES RIBICAS Y RIVADAS SE GLOCA LA INSCIRION PESENT"
+doc_022,manuscrito,PP-OCRv6 (base),0.137,2.36,"$30
+r I M. Rodiguer R.
+Prefecto del Dept?3
+Lambayeque
+Mi querido Fr Frefecto:
+El Ir Pedro Adolfo Espinoza,
+despues de conversar conmigo, regresa a Mbotu-
+pe lugar de su pesidencia para ocuparse de eus a-
+suntos particulares.
+Recomindolo mui especialmente a su
+distinguida considevacion i a la de ins auto-
+ridades suballermas.
+fectuosamente lrge
+lverol"
+doc_022,manuscrito,PaddleOCR-VL 1.6,0.14,5.39,"Sr. I.M. Rodriguez R.
+
+Prefecto del Depk.° 3 Lambayequ
+
+Mí querido Sr. Prefecto:
+
+El Sr Pedro Adolfo Espinoza,
+
+despues de conversar conmigo, regresa a Moto-
+
+pe lugar de su residencia frasa ocuparse de sus a-
+
+suntos particulares.
+
+Recomiéndolo mini especialmente a su distinguida consideración i a la de sus auto-pida de subalternas.
+
+A sectus amnente� nyo
+
+Tiroola"
+doc_023,manuscrito,PP-OCRv6 (base),0.487,4.71,"$30.
+S Por! A. Antene Red Rame
+reguipa
+Chirrils, abril o fe
+IRrel lpootaiora te esta quie
+debe instrir a V. acerca de
+Siempre Srye
+aafme amige.
+Palta"
+doc_023,manuscrito,PaddleOCR-VL 1.6,0.21,5.74,"S.L.A. Antonio Pvd. 4 관.4
+
+Areguipa
+
+Cherriles, Abril 3, 1969.
+
+Mi appreciado amigo
+
+Recomiendo a V. a V.a Teresa
+
+Rosal Portadora de esta Quien
+
+debe instruir a V. Acerca de
+
+con Acorinto de Interés_{{{\text{Siempre}_{A}}}Uyo}
+
+Affimo amigo.
+
+Galita
+
+C"
+doc_025,manuscrito,PP-OCRv6 (base),0.492,3.69,"11-54(2)
+Gi
+REPÚBLICA DEL PERÚ.
+Guaman meno Bo-de 1825.
+Prefectura del
+Departamento
+t fo
+Jenon hond.
+Ninvare lis. mmmaa abonae en
+ua Yiten. al capit.d rnumel
+rupo la luanta pante re una pa
+ga, en Naron be que o ha ya
+maacha dera dno 
+abomauele aulafunenia
+Dig queals
+S0rbegore
+U
+aguere p:mi a marian Lica
+lante Aaph. I1ir E.1
+Men.zerpol"
+doc_025,manuscrito,PaddleOCR-VL 1.6,0.382,5.24,"Prefectura del Departamento ofensurman Frujillo Inero Bo-de 1825.
+
+Ut for. Col. Vur. Erla Prov. Desp. Quig.
+
+ofenor hotand.
+
+Vivare Ust. mandata abonna en
+
+una Vuitend. al capit. & strummel
+
+Calipo la acanta grante be una pa
+
+ga, en Paron de que pot haver ya
+
+muchado de esta atud a no guarda
+
+abonnante una femminin
+
+Diy gueals
+
+SAbegou
+
+laguerre p.m. a D.n. munions Eica
+
+lante Alaph< 31< E.n. n<18<2
+
+Mem. Exsp."
