@@ -45,7 +45,10 @@
   "PP-OCRv6 (base)": 3.04,
   "PaddleOCR-VL 1.6": 5.46
  },
- "acuerdo_llm": {},
+ "acuerdo_llm": {
+  "correctas": 6,
+  "total": 20
+ },
  "modelo_ocr_elegido": "PaddleOCR-VL 1.6",
  "modelo_asr_elegido": "faster-whisper large-v3-turbo",
  "decision": "**OCR → PaddleOCR-VL 1.6.** Menor CER global (9,6 % frente a 11,1 %) y, sobre todo, en manuscritos (25,8 % frente a 36,4 %), que es donde está el problema real del corpus. En impresos y fotos ambos empatan (~4 % y ~10 %). Cuesta 1,8 veces más tiempo (5,5 s frente a 3,0 s por página), aceptable para un archivo que se procesa una sola vez. Si el volumen fuera enorme y solo de impresos, PP-OCRv6 sería suficiente y más barato.\n\n**ASR → faster-whisper large-v3-turbo.** El menor WER global (23,6 %, frente a 34,9 % de la línea base *small* y 30,2 % de Qwen3-ASR) y el mejor en el caso más difícil, la fiesta patronal con ruido (23,6 % frente a 42,1 % y 36,1 %). Corre en CPU sin GPU (factor de tiempo real 0,27: una hora de audio en ~16 min). Qwen3-ASR es el más rápido (0,10) y empata en calle, así que sería la opción si hubiera que transcribir en tiempo real con GPU."
