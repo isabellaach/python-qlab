@@ -2,7 +2,9 @@
 
 > **¿Pueden convertir documentos escaneados y entrevistas en audio en un archivo de texto estructurado y buscable?**
 
-**Dashboard público:** _(enlace de Streamlit Community Cloud, pendiente)_
+**Dashboard público:** https://python-qlab-8pczqqvrjifzjm6vcpi2qh.streamlit.app/
+
+**Resultados de los modelos elegidos** (10 documentos y 10 clips transcritos a mano): **CER 0,10** (PaddleOCR-VL) · **WER 0,24** (Whisper turbo) · **Acuerdo LLM–humano: 6/20**
 
 Pipeline de IA con modelos abiertos y locales que extrae texto de **25 documentos peruanos** (impresos, fotos y manuscritos) con OCR,
 transcribe **28 clips de audio en español peruano (51 min)** con VAD y diarización, reemplaza los nombres de personas privadas por seudónimos,
