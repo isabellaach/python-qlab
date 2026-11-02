@@ -6,7 +6,7 @@ Diplomado en Ciencia de Datos para las Ciencias Sociales y la Gestión Pública 
 | | |
 |---|---|
 | **Dashboard público** | https://isabellaach.github.io/python-qlab/tarea_3/web/ |
-| **Publicación de LinkedIn** | _(pendiente: enlace al post)_ |
+| **Publicación de LinkedIn** | https://lnkd.in/p/daBRgWEP |
 | **Reel** | [`reel/salidas/reel.mp4`](reel/salidas/reel.mp4) |
 
 ## 1. Tema y pregunta de investigación
@@ -92,7 +92,7 @@ La tasa de 2019 calculada con `ocupinf` (72,7 %) coincide con la cifra oficial d
 ## 6. Enlaces
 
 - Dashboard: https://isabellaach.github.io/python-qlab/tarea_3/web/. Los filtros se pueden compartir por URL, por ejemplo `?reg=09&anio=2025&dim=tamano`.
-- LinkedIn: _(pendiente)_.
+- LinkedIn: https://lnkd.in/p/daBRgWEP
 
 ## 7. Cómo reproducir
 
