@@ -1,0 +1,1 @@
+Hola, soy Isabella. En este proyecto analizo la informalidad laboral en el Perú con datos de la Encuesta Nacional de Hogares del INEI. Quiero entender en qué regiones y en qué grupos de trabajadores se concentra, y qué cambió entre dos mil diecinueve y dos mil veinticinco. Los resultados están en un tablero interactivo.

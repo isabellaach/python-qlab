@@ -1,0 +1,11 @@
+# microdatos del INEI (~380 MB): se vuelven a bajar con scripts/obtener_datos.py
+datos/originales/*.zip
+# entorno y salidas intermedias del reel
+reel/.venv/
+reel/salidas/*.wav
+reel/salidas/_16k.wav
+# mi grabación de voz y la música (licencia Pixabay: no se redistribuye la pista suelta)
+reel/recursos/mi_voz.m4a
+reel/recursos/*.mp3
+__pycache__/
+.DS_Store

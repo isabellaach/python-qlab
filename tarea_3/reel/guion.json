@@ -1,0 +1,54 @@
+{
+  "titulo": "Empleo sí, formalidad no",
+  "escenas": [
+    {
+      "frase": "En el Perú, nueve de cada diez empleos creados desde dos mil diecinueve son informales. ¿Qué pasó con el trabajo después de la pandemia?",
+      "subtitulo": "En el Perú, 9 de cada 10 empleos creados desde 2019 son informales. ¿Qué pasó con el trabajo después de la pandemia?",
+      "cifra": "9 de 10",
+      "etiqueta": "empleos creados entre 2019 y 2025 son informales",
+      "imagen": "foto",
+      "fuente_cifra": "datos/procesados/serie_nacional.csv: (13,61 M − 12,57 M) / (18,46 M − 17,32 M) = 91 %",
+      "credito": "Foto: Diego Delso · Wikimedia Commons · CC BY-SA 4.0"
+    },
+    {
+      "frase": "Antes de la pandemia, la informalidad era de setenta y dos coma seis por ciento. En dos mil veintiuno subió a setenta y seis coma seis, y en dos mil veinticinco sigue en setenta y tres coma siete.",
+      "subtitulo": "Antes de la pandemia, la informalidad era de 72,6 %. En 2021 subió a 76,6 %, y en 2025 sigue en 73,7 %.",
+      "cifra": "73,7 %",
+      "etiqueta": "informalidad laboral en 2025 · 72,6 % en 2019",
+      "imagen": "serie",
+      "fuente_cifra": "serie_nacional.csv: 2019 = 72,56; 2021 = 76,63; 2025 = 73,72"
+    },
+    {
+      "frase": "Y crece donde menos se espera: entre los universitarios, en las empresas grandes y entre los asalariados.",
+      "subtitulo": "Y crece donde menos se espera: entre los universitarios, en las empresas grandes y entre los asalariados.",
+      "cifra": "44,8 %",
+      "etiqueta": "de los universitarios ocupados tiene un empleo informal · 40,5 % en 2019",
+      "imagen": "grupos",
+      "fuente_cifra": "grupos.csv (nacional, educacion = Universitaria): 2019 = 40,5; 2025 = 44,8; z = 3,8"
+    },
+    {
+      "frase": "Incluso en el Estado: casi tres de cada diez asalariados públicos tienen un empleo informal. La mayoría trabaja por locación de servicios, sin planilla ni seguro.",
+      "subtitulo": "Incluso en el Estado: casi 3 de cada 10 asalariados públicos tienen un empleo informal. La mayoría trabaja por locación de servicios, sin planilla ni seguro.",
+      "cifra": "28,5 %",
+      "etiqueta": "de los asalariados del Estado tiene un empleo informal · 21,0 % en 2019",
+      "imagen": "estado",
+      "fuente_cifra": "estado_tasas.csv: 2019 = 20,99; 2025 = 28,52; 82 % de los informales públicos son locadores"
+    },
+    {
+      "frase": "Y la brecha territorial es enorme: va de casi el sesenta por ciento en el Callao a más del noventa en Huancavelica.",
+      "subtitulo": "Y la brecha territorial es enorme: va de casi el 60 % en el Callao a más del 90 % en Huancavelica.",
+      "cifra": "30 pp",
+      "etiqueta": "Callao 59,7 % · Huancavelica 90,3 %",
+      "imagen": "mapa_anim",
+      "fuente_cifra": "departamentos.csv 2025: Callao = 59,7; Huancavelica = 90,3"
+    },
+    {
+      "frase": "El Perú recuperó el empleo, pero no la formalidad. Explora los datos de tu región en el tablero.",
+      "subtitulo": "El Perú recuperó el empleo, pero no la formalidad. Explora los datos de tu región en el tablero.",
+      "cifra": "",
+      "etiqueta": "El Perú recuperó el empleo, pero no la formalidad",
+      "imagen": "portada",
+      "fuente_cifra": ""
+    }
+  ]
+}

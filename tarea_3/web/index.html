@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informalidad laboral en el Perú</title>
+<meta name="description" content="Dashboard interactivo: informalidad laboral en el Perú antes y después de la pandemia, 2015–2025, con microdatos de la ENAHO (INEI).">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Después de la pandemia, el Perú recuperó el empleo, pero no la formalidad">
+<meta property="og:description" content="Dashboard interactivo: 9 de cada 10 empleos creados entre 2019 y 2025 son informales. Microdatos de la ENAHO (INEI), 2015–2025, por departamento y grupo.">
+<meta property="og:image" content="https://isabellaach.github.io/python-qlab/tarea_3/web/assets/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:url" content="https://isabellaach.github.io/python-qlab/tarea_3/web/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="author" content="Isabella Albarrán">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234A2C82'/%3E%3Crect x='14' y='34' width='9' height='16' rx='2' fill='%23F6F3EE'/%3E%3Crect x='28' y='24' width='9' height='26' rx='2' fill='%23F6F3EE'/%3E%3Crect x='42' y='14' width='9' height='36' rx='2' fill='%23F08A4B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F3EE; --card:#FFFFFF; --ink:#1E1A2B; --ink2:#5B5668; --muted:#8C8797; --line:#E4DFD7;
+  --brand:#4A2C82; --brand-soft:#EDE8F5; --informal:#C8551F; --formal:#0E7A5C; --chip:#EFEAF6;
+  --serif:"DM Serif Display",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif;
+}
+:root[data-font="a"]{--serif:Fraunces,Georgia,serif; --sans:Inter,system-ui,sans-serif}
+h1,h2,.big .n,.kpi .val,.find .num,.find h3,.callout .k,.policy h3,.epen h3,.foto figcaption b{font-weight:400}
+:root[data-font="b"]{--serif:Newsreader,Georgia,serif; --sans:"Public Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--brand)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+nav.top{background:var(--ink);color:#fff;position:sticky;top:0;z-index:30}
+nav.top .wrap{display:flex;align-items:center;gap:22px;height:46px;overflow-x:auto;white-space:nowrap}
+nav.top b{font-weight:600;letter-spacing:.02em;margin-right:8px}
+nav.top a{color:#D9D3E8;text-decoration:none;font-size:13px}
+nav.top a:hover{color:#fff}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--informal);font-weight:600}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(34px,4.8vw,56px);line-height:1.05;letter-spacing:-.015em;margin:12px 0 16px}
+h1 em{font-style:normal;color:var(--informal)}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;margin:0 0 8px}
+h3{font-size:15px;font-weight:600}
+.lead{font-size:18px;color:var(--ink2);max-width:760px}
+.hero{display:grid;grid-template-columns:1.45fr 1fr;gap:32px;padding:40px 0 28px;align-items:center}
+.big{background:#E9E3F3;border-radius:16px;padding:28px 30px}
+.big .n{font-family:var(--serif);font-size:clamp(64px,9vw,104px);line-height:.9;color:var(--brand);font-weight:700}
+.big .n small{font-size:.42em;color:var(--ink)}
+.big p{margin-top:12px;font-size:17px}
+.big .src{font-size:12px;color:var(--ink2);margin-top:14px;border-top:1px solid #D3C9E6;padding-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{background:var(--chip);color:var(--ink2);font-size:12.5px;padding:5px 11px;border-radius:99px}
+.foto{position:relative;border-radius:16px;overflow:hidden;margin:0 0 22px;background:#ddd}
+.foto img{display:block;width:100%;height:clamp(180px,26vw,330px);object-fit:cover;object-position:center 40%}
+.foto figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 22px 14px;color:#fff;font-size:13px;background:linear-gradient(transparent,rgba(20,16,30,.78))}
+.foto figcaption b{font-family:var(--serif);font-size:20px;display:block;margin-bottom:2px}
+.foto figcaption small{opacity:.8;font-size:11.5px}
+.foto figcaption a{color:#fff}
+.def{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 34px}
+.def .card h3{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.dot{display:inline-block;width:11px;height:11px;border-radius:3px}
+.def ul{padding-left:18px;color:var(--ink2);font-size:14px}
+.def li{margin:4px 0}
+.note{font-size:12.5px;color:var(--muted)}
+.filters{position:sticky;top:46px;z-index:20;background:rgba(246,243,238,.97);backdrop-filter:blur(6px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);box-shadow:0 6px 14px -12px rgba(30,26,43,.35)}
+.filters .wrap{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:flex-end;padding-top:9px;padding-bottom:9px}
+.f label{display:block;font-size:11px;color:var(--muted);margin-bottom:3px;font-weight:500;letter-spacing:.02em}
+select,button{font:inherit;font-size:13px;color:var(--ink)}
+select{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 9px;min-width:140px}
+.seg{display:flex;flex-wrap:wrap}
+.seg button{background:var(--card);border:1px solid var(--line);margin-left:-1px;padding:5px 10px;cursor:pointer}
+.seg button:first-child{border-radius:8px 0 0 8px;margin-left:0}.seg button:last-child{border-radius:0 8px 8px 0}
+.seg button.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.acts{display:flex;gap:8px;margin-left:auto;align-items:flex-end}
+.btn{background:var(--card);border:1px solid var(--brand);color:var(--brand);border-radius:8px;padding:6px 11px;cursor:pointer;font-weight:500;white-space:nowrap}
+.btn:hover{background:var(--brand-soft)}
+.btn.link{border-color:transparent;background:none;padding:6px 2px;text-decoration:underline}
+section{padding:30px 0 6px;scroll-margin-top:118px}
+#explorar{scroll-margin-top:46px}
+#fuentes{scroll-margin-top:130px}
+nav.top a.brand{color:#fff;font-weight:600;letter-spacing:.02em;margin-right:8px}
+.sub{color:var(--ink2);max-width:780px;margin-bottom:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.row{display:grid;grid-template-columns:1.08fr 1fr;gap:14px;align-items:start}
+.stack{display:flex;flex-direction:column;gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;transition:box-shadow .4s,border-color .4s}
+.card.flash{border-color:var(--brand);box-shadow:0 0 0 3px rgba(74,44,130,.25)}
+.kpi{border-top:3px solid var(--brand)}
+.kpi .lab{font-size:12.5px;color:var(--muted)}
+.kpi .val{font-family:var(--serif);font-size:36px;font-weight:700;line-height:1.1;margin:6px 0 4px}
+.kpi .det{font-size:12.5px;color:var(--ink2)}
+.tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 7px;border-radius:99px;margin-left:4px;vertical-align:2px}
+.tag.si{background:#FBE6DB;color:#93391A}.tag.no{background:#ECEAF0;color:var(--ink2)}
+.card .t{margin-bottom:2px}.card .s{font-size:12.5px;color:var(--muted);margin-bottom:8px}
+.hd{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.applies{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end;flex-shrink:0}
+.applies span{font-size:10.5px;color:var(--brand);background:var(--brand-soft);border-radius:99px;padding:2px 7px;white-space:nowrap}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--ink2);margin-bottom:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+svg text{font-family:var(--sans)}
+.axis text{fill:var(--muted);font-size:11px}.axis line,.axis path{stroke:var(--line)}
+.grid line{stroke:var(--line)}
+.dep{cursor:pointer;transition:opacity .15s}.dep:hover{opacity:.85}
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:#fff;font-size:12.5px;line-height:1.4;padding:8px 10px;border-radius:8px;max-width:260px;opacity:0;transition:opacity .1s;z-index:50}
+.find{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.find .card{border-top:4px solid var(--informal);padding:22px}
+.find .num{font-family:var(--serif);font-size:50px;font-weight:700;color:var(--informal);line-height:1}
+.find .what{font-size:12.5px;font-weight:600;color:var(--ink2);text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
+.find h3{font-family:var(--serif);font-size:21px;line-height:1.25;margin:14px 0 8px;font-weight:700}
+.find p{font-size:14px;color:var(--ink2)}
+.campo{position:relative;display:grid;grid-template-columns:240px 1fr;gap:24px;align-items:center;margin-top:16px;background:#FBF4EC;border:1px solid #EFD9C6;border-radius:16px;padding:16px 20px}
+.campo:before{content:"";position:absolute;top:-9px;left:calc(83.3% - 9px);width:16px;height:16px;background:#FBF4EC;border-left:1px solid #EFD9C6;border-top:1px solid #EFD9C6;transform:rotate(45deg)}
+.campo .det{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--informal);border-radius:99px;padding:3px 9px}
+.campo img{display:block;width:100%;border-radius:12px;aspect-ratio:4/5;object-fit:cover}
+.campo figcaption{font-size:11.5px;color:var(--muted);margin-top:6px}
+.campo .k{font-family:var(--serif);font-size:38px;color:var(--informal);line-height:1;margin:10px 0 6px}
+.campo h3{font-family:var(--serif);font-weight:400;font-size:19px;line-height:1.25;margin-bottom:6px}
+.campo p{color:var(--ink2);font-size:14.5px;max-width:620px}
+@media (max-width:980px){.campo:before{display:none}}
+@media (max-width:700px){.campo{grid-template-columns:1fr}.campo img{max-width:300px}}
+.sec-list{columns:2;column-gap:28px;font-size:14px;color:var(--ink2);margin-top:18px}
+.sec-list li{margin:0 0 10px 18px;break-inside:avoid}
+.callout{background:var(--ink);color:#F2EFF8;border-radius:16px;padding:26px 28px}
+.callout h2{color:#fff}.callout p{color:#D9D3E8;margin-top:8px}
+.callout .k{font-family:var(--serif);font-size:64px;color:#F08A4B;line-height:1;font-weight:700}
+.epen{background:#FFF7F1;border:1px solid #F1D3C2;border-radius:14px;padding:18px 20px;margin-top:16px}
+.epen h3{font-family:var(--serif);font-size:19px;margin-bottom:8px}
+.epen .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;font-size:14px;color:var(--ink2)}
+.epen .cols b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:right;padding:6px 8px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--muted);font-weight:500;font-size:12px}
+.method{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;align-items:start}
+.method ol,.method ul{padding-left:18px;color:var(--ink2);font-size:14px}.method li{margin:6px 0}
+.policy{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.policy .card{border-left:3px solid var(--brand)}
+.policy .lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--informal);font-weight:600}
+.policy h3{font-family:var(--serif);font-size:18px;margin:4px 0 6px}.policy p{font-size:14px;color:var(--ink2)}
+.policy .q{font-size:13px;color:var(--brand);margin-top:8px;font-style:italic}
+.tscroll{overflow-x:auto}
+code{font-size:.92em;word-break:break-word}
+footer{margin-top:40px;background:var(--ink);color:#C9C3D6;font-size:13px;padding:26px 0}
+footer a{color:#fff}
+.hero>*,.def>*,.grid2>*,.row>*,.method>*,.grid4>*,.find>*,.policy>*,.stack>*{min-width:0}
+@media (max-width:980px){
+  .hero,.row,.grid2,.method,.def,.epen .cols{grid-template-columns:1fr}
+  .grid4{grid-template-columns:1fr 1fr}.find,.policy{grid-template-columns:1fr}.sec-list{columns:1}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}.grid4{grid-template-columns:1fr}.filters{position:static}.kpi .val{font-size:30px}
+  select{min-width:0;width:100%}.f{flex:1 1 140px}.f.fdim{flex-basis:100%}.seg button{padding:5px 8px;font-size:12.5px}
+  .acts{margin-left:0;flex-wrap:wrap}.big{padding:22px}.applies{display:none}
+}
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap">
+  <a class="brand" href="#" id="irInicio">Informalidad · Perú</a>
+  <a href="#explorar">Explorar</a><a href="#estado">El Estado</a><a href="#hallazgos">Hallazgos</a>
+  <a href="#metodo">Metodología</a><a href="#politica">Implicancias</a><a href="#fuentes">Fuentes</a>
+</div></nav>
+
+<header class="wrap">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Antes y después de la pandemia · Perú 2015–2025</div>
+      <h1>Después de la pandemia, el Perú recuperó el empleo, pero no la <em>formalidad</em></h1>
+      <p class="lead"><b>¿La informalidad laboral volvió a su nivel de 2019, y en qué regiones, sectores y grupos de trabajadores se quedó más alta?</b> Este tablero reconstruye la tasa de empleo informal con los microdatos de la Encuesta Nacional de Hogares del INEI, año por año y para los 25 departamentos, y compara 2019 (el último año antes de la pandemia) con 2025.</p>
+      <div class="chips"><span>Cobertura: Perú, 25 departamentos, área urbana y rural</span><span>Periodo: 2015–2025 (anual)</span><span>Fuente: INEI, ENAHO módulos 400 y 500</span><span>Universo: población ocupada de 14 años a más</span></div>
+    </div>
+    <div class="big">
+      <div class="n">9 <small>de cada 10</small></div>
+      <p><b>empleos creados entre 2019 y 2025 son informales.</b> <span id="heroTxt"></span></p>
+      <div class="src">Estimación propia con la ENAHO (factores de expansión del INEI). Las cifras absolutas son aproximadas.</div>
+    </div>
+  </div>
+
+  <figure class="foto">
+    <img src="assets/foto_puesto_lima.jpg" alt="Puesto de comida en una calle del Centro de Lima" loading="lazy">
+    <figcaption><b>13,6 millones de personas trabajan en la informalidad</b>Comercio y servicios de comida, como este puesto en el Jr. Áncash (Lima), concentran buena parte del empleo urbano. Imagen ilustrativa. <small>Foto: Diego Delso, <a href="https://commons.wikimedia.org/wiki/File:Puesto_de_comida,_calle_Jir%C3%B3n_Ancash,_Lima,_Per%C3%BA,_2015-07-28,_DD_80.JPG">Wikimedia Commons</a>, CC BY-SA 4.0 (recortada).</small></figcaption>
+  </figure>
+
+  <div class="def">
+    <div class="card">
+      <h3><span class="dot" style="background:var(--informal)"></span>¿Qué es un empleo informal?</h3>
+      <ul>
+        <li><b>Asalariados</b> (empleados, obreros, trabajadores del hogar) cuyo empleador <b>no les paga seguro de salud</b> (EsSalud, EPS o seguro privado).</li>
+        <li><b>Independientes y empleadores</b> cuyo negocio <b>no está registrado en SUNAT</b> (sin RUC), o que trabajan en actividades agropecuarias.</li>
+        <li><b>Trabajadores familiares no remunerados</b>: siempre.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span class="dot" style="background:var(--formal)"></span>¿Y uno formal?</h3>
+      <ul>
+        <li>Asalariados con seguro de salud <b>pagado por su centro de trabajo</b> (planilla, CAS, militares y policías con su seguro).</li>
+        <li>Independientes y empleadores con negocio <b>registrado en SUNAT</b> (persona jurídica o persona natural con RUC).</li>
+      </ul>
+      <p class="note" style="margin-top:8px">Criterio del INEI para su variable oficial <code>ocupinf</code>, basado en las resoluciones de la OIT (15.ª y 17.ª CIET). Ojo: tener RUC y emitir recibos por honorarios hace a alguien <b>formal ante SUNAT</b>, pero si en la práctica trabaja como empleado y nadie le paga seguro, su <b>empleo</b> es informal.</p>
+    </div>
+  </div>
+</header>
+
+<div id="explorar" aria-hidden="true"></div>
+<div class="filters"><div class="wrap">
+  <div class="f"><label for="fReg">Región (también con clic en el mapa)</label><select id="fReg"></select></div>
+  <div class="f"><label for="fAnio">Año</label><select id="fAnio"></select></div>
+  <div class="acts">
+    <button class="btn" id="play">▶ Reproducir años</button>
+    <button class="btn" id="csv">⤓ CSV</button>
+    <button class="btn link" id="reset">Restablecer</button>
+  </div>
+</div></div>
+
+<main class="wrap">
+<section style="padding-top:20px">
+  <div class="grid4" id="kpis"></div>
+  <p class="note" style="margin-top:8px" id="kpiNote"></p>
+</section>
+
+<section style="padding-top:12px">
+  <div class="row" id="rowA">
+    <div class="card" id="cMap">
+      <div class="hd"><h3 class="t" id="mapTit"></h3><div class="applies"><span>Año</span><span>Región</span></div></div>
+      <div class="s" id="mapSub"></div>
+      <div class="seg" id="mapMode" style="margin:2px 0 6px"></div>
+      <div id="map"></div>
+    </div>
+    <div class="stack">
+      <div class="card" id="cSerie">
+        <div class="hd"><h3 class="t">¿Volvió a su nivel de 2019? <span id="serieTit"></span></h3><div class="applies"><span>Región</span></div></div>
+        <div class="s">Tasa de empleo informal, 2015–2025, con intervalo de confianza al 95 %. La franja marca la pandemia.</div>
+        <div class="legend" id="serieLeg"></div><div id="serie"></div>
+      </div>
+      <div class="card" id="cIng">
+        <div class="hd"><h3 class="t">¿Cuánto gana un trabajador informal? <span class="regName"></span></h3><div class="applies"><span>Región</span></div></div>
+        <div class="s">Ingreso mensual mediano de la ocupación principal, en soles de cada año.</div>
+        <div class="legend"><span><i style="background:var(--formal)"></i>Formal</span><span><i style="background:var(--informal)"></i>Informal</span></div>
+        <div id="ingresos"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quien">
+  <h2>¿Quién trabaja en la informalidad?</h2>
+  <p class="sub">Tasa de informalidad por grupo (barra) frente a 2019 (punto gris). Elige cómo agrupar a los trabajadores aquí abajo. La región se elige en la barra de filtros, con un clic en el mapa o con un clic en el gráfico «2019 frente a…» de la derecha.</p>
+  <div class="f" style="margin:-4px 0 14px"><label>Ver grupos por</label><div class="seg" id="fDim2"></div></div>
+  <div class="row" id="rowB">
+    <div class="stack">
+      <div class="card" id="cGrp">
+        <div class="hd"><h3 class="t" id="grpTit"></h3><div class="applies"><span>Ver por</span><span>Región</span><span>Año</span></div></div>
+        <div class="s" id="grpSub"></div>
+        <div class="legend"><span><i style="background:var(--informal)"></i>Tasa <span class="yr"></span></span><span><i style="background:var(--muted);border-radius:50%"></i>2019</span><span>— IC 95 %</span></div>
+        <div id="grupos"></div>
+      </div>
+      <div class="card" id="cComp">
+        <div class="hd"><h3 class="t">¿Dónde trabajan? <span class="regName"></span>, <span class="yr"></span></h3><div class="applies"><span>Ver por</span><span>Región</span><span>Año</span></div></div>
+        <div class="s">Ocupados de cada grupo, separando informales y formales.</div>
+        <div class="legend"><span><i style="background:var(--informal)"></i>Informales</span><span><i style="background:var(--formal)"></i>Formales</span></div>
+        <div id="composicion"></div>
+      </div>
+    </div>
+    <div class="card" id="cPesas">
+      <div class="hd"><h3 class="t">2019 frente a <span class="yr2"></span>, por departamento</h3><div class="applies"><span>Año</span></div></div>
+      <div class="s">Ordenado por la tasa más reciente. Haz clic en un departamento para seleccionarlo.</div>
+      <div class="legend"><span><i style="background:var(--muted);border-radius:50%"></i>2019</span><span><i style="background:var(--brand);border-radius:50%"></i><span class="yr2"></span></span><span><i style="background:var(--informal);border-radius:50%"></i>cambio significativo (95 %)</span></div>
+      <div id="pesas"></div>
+    </div>
+  </div>
+</section>
+
+<section id="estado">
+  <div class="callout">
+    <div class="grid2" style="align-items:center">
+      <div><div class="eyebrow" style="color:#F08A4B">El empleador más grande también se informaliza</div>
+        <h2 style="margin-top:8px">Casi 3 de cada 10 asalariados del Estado tienen un empleo informal</h2>
+        <p>Entre los asalariados de la administración pública, la informalidad pasó de <b id="estA"></b> en 2019 a <b id="estB"></b> en 2025. Detrás está la <b>locación de servicios</b>: personas que trabajan para el Estado con RUC y recibo por honorarios, pero sin planilla ni seguro de salud pagado por el empleador. Por eso el INEI clasifica su empleo como informal (su variable oficial marcaba así al 98–100 % de ellos entre 2019 y 2023).</p></div>
+      <div style="text-align:center"><div class="k" id="estK"></div><p>de los asalariados informales del Estado trabaja por locación de servicios (<span class="yr"></span>)</p></div>
+    </div>
+  </div>
+  <div class="grid2" style="margin-top:14px;align-items:stretch">
+    <div class="card" id="cEst1"><div class="hd"><h3 class="t">Informalidad y locación de servicios en el Estado, 2015–2025</h3><div class="applies"><span>Año</span></div></div>
+      <div class="s">Asalariados de la administración pública (excluye empresas públicas y FF.AA./PNP). IC 95 %.</div>
+      <div class="legend"><span><i style="background:var(--informal)"></i>% con empleo informal</span><span><i style="background:var(--brand)"></i>% contratados por locación de servicios</span></div>
+      <div id="estadoSerie"></div></div>
+    <div class="card" id="cEst2"><div class="hd"><h3 class="t">Asalariados del Estado por tipo de contrato, <span class="yr"></span></h3><div class="applies"><span>Año</span></div></div>
+      <div class="s">Miles de trabajadores. Total nacional (la muestra no alcanza para desagregar por región).</div>
+      <div class="legend"><span><i style="background:var(--informal)"></i>Informales</span><span><i style="background:var(--formal)"></i>Formales</span></div>
+      <div id="estadoBar"></div></div>
+  </div>
+</section>
+
+<section id="hallazgos">
+  <h2>Tres hallazgos</h2>
+  <p class="sub">Comparación nacional entre 2019 (antes de la pandemia) y 2025. Solo llamamos «significativo» a lo que supera la prueba al 95 % con el diseño muestral de la ENAHO.</p>
+  <div class="find">
+    <div class="card"><div class="num">+1,2 pp</div><div class="what">Informalidad 2025 frente a 2019</div>
+      <h3>La informalidad no volvió a su nivel prepandemia</h3>
+      <p>Pasó de 72,6 % en 2019 a un pico de 76,6 % en 2021 y está en 73,7 % en 2025 (IC 95 %: 72,9–74,5). La diferencia con 2019 es significativa, aunque por poco. De los ~1,14 millones de empleos que se sumaron entre 2019 y 2025, ~1,04 millones son informales: <b>9 de cada 10</b>.</p></div>
+    <div class="card"><div class="num">78 %</div><div class="what">de los nuevos asalariados son informales</div>
+      <h3>Se informaliza el empleo que debería ser formal</h3>
+      <p>Casi 8 de cada 10 nuevos asalariados no tienen seguro pagado por su empleador. La informalidad sube entre asalariados (54,2 → 57,4 %), universitarios (40,5 → 44,8 %), en empresas de más de 100 trabajadores (19,2 → 23,5 %) y entre los asalariados del Estado (21,0 → 28,5 %). Todos los cambios son significativos.</p></div>
+    <div class="card"><div class="num">30 pp</div><div class="what">de distancia entre Callao y Huancavelica</div>
+      <h3>Un problema urbano con una brecha territorial enorme</h3>
+      <p>Todo el aumento neto de informales es urbano: la tasa urbana sube de 66,2 % a 68,4 %, mientras la rural se mantiene en torno a 95 %. En 2025 la tasa va del 59,7 % del Callao al 90,3 % de Huancavelica, y 13 de 25 departamentos superan el 80 %. <b>El campo, en detalle abajo ↓</b></p></div>
+  </div>
+  <div class="campo">
+    <figure><img src="assets/foto_campo.jpg" alt="Productora junto a cajas de palta durante la cosecha en Caujul, región Lima" loading="lazy">
+      <figcaption>Cosecha de paltas en Aguar-Caujul (región Lima). Imagen ilustrativa. Foto: Elia Granados Solís, <a href="https://commons.wikimedia.org/wiki/File:Cosecha_de_paltas.jpg">Wikimedia Commons</a>, CC BY-SA 4.0 (recortada).</figcaption></figure>
+    <div class="campo-txt">
+      <span class="det">Hallazgo 3 · en detalle: el campo</span>
+      <div class="k">94,7 %</div>
+      <h3>En el área rural, casi 95 de cada 100 trabajadores tienen un empleo informal</h3>
+      <p>La tasa rural apenas se movió entre 2019 (95,0 %) y 2025 (94,7 %). Tres de cada cuatro informales rurales trabajan en el agro (74 % en 2025), que el INEI cuenta como sector informal, y uno de cada cuatro es trabajador familiar no remunerado (24 %). Es una informalidad estructural, distinta de la urbana: en el campo no aumentó después de la pandemia porque ya era casi total.</p>
+    </div>
+  </div>
+  <h3 style="font-family:var(--serif);font-weight:400;font-size:22px;margin:30px 0 4px">Otros hallazgos</h3>
+  <p class="note" style="margin-bottom:4px">Datos que complementan los tres hallazgos principales (2019 frente a 2025, nivel nacional salvo que se indique).</p>
+  <ul class="sec-list" style="margin-top:10px">
+    <li><b>Microempresas:</b> el 72 % de los ocupados trabaja en negocios de 1 a 10 personas, y 9 de cada 10 de ellos son informales.</li>
+    <li><b>Género:</b> la brecha entre mujeres y hombres se redujo de 5,8 a 4,0 pp, pero porque subió la informalidad de los hombres (70,0 → 72,0 %, significativo), no porque bajara la de las mujeres (75,8 → 76,0 %).</li>
+    <li><b>Ingresos:</b> en 2025 el ingreso mensual mediano de un informal es S/ 898 y el de un formal S/ 2 003. La brecha se achicó: el informal ganaba el 37 % de lo que gana un formal en 2019 y el 45 % en 2025.</li>
+    <li><b>Territorio:</b> Madre de Dios es el único departamento con un aumento significativo (+8,5 pp); ninguno tuvo una reducción significativa.</li>
+  </ul>
+</section>
+
+<section id="metodo">
+  <h2>Metodología y validación</h2>
+  <div class="method">
+    <div>
+      <ol>
+        <li><b>Datos:</b> microdatos anuales de la ENAHO 2015–2025 (INEI), módulo 500 (empleo e ingresos) y módulo 400 (salud), unidos por vivienda, hogar y persona.</li>
+        <li><b>Universo:</b> población ocupada de 14 años a más (<code>ocu500 = 1</code>), ocupación principal. Entre 56 600 y 70 000 ocupados encuestados por año.</li>
+        <li><b>Informalidad:</b> el INEI publicó su variable oficial (<code>ocupinf</code>) hasta 2023; <b>desde 2024 ya no está en la base ni en el diccionario de la ENAHO</b>. La reconstruimos con sus criterios (recuadro de arriba) para toda la serie, de modo que 2015–2025 sea comparable.</li>
+        <li><b>Validación:</b> en 2015–2023 nuestra variable coincide con la oficial en el 98,9–99,7 % de los trabajadores, con diferencias de −0,2 a +0,4 pp en la tasa (tabla). Además, la tasa de 2019 calculada con <code>ocupinf</code> (72,7 %) coincide con la cifra oficial difundida para ese año.</li>
+        <li><b>Ponderación e inferencia:</b> todas las cifras usan el factor de expansión <code>fac500a</code>. Los intervalos de confianza al 95 % se estiman por linealización con conglomerados y estratos (departamento × estrato). Un cambio es «significativo» si |diferencia| &gt; 1,96 × error estándar.</li>
+        <li><b>Ingresos:</b> ingreso mensual de la ocupación principal (monetario, imputado por el INEI), mediana ponderada, en soles corrientes; se compara formal e informal dentro de cada año.</li>
+      </ol>
+    </div>
+    <div class="card"><h3 class="t">Validación contra la variable oficial del INEI</h3><div class="s">% de trabajadores clasificados igual y tasa nacional, por año.</div>
+      <div class="tscroll"><table id="valTab"></table></div></div>
+  </div>
+  <div class="epen">
+    <h3>¿Por qué el INEI reportó 70,9 % para 2024 y este tablero dice 74,1 %?</h3>
+    <div class="cols">
+      <div><b>Son dos encuestas distintas.</b> El 70,9 % viene de la <b>EPEN</b> (Encuesta Permanente de Empleo Nacional), que el INEI usa desde 2022 para seguir el empleo. Este tablero usa la <b>ENAHO</b>, la encuesta de hogares de siempre.</div>
+      <div><b>No se pueden mezclar.</b> Tienen distinta muestra y diseño, así que sus tasas no son comparables. Comparar EPEN 2024 con ENAHO 2019 mezclaría el cambio de encuesta con el cambio real.</div>
+      <div><b>Por qué usamos la ENAHO.</b> Es la única con datos desde antes de la pandemia (2015–2019) y representativa por departamento en todo el periodo, que es lo que exige la pregunta.</div>
+    </div>
+  </div>
+  <div class="grid2" style="margin-top:16px;align-items:stretch">
+    <div class="card"><h3 class="t">Limitaciones</h3><ul style="padding-left:18px;color:var(--ink2);font-size:14px">
+      <li>En 2023 la reconstrucción sobreestima la tasa oficial en 0,4 pp. Si el sesgo persiste en 2024–2025, el aumento frente a 2019 estaría más cerca de 0,8 pp.</li>
+      <li>En 2020 parte de la encuesta se hizo por teléfono; su comparabilidad es menor.</li>
+      <li>Los conteos (millones de trabajadores) dependen de las proyecciones de población del INEI y no llevan intervalo de confianza.</li>
+      <li>Por departamento y grupo, las muestras son menores y los intervalos amplios: los cambios pequeños no son concluyentes.</li>
+      <li>Es un análisis descriptivo: muestra dónde y en quién cambia la informalidad, no sus causas.</li>
+    </ul></div>
+    <div class="card" id="fuentes"><h3 class="t">Fuentes</h3><ul style="padding-left:18px;color:var(--ink2);font-size:14px">
+      <li>INEI, <a href="https://proyectos.inei.gob.pe/microdatos/">Encuesta Nacional de Hogares (ENAHO), microdatos 2015–2025</a>, módulos 400 y 500 (descargados el 1/11/2026).</li>
+      <li>IPE en ProActivo, <a href="https://proactivo.com.pe/ipe-informalidad-laboral-en-el-pais-supero-el-73-en-el-ultimo-ano/">informalidad ENAHO 2019 (72,7 %) frente a EPEN 2022–2023</a>.</li>
+      <li>Gestión, <a href="https://gestion.pe/economia/informalidad-en-peru-cayo-pero-en-10-ciudades-la-situacion-fue-otra-como-entenderlo-empleo-en-peru-puestos-de-trabajo-inei-mercado-laboral-noticia/">informalidad 2024 según la EPEN (70,9 %)</a>.</li>
+      <li>Límites departamentales: INEI, geojson simplificado usado en el diplomado.</li>
+      <li>Foto rural: Elia Granados Solís, <a href="https://commons.wikimedia.org/wiki/File:Cosecha_de_paltas.jpg">Cosecha de paltas en Aguar-Caujul, Wikimedia Commons</a>, CC BY-SA 4.0.</li>
+      <li>Foto: Diego Delso, <a href="https://commons.wikimedia.org/wiki/File:Puesto_de_comida,_calle_Jir%C3%B3n_Ancash,_Lima,_Per%C3%BA,_2015-07-28,_DD_80.JPG">Wikimedia Commons</a>, CC BY-SA 4.0.</li>
+      <li>Código y datos procesados: <a href="https://github.com/isabellaach/python-qlab/tree/main/tarea_3">repositorio en GitHub</a>.</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="politica">
+  <h2>Implicancias y preguntas abiertas</h2>
+  <p class="sub">Ideas para la discusión de política pública que se desprenden de los hallazgos. No son conclusiones causales: señalan dónde mirar y qué falta investigar.</p>
+  <div class="policy">
+    <div class="card"><div class="lbl">Estado empleador</div><h3>Formalizar empieza por casa</h3><p>Una parte creciente del empleo público se contrata por locación de servicios, sin planilla ni seguro. Medir cuántos de estos contratos cubren funciones permanentes y subordinadas permitiría dimensionar el problema y el costo de regularizarlo.</p>
+      <p class="q">¿Qué entidades y niveles de gobierno explican el aumento?</p></div>
+    <div class="card"><div class="lbl">Empleo asalariado</div><h3>Del registro a la protección</h3><p>El aumento viene sobre todo de asalariados sin seguro, no de negocios sin RUC. Las políticas centradas solo en registrar empresas podrían no llegar a este grupo; la fiscalización laboral y el costo de la planilla son piezas a evaluar.</p>
+      <p class="q">¿Qué peso tienen los costos laborales frente a la capacidad de fiscalización?</p></div>
+    <div class="card"><div class="lbl">Microempresas</div><h3>El grueso está en los negocios pequeños</h3><p>Siete de cada diez ocupados trabajan en negocios de hasta 10 personas, y casi todos son informales. Formalizar a este grupo probablemente requiere mejorar su productividad, no solo simplificar trámites.</p>
+      <p class="q">¿Qué regímenes tributarios y laborales funcionan para unidades de 1 a 10 trabajadores?</p></div>
+    <div class="card"><div class="lbl">Empleo calificado</div><h3>El título protege cada vez menos</h3><p>La informalidad entre universitarios subió 4,3 pp. Puede reflejar más profesionales trabajando como independientes o por honorarios, también en el Estado. Vale la pena distinguir la informalidad «elegida» de la que se impone.</p>
+      <p class="q">¿Cuánto de este aumento es empleo por honorarios en ocupaciones profesionales?</p></div>
+    <div class="card"><div class="lbl">Territorio</div><h3>Estrategias regionales, no una sola receta</h3><p>Trece departamentos superan el 80 % y la distancia con Lima y Callao no se cerró. Madre de Dios, el único con un aumento significativo, merece un análisis propio de qué sectores lo explican.</p>
+      <p class="q">¿Qué actividades explican el salto de Madre de Dios?</p></div>
+    <div class="card"><div class="lbl">Medición</div><h3>Medir para poder comparar</h3><p>El paso de la ENAHO a la EPEN deja sin una serie oficial comparable desde 2015 ni cifras departamentales consistentes. Publicar la variable de informalidad en la ENAHO, o un empalme oficial entre ambas encuestas, facilitaría el seguimiento de las políticas.</p>
+      <p class="q">¿Cómo empalmar ENAHO y EPEN sin romper la serie?</p></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <p><b style="color:#fff">Isabella Albarrán</b> · Tarea 3 del curso Python Intermedio · Diplomado en Ciencia de Datos para las Ciencias Sociales y la Gestión Pública 2026 (Q-LAB PUCP) · <a href="https://github.com/isabellaach/python-qlab/tree/main/tarea_3">Código y datos</a></p>
+  <p style="margin-top:10px"><b style="color:#fff">Cómo citar:</b> Albarrán, I. (2026). <i>Informalidad laboral en el Perú antes y después de la pandemia, 2015–2025</i> [Dashboard interactivo]. https://isabellaach.github.io/python-qlab/tarea_3/web/ · Datos: INEI, ENAHO 2015–2025 (descargados el 1/11/2026). Última actualización: 1 de noviembre de 2026.</p>
+  <p style="margin-top:6px">Uso de IA: el procesamiento, el tablero y el reel se desarrollaron con asistencia de Claude Code. Las cifras se verificaron contra la variable oficial del INEI (2015–2023).</p>
+</div></footer>
+<div id="tip"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+const C = {brand:'#4A2C82', inf:'#C8551F', form:'#0E7A5C', muted:'#8C8797', line:'#E4DFD7', ink:'#1E1A2B', ink2:'#5B5668', band:'#EDE8F5'};
+const DIMS = [['sexo','Sexo'],['edad','Edad'],['area','Área'],['educacion','Educación'],['tamano','Tamaño de empresa'],['rama','Rama'],['categoria_ocup','Categoría']];
+const ORDEN = {
+  sexo:['Mujeres','Hombres'], edad:['14 a 24','25 a 44','45 a 64','65 a más'], area:['Urbana','Rural'],
+  educacion:['Primaria o menos','Secundaria','Superior técnica','Universitaria'], tamano:['1 a 10','11 a 50','51 a 100','Más de 100'],
+  categoria_ocup:['Asalariado','Independiente','Empleador','Trabajador del hogar','Familiar no remunerado']
+};
+const DIM_TXT = {sexo:'sexo',edad:'grupo de edad',area:'área',educacion:'nivel educativo',tamano:'tamaño de la empresa (n.º de trabajadores)',rama:'rama de actividad',categoria_ocup:'categoría ocupacional'};
+const es = d3.formatLocale({decimal:',',thousands:' ',grouping:[3],currency:['S/ ','']});
+const n1 = v => es.format(',.1f')(v), n0 = v => es.format(',.0f')(v), pct = v => n1(v)+' %';
+const mill = v => v>=1e6 ? es.format(',.2f')(v/1e6)+' M' : es.format(',.0f')(v/1e3)+' mil';
+const S = {reg:'00', anio:2025, dim:'educacion', mapa:'tasa', playing:null};
+const Q = new URLSearchParams(location.search);
+if (Q.get('reg')) S.reg = Q.get('reg'); if (Q.get('anio')) S.anio = +Q.get('anio'); if (Q.get('dim')) S.dim = Q.get('dim'); if (Q.get('mapa')) S.mapa = Q.get('mapa');
+if (['a','b','c'].includes(Q.get('font'))) document.documentElement.dataset.font = Q.get('font');
+const tip = d3.select('#tip');
+function showTip(ev, html){ tip.html(html).style('opacity',1); const x=Math.min(ev.clientX+14, innerWidth-280); tip.style('left',x+'px').style('top',(ev.clientY+14)+'px'); }
+function hideTip(){ tip.style('opacity',0); }
+function width(id){ return Math.max(260, document.getElementById(id).clientWidth); }
+const wide = () => innerWidth > 980;
+document.getElementById('irInicio').addEventListener('click',e=>{e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'});});
+
+// escalas del mapa: nivel (multitono) y cambio (divergente verde–gris–naranja)
+const colTasa = d3.scaleSequential(d3.interpolateRgbBasis(['#FFF4E4','#F8C98F','#EE8D4E','#C8551F','#8A2F55','#3B1A5A'])).domain([55,95]).clamp(true);
+const colCambio = d3.scaleDiverging(d3.interpolateRgbBasis(['#0B6B50','#7FBFA6','#EFEBE6','#F0A57A','#B0441A'])).domain([-6,0,6]).clamp(true);
+
+// lleva la vista al gráfico que cambió y lo resalta
+function enfocar(ids){
+  const els = ids.map(id=>document.getElementById(id)).filter(Boolean);
+  if(!els.length) return;
+  const r = els[0].getBoundingClientRect(), top = 130;
+  if(r.top < top || r.top > innerHeight*0.55) window.scrollTo({top: scrollY + r.top - top - 6, behavior:'smooth'});
+  resaltar(ids);
+}
+function resaltar(ids){
+  ids.map(id=>document.getElementById(id)).filter(Boolean).forEach(e=>{ e.classList.remove('flash'); void e.offsetWidth; e.classList.add('flash'); setTimeout(()=>e.classList.remove('flash'),1400); });
+}
+
+Promise.all([d3.json('data/datos.json'), d3.json('data/departamentos.geojson')]).then(([D, geo]) => {
+  const NAMES = D.dptos, ANIOS = D.nacional.map(d=>d.anio);
+  const serieReg = reg => reg==='00' ? D.nacional : D.departamentos.filter(d=>d.dpto===reg);
+  const filaReg = (reg, a) => serieReg(reg).find(d=>d.anio===a);
+  const nomReg = reg => reg==='00' ? 'Perú' : NAMES[reg];
+
+  // ---------- controles
+  const fReg = d3.select('#fReg');
+  fReg.selectAll('option').data([['00','Todo el Perú'], ...Object.entries(NAMES).sort((a,b)=>a[1].localeCompare(b[1]))]).join('option').attr('value',d=>d[0]).text(d=>d[1]);
+  const fAnio = d3.select('#fAnio');
+  fAnio.selectAll('option').data(ANIOS.slice().reverse()).join('option').attr('value',d=>d).text(d=>d);
+  d3.select('#fDim2').selectAll('button').data(DIMS).join('button').text(d=>d[1]).on('click',(e,d)=>{S.dim=d[0]; update(); resaltar(['cGrp','cComp']);});
+  d3.select('#mapMode').selectAll('button').data([['tasa','Tasa de informalidad'],['cambio','Cambio frente a 2019']]).join('button').text(d=>d[1]).on('click',(e,d)=>{S.mapa=d[0]; update();});
+  const setReg = (reg, scroll) => { S.reg = reg; update(); if(scroll) enfocar(['kpis','cSerie']); };
+  fReg.on('change', e=>setReg(e.target.value, true));
+  fAnio.on('change', e=>{S.anio=+e.target.value; update(); enfocar(['cMap','kpis']);});
+  d3.select('#reset').on('click',()=>{S.reg='00'; S.anio=2025; S.dim='educacion'; S.mapa='tasa'; stop(); update(); enfocar(['kpis']);});
+  function stop(){ if(S.playing){clearInterval(S.playing); S.playing=null; d3.select('#play').text('▶ Reproducir años');} }
+  d3.select('#play').on('click',()=>{
+    if(S.playing){stop();return;}
+    S.anio=ANIOS[0]; update(); enfocar(['cMap']); d3.select('#play').text('❚❚ Pausa');
+    S.playing=setInterval(()=>{ const i=ANIOS.indexOf(S.anio); if(i>=ANIOS.length-1){stop();return;} S.anio=ANIOS[i+1]; update(); },1100);
+  });
+  d3.select('#csv').on('click',()=>{
+    const reg=S.reg, rows=[];
+    serieReg(reg).forEach(d=>rows.push({tabla:'tasa_region',region:nomReg(reg),anio:d.anio,dimension:'',categoria:'',tasa:d.tasa,ic_inf:d.li,ic_sup:d.ls,n_muestra:d.n,ocupados:Math.round(d.ocupados),informales:Math.round(d.casos)}));
+    D.grupos.filter(d=>d.dpto===reg && d.dimension===S.dim).forEach(d=>rows.push({tabla:'tasa_grupo',region:nomReg(reg),anio:d.anio,dimension:S.dim,categoria:d.categoria,tasa:d.tasa,ic_inf:d.li,ic_sup:d.ls,n_muestra:d.n,ocupados:Math.round(d.ocupados),informales:Math.round(d.casos)}));
+    D.departamentos.filter(d=>d.anio===S.anio).forEach(d=>rows.push({tabla:'tasa_departamento',region:d.departamento,anio:d.anio,dimension:'',categoria:'',tasa:d.tasa,ic_inf:d.li,ic_sup:d.ls,n_muestra:d.n,ocupados:Math.round(d.ocupados),informales:Math.round(d.casos)}));
+    const blob=new Blob(['﻿'+d3.csvFormat(rows)],{type:'text/csv;charset=utf-8'});
+    const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`informalidad_${nomReg(reg).replace(/\s/g,'_')}_${S.anio}_${S.dim}.csv`; a.click();
+  });
+
+  // ---------- portada
+  const n19=D.nacional.find(d=>d.anio===2019), n25=D.nacional.find(d=>d.anio===2025);
+  const dOc=n25.ocupados-n19.ocupados, dIn=n25.casos-n19.casos;
+  d3.select('#heroTxt').html(`Entre 2019, el último año antes de la pandemia, y 2025 se sumaron ~${mill(dOc)} de ocupados; ~${mill(dIn)} de ellos (${Math.round(100*dIn/dOc)} %) tienen un empleo informal.`);
+
+  // ---------- validación
+  const vt=d3.select('#valTab');
+  vt.append('tr').html('<th>Año</th><th>Acuerdo</th><th>Oficial</th><th>Reconstruida</th><th>Dif. (pp)</th>');
+  D.validacion.forEach(v=>vt.append('tr').html(`<td>${v.anio}</td><td>${v.acuerdo_pct!=null?pct(v.acuerdo_pct):'—'}</td><td>${v.tasa_oficial!=null?pct(v.tasa_oficial):'<span class="note">no publicada</span>'}</td><td><b>${pct(v.tasa_reconstruida)}</b></td><td>${v.diferencia_pp!=null?(v.diferencia_pp>0?'+':'')+n1(v.diferencia_pp):'—'}</td>`));
+
+  // ---------- mapa
+  function drawMap(){
+    const W=Math.min(width('map'),560), LEG=64, H=(W-LEG)*1.22;
+    const svg=d3.select('#map').selectAll('svg').data([0]).join('svg').attr('viewBox',`0 0 ${W} ${H}`).attr('width','100%');
+    svg.selectAll('*').remove();
+    const proj=d3.geoIdentity().reflectY(true).fitSize([W-LEG-10,H-10],geo), path=d3.geoPath(proj);
+    const cambio = S.mapa==='cambio', a2 = S.anio;
+    const act=new Map(D.departamentos.filter(d=>d.anio===a2).map(d=>[d.dpto,d]));
+    const base=new Map(D.departamentos.filter(d=>d.anio===2019).map(d=>[d.dpto,d]));
+    const val = id => { const r=act.get(id); if(!r) return null; if(!cambio) return {r, v:r.tasa}; const b=base.get(id), dif=r.tasa-b.tasa, sig=Math.abs(dif)>1.96*Math.hypot(r.ee,b.ee); return {r,b,v:dif,sig}; };
+    d3.select('#mapTit').text(cambio ? (a2===2019 ? 'Cambio frente a 2019: 2019 es el año base' : `Cambio frente a 2019, en ${a2}`) : `Informalidad por departamento, ${S.anio}`);
+    d3.select('#mapSub').text(cambio ? 'Puntos porcentuales. Verde: bajó; naranja: subió; beige: casi igual. ● = cambio significativo (95 %). Borde grueso: región seleccionada.' : '% de ocupados con empleo informal. Haz clic en un departamento para filtrar todo el tablero (borde grueso: región seleccionada).');
+    d3.select('#mapMode').selectAll('button').classed('on',d=>d[0]===S.mapa);
+    svg.append('g').selectAll('path').data(geo.features).join('path').attr('class','dep').attr('d',path)
+      .attr('fill',f=>{const o=val(f.properties.FIRST_IDDP); return o ? (cambio?colCambio(o.v):colTasa(o.v)) : '#ddd';})
+      .attr('stroke',f=>f.properties.FIRST_IDDP===S.reg ? C.ink : '#fff')
+      .attr('stroke-width',f=>f.properties.FIRST_IDDP===S.reg ? 3 : .8)
+      .on('mousemove',(e,f)=>{const o=val(f.properties.FIRST_IDDP); if(!o) return; const r=o.r;
+        showTip(e, cambio ? `<b>${r.departamento}</b><br>2019: ${pct(o.b.tasa)} → ${a2}: <b>${pct(r.tasa)}</b><br>Cambio: <b>${o.v>0?'+':''}${n1(o.v)} pp</b> · ${o.sig?'significativo':'no significativo'}`
+                         : `<b>${r.departamento}</b> · ${S.anio}<br>Informalidad: <b>${pct(r.tasa)}</b><br>IC 95 %: ${n1(r.li)}–${n1(r.ls)} %<br>${mill(r.casos)} informales de ${mill(r.ocupados)} ocupados`);})
+      .on('mouseleave',hideTip)
+      .on('click',(e,f)=>{const id=f.properties.FIRST_IDDP; setReg(S.reg===id ? '00' : id, false); enfocar(['kpis','cSerie']);});
+    svg.selectAll('path.dep').filter(f=>f.properties.FIRST_IDDP===S.reg).raise();
+    if(cambio){ // punto en el centro de los departamentos con cambio significativo
+      svg.append('g').selectAll('circle').data(geo.features.filter(f=>{const o=val(f.properties.FIRST_IDDP); return o&&o.sig;})).join('circle')
+        .attr('cx',f=>path.centroid(f)[0]).attr('cy',f=>path.centroid(f)[1]).attr('r',5.5).attr('fill',C.ink).attr('stroke','#fff').attr('stroke-width',2).style('pointer-events','none');
+    }
+    // leyenda continua, vertical, a la derecha del mapa
+    const sc = cambio ? colCambio : colTasa, dom = cambio ? [-6,6] : [55,95], LH=Math.min(300,H*.6), x0=W-LEG+8, y0=(H-LH)/2;
+    const defs=svg.append('defs'), gid='grad'+S.mapa, lg=defs.append('linearGradient').attr('id',gid).attr('x1',0).attr('y1',1).attr('x2',0).attr('y2',0);
+    d3.range(0,1.01,.1).forEach(t=>lg.append('stop').attr('offset',t).attr('stop-color',sc(dom[0]+t*(dom[1]-dom[0]))));
+    const L=svg.append('g').attr('transform',`translate(${x0},${y0})`);
+    L.append('text').attr('x',0).attr('y',-10).attr('font-size',10.5).attr('fill',C.ink2).attr('font-weight',600).text(cambio?'Cambio':'Tasa');
+    L.append('rect').attr('width',12).attr('height',LH).attr('rx',3).attr('fill',`url(#${gid})`);
+    const ticks = cambio ? [-6,-3,0,3,6] : [55,65,75,85,95];
+    if(cambio){ L.append('circle').attr('cx',6).attr('cy',LH+20).attr('r',5).attr('fill',C.ink).attr('stroke','#fff').attr('stroke-width',1.5);
+      L.append('text').attr('x',15).attr('y',LH+24).attr('font-size',10).attr('fill',C.muted).text('signif.'); }
+    L.selectAll('text.tk').data(ticks).join('text').attr('class','tk').attr('x',17).attr('y',d=>LH-(d-dom[0])/(dom[1]-dom[0])*LH+4).attr('font-size',10.5).attr('fill',C.muted)
+      .text(d=>cambio?(d>0?'+':'')+d+' pp':d+' %');
+  }
+
+  // ---------- gráfico de líneas genérico
+  function lineChart(id, series, opts){
+    const W=width(id), H=opts.h||260, m={t:14,r:66,b:26,l:opts.yfmt?58:40};
+    const x=d3.scaleLinear().domain(d3.extent(ANIOS)).range([m.l,W-m.r]);
+    const all=series.flatMap(s=>s.data.flatMap(d=>[d.li??d.y,d.ls??d.y]));
+    const y=d3.scaleLinear().domain(opts.ydom||[Math.floor(d3.min(all)/5)*5, Math.ceil(d3.max(all)/5)*5]).nice().range([H-m.b,m.t]);
+    const svg=d3.select('#'+id).selectAll('svg').data([0]).join('svg').attr('viewBox',`0 0 ${W} ${H}`).attr('width','100%');
+    svg.selectAll('*').remove();
+    if(opts.band){ svg.append('rect').attr('x',x(2019.5)).attr('width',x(2021.5)-x(2019.5)).attr('y',m.t).attr('height',H-m.b-m.t).attr('fill',C.band);
+      svg.append('text').attr('x',x(2020.5)).attr('y',m.t+12).attr('text-anchor','middle').attr('font-size',10.5).attr('fill',C.muted).text('pandemia'); }
+    svg.append('g').attr('class','grid').selectAll('line').data(y.ticks(5)).join('line').attr('x1',m.l).attr('x2',W-m.r).attr('y1',d=>y(d)).attr('y2',d=>y(d));
+    svg.append('g').attr('class','axis').attr('transform',`translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(opts.yfmt||(d=>d+'%')).tickSize(0)).call(g=>g.select('.domain').remove());
+    svg.append('g').attr('class','axis').attr('transform',`translate(0,${H-m.b})`).call(d3.axisBottom(x).tickValues(ANIOS.filter(a=>W>520||a%2)).tickFormat(d3.format('d')).tickSize(0)).call(g=>g.select('.domain').remove()).selectAll('text').attr('dy','1.1em');
+    if(opts.mark) svg.append('line').attr('x1',x(opts.mark)).attr('x2',x(opts.mark)).attr('y1',m.t).attr('y2',H-m.b).attr('stroke',C.ink).attr('stroke-dasharray','2 3').attr('opacity',.5);
+    series.forEach(s=>{
+      if(s.ci) svg.append('path').datum(s.data).attr('fill',s.color).attr('opacity',.13).attr('d',d3.area().x(d=>x(d.x)).y0(d=>y(d.li)).y1(d=>y(d.ls)));
+      if(!s.hollow) svg.append('path').datum(s.data).attr('fill','none').attr('stroke',s.color).attr('stroke-width',s.w||2.2).attr('d',d3.line().x(d=>x(d.x)).y(d=>y(d.y)));
+      if(!s.nodots) svg.append('g').selectAll('circle').data(s.data).join('circle').attr('cx',d=>x(d.x)).attr('cy',d=>y(d.y)).attr('r',s.hollow?3.5:4)
+        .attr('fill',s.hollow?'#fff':s.color).attr('stroke',s.hollow?s.color:'#fff').attr('stroke-width',s.hollow?1.6:1.5);
+      const last=s.data[s.data.length-1]; if(s.label!==false) svg.append('text').attr('x',x(last.x)+8).attr('y',y(last.y)+4).attr('font-size',12).attr('font-weight',600).attr('fill',C.ink).text(s.fmt?s.fmt(last.y):pct(last.y));
+    });
+    svg.append('rect').attr('x',m.l).attr('y',m.t).attr('width',W-m.l-m.r).attr('height',H-m.t-m.b).attr('fill','transparent')
+      .on('mousemove',e=>{const a=Math.round(x.invert(d3.pointer(e)[0])); const rows=series.map(s=>{const d=s.data.find(d=>d.x===a); return d?`<span style="color:${s.color}">●</span> ${s.name}: <b>${s.fmt?s.fmt(d.y):pct(d.y)}</b>${d.li!=null?` <span style="opacity:.7">(${n1(d.li)}–${n1(d.ls)})</span>`:''}`:'';}).filter(Boolean).join('<br>'); showTip(e,`<b>${a}</b><br>${rows}`);})
+      .on('mouseleave',hideTip);
+  }
+  function drawSerie(h){
+    const pe=D.nacional.map(d=>({x:d.anio,y:d.tasa,li:d.li,ls:d.ls}));
+    const series=[];
+    if(S.reg!=='00'){
+      series.push({name:NAMES[S.reg],color:C.brand,ci:true,data:serieReg(S.reg).map(d=>({x:d.anio,y:d.tasa,li:d.li,ls:d.ls}))});
+      series.push({name:'Perú',color:C.muted,w:1.6,data:pe,nodots:true});
+    } else {
+      series.push({name:'Perú (reconstruida)',color:C.brand,ci:true,data:pe});
+      series.push({name:'Oficial INEI (ocupinf)',color:C.inf,hollow:true,label:false,data:D.nacional.filter(d=>d.tasa_oficial!=null).map(d=>({x:d.anio,y:d.tasa_oficial}))});
+    }
+    d3.select('#serieLeg').html(series.map(s=>`<span><i style="background:${s.hollow?'#fff':s.color};${s.hollow?'border-radius:50%;border:2px solid '+s.color:''}"></i>${s.name}</span>`).join(''));
+    d3.select('#serieTit').text('· '+nomReg(S.reg));
+    lineChart('serie',series,{band:true,mark:S.anio,h});
+  }
+  function drawIngresos(h){
+    const rows=D.ingresos.filter(d=>d.dpto===S.reg).sort((a,b)=>a.anio-b.anio), sol=v=>'S/ '+n0(v);
+    lineChart('ingresos',[
+      {name:'Formal',color:C.form,fmt:sol,data:rows.map(d=>({x:d.anio,y:d.mediana_formal}))},
+      {name:'Informal',color:C.inf,fmt:sol,data:rows.map(d=>({x:d.anio,y:d.mediana_informal}))}
+    ],{h,ydom:[0,Math.ceil(d3.max(rows,d=>d.mediana_formal)/500)*500],mark:S.anio,yfmt:d=>'S/ '+n0(d)});
+  }
+
+  // ---------- grupos
+  function drawGrupos(rowH0){
+    const dim=S.dim, reg=S.reg;
+    let rows=D.grupos.filter(d=>d.dpto===reg && d.dimension===dim && d.anio===S.anio);
+    const base=new Map(D.grupos.filter(d=>d.dpto===reg && d.dimension===dim && d.anio===2019).map(d=>[d.categoria,d]));
+    const ord=ORDEN[dim]; rows = ord ? ord.map(c=>rows.find(r=>r.categoria===c)).filter(Boolean) : rows.sort((a,b)=>b.tasa-a.tasa);
+    d3.select('#grpTit').text(`Informalidad según ${DIM_TXT[dim]} · ${nomReg(reg)}`);
+    d3.select('#grpSub').text('% de ocupados de cada grupo con empleo informal. Entre paréntesis, el peso del grupo en el empleo.'+(reg!=='00'?' * menos de 100 casos en la muestra: leer con cautela.':''));
+    const W=width('grupos'), rowH=rowH0||(dim==='rama'?28:38), lab=Math.min(170,W*.36), m={t:6,r:110,b:20,l:lab}, H=m.t+m.b+rows.length*rowH;
+    const x=d3.scaleLinear().domain([0,100]).range([m.l,W-m.r]);
+    const svg=d3.select('#grupos').selectAll('svg').data([0]).join('svg').attr('viewBox',`0 0 ${W} ${H}`).attr('width','100%'); svg.selectAll('*').remove();
+    svg.append('g').attr('class','grid').selectAll('line').data([0,25,50,75,100]).join('line').attr('x1',d=>x(d)).attr('x2',d=>x(d)).attr('y1',m.t).attr('y2',H-m.b);
+    svg.append('g').attr('class','axis').attr('transform',`translate(0,${H-m.b})`).call(d3.axisBottom(x).tickValues([0,25,50,75,100]).tickFormat(d=>d+'%').tickSize(0)).call(g=>g.select('.domain').remove());
+    const g=svg.selectAll('g.r').data(rows).join('g').attr('class','r').attr('transform',(d,i)=>`translate(0,${m.t+i*rowH})`);
+    const bh=Math.min(16,rowH-12);
+    g.append('text').attr('x',m.l-8).attr('y',rowH/2+4).attr('text-anchor','end').attr('font-size',12).attr('fill',C.ink2).text(d=>d.categoria+(d.n<100?' *':''));
+    g.append('rect').attr('x',x(0)).attr('y',(rowH-bh)/2).attr('height',bh).attr('rx',4).attr('fill',C.inf).attr('width',d=>Math.max(0,x(d.tasa)-x(0)));
+    g.append('line').attr('x1',d=>x(Math.max(0,d.li))).attr('x2',d=>x(Math.min(100,d.ls))).attr('y1',rowH/2).attr('y2',rowH/2).attr('stroke',C.ink).attr('stroke-width',1.2);
+    g.filter(d=>base.has(d.categoria)).append('circle').attr('cx',d=>x(base.get(d.categoria).tasa)).attr('cy',rowH/2).attr('r',4.5).attr('fill',C.muted).attr('stroke','#fff').attr('stroke-width',1.5);
+    g.append('text').attr('x',W-m.r+8).attr('y',rowH/2+4).attr('font-size',12).attr('fill',C.ink).html(d=>`<tspan font-weight="600">${n1(d.tasa)} %</tspan><tspan fill="${C.muted}"> (${n0(d.participacion)} %)</tspan>`);
+    g.append('rect').attr('x',0).attr('width',W).attr('height',rowH).attr('fill','transparent')
+      .on('mousemove',(e,d)=>{const b=base.get(d.categoria); const dif=b?d.tasa-b.tasa:null, se=b?Math.hypot(d.ee,b.ee):null;
+        showTip(e,`<b>${d.categoria}</b> · ${nomReg(reg)}<br>${S.anio}: <b>${pct(d.tasa)}</b> (IC ${n1(d.li)}–${n1(d.ls)})${b?`<br>2019: ${pct(b.tasa)}<br>Cambio: ${dif>0?'+':''}${n1(dif)} pp ${Math.abs(dif)>1.96*se?'· significativo':'· no significativo'}`:''}<br>${mill(d.casos)} informales · ${n0(d.participacion)} % del empleo<br>Muestra: ${n0(d.n)} personas`);})
+      .on('mouseleave',hideTip);
+  }
+
+  // ---------- pesas
+  function drawPesas(rowH0){
+    const a2 = S.anio;
+    d3.selectAll('.yr2').text(a2===2019 ? '2019 (año base)' : a2);
+    const b=new Map(D.departamentos.filter(d=>d.anio===2019).map(d=>[d.dpto,d]));
+    const rows=D.departamentos.filter(d=>d.anio===a2).map(d=>{const o=b.get(d.dpto), dif=d.tasa-o.tasa, se=Math.hypot(d.ee,o.ee); return {...d,t19:o.tasa,dif,sig:Math.abs(dif)>1.96*se};}).sort((p,q)=>q.tasa-p.tasa);
+    const W=width('pesas'), rowH=rowH0||17, m={t:6,r:54,b:22,l:104}, H=m.t+m.b+rows.length*rowH;
+    const x=d3.scaleLinear().domain([50,95]).range([m.l,W-m.r]);
+    const svg=d3.select('#pesas').selectAll('svg').data([0]).join('svg').attr('viewBox',`0 0 ${W} ${H}`).attr('width','100%'); svg.selectAll('*').remove();
+    svg.append('g').attr('class','grid').selectAll('line').data([50,60,70,80,90]).join('line').attr('x1',d=>x(d)).attr('x2',d=>x(d)).attr('y1',m.t).attr('y2',H-m.b);
+    svg.append('g').attr('class','axis').attr('transform',`translate(0,${H-m.b})`).call(d3.axisBottom(x).tickValues([50,60,70,80,90]).tickFormat(d=>d+'%').tickSize(0)).call(g=>g.select('.domain').remove());
+    const g=svg.selectAll('g.r').data(rows).join('g').attr('class','r').attr('transform',(d,i)=>`translate(0,${m.t+i*rowH})`).style('cursor','pointer');
+    g.append('rect').attr('x',0).attr('width',W).attr('height',rowH).attr('fill',d=>d.dpto===S.reg?C.band:'transparent');
+    g.append('text').attr('x',m.l-8).attr('y',rowH/2+4).attr('text-anchor','end').attr('font-size',11.5).attr('fill',d=>d.dpto===S.reg?C.ink:C.ink2).attr('font-weight',d=>d.dpto===S.reg?600:400).text(d=>d.departamento);
+    g.append('line').attr('x1',d=>x(d.t19)).attr('x2',d=>x(d.tasa)).attr('y1',rowH/2).attr('y2',rowH/2).attr('stroke',C.muted).attr('stroke-width',2);
+    g.append('circle').attr('cx',d=>x(d.t19)).attr('cy',rowH/2).attr('r',4).attr('fill',C.muted);
+    g.append('circle').attr('cx',d=>x(d.tasa)).attr('cy',rowH/2).attr('r',4.8).attr('fill',d=>d.sig?C.inf:C.brand).attr('stroke','#fff').attr('stroke-width',1.5);
+    g.append('text').attr('x',W-m.r+6).attr('y',rowH/2+4).attr('font-size',11).attr('fill',d=>d.sig?C.inf:C.muted).attr('font-weight',d=>d.sig?600:400).text(d=>(d.dif>0?'+':'')+n1(d.dif));
+    g.on('mousemove',(e,d)=>showTip(e,`<b>${d.departamento}</b><br>2019: ${pct(d.t19)} → ${a2}: <b>${pct(d.tasa)}</b><br>Cambio: ${d.dif>0?'+':''}${n1(d.dif)} pp · ${d.sig?'significativo':'no significativo'} (95 %)`)).on('mouseleave',hideTip)
+     .on('click',(e,d)=>{setReg(S.reg===d.dpto?'00':d.dpto,false); enfocar(['kpis','cSerie']);});
+  }
+
+  // ---------- barras apiladas
+  function stackBars(id, rows, fmtV, rowH){
+    const W=width(id), lab=Math.min(170,W*.36), m={t:4,r:70,b:6,l:lab}, H=m.t+m.b+rows.length*rowH;
+    const x=d3.scaleLinear().domain([0,d3.max(rows,d=>d.inf+d.form)||1]).range([m.l,W-m.r]);
+    const svg=d3.select('#'+id).selectAll('svg').data([0]).join('svg').attr('viewBox',`0 0 ${W} ${H}`).attr('width','100%'); svg.selectAll('*').remove();
+    const g=svg.selectAll('g').data(rows).join('g').attr('transform',(d,i)=>`translate(0,${m.t+i*rowH})`);
+    const bh=Math.min(16,rowH-10);
+    g.append('text').attr('x',m.l-8).attr('y',rowH/2+4).attr('text-anchor','end').attr('font-size',12).attr('fill',C.ink2).text(d=>d.cat);
+    g.append('rect').attr('x',x(0)).attr('y',(rowH-bh)/2).attr('height',bh).attr('rx',3).attr('fill',C.inf).attr('width',d=>Math.max(0,x(d.inf)-x(0)));
+    g.append('rect').attr('x',d=>x(d.inf)+(d.inf>0?2:0)).attr('y',(rowH-bh)/2).attr('height',bh).attr('rx',3).attr('fill',C.form).attr('width',d=>Math.max(0,x(d.inf+d.form)-x(d.inf)-2));
+    g.append('text').attr('x',d=>x(d.inf+d.form)+6).attr('y',rowH/2+4).attr('font-size',11.5).attr('fill',C.ink).text(d=>fmtV(d.inf+d.form));
+    g.append('rect').attr('width',W).attr('height',rowH).attr('fill','transparent')
+      .on('mousemove',(e,d)=>showTip(e,`<b>${d.cat}</b><br><span style="color:#F08A4B">●</span> Informales: ${fmtV(d.inf)}<br><span style="color:#2FBF8F">●</span> Formales: ${fmtV(d.form)}<br>Informalidad: <b>${pct(100*d.inf/(d.inf+d.form))}</b>`)).on('mouseleave',hideTip);
+  }
+  function drawComp(rowH){
+    let rows=D.grupos.filter(d=>d.dpto===S.reg && d.dimension===S.dim && d.anio===S.anio);
+    const ord=ORDEN[S.dim]; rows = ord ? ord.map(c=>rows.find(r=>r.categoria===c)).filter(Boolean) : rows.sort((a,b)=>b.ocupados-a.ocupados);
+    stackBars('composicion', rows.map(d=>({cat:d.categoria,inf:d.casos,form:d.ocupados-d.casos})), mill, rowH||(S.dim==='rama'?26:34));
+  }
+
+  // ---------- Estado
+  function drawEstado(){
+    const t=D.estado_tasas, inf=t.filter(d=>d.indicador==='informalidad'), loc=t.filter(d=>d.indicador==='locacion');
+    const g=a=>inf.find(d=>d.anio===a);
+    d3.select('#estA').text(pct(g(2019).tasa)); d3.select('#estB').text(pct(g(2025).tasa));
+    const comp=D.estado_contratos.filter(d=>d.anio===S.anio);
+    const tipos=['Nombrado o indefinido','Plazo fijo','CAS','Locación de servicios','Prácticas','Sin contrato','Otro'];
+    const rows=tipos.map(c=>({cat:c,inf:d3.sum(comp.filter(d=>d.contrato===c&&d.informal===1),d=>d.trabajadores),form:d3.sum(comp.filter(d=>d.contrato===c&&d.informal===0),d=>d.trabajadores)})).filter(d=>d.inf+d.form>0);
+    stackBars('estadoBar', rows, v=>n0(v/1e3)+' mil', 36);
+    const totInf=d3.sum(rows,d=>d.inf), locInf=(rows.find(d=>d.cat==='Locación de servicios')||{inf:0}).inf;
+    d3.select('#estK').text(Math.round(100*locInf/totInf)+' %');
+    const hBar=document.getElementById('estadoBar').getBoundingClientRect().height;
+    lineChart('estadoSerie',[
+      {name:'Empleo informal',color:C.inf,ci:true,data:inf.map(d=>({x:d.anio,y:d.tasa,li:d.li,ls:d.ls}))},
+      {name:'Locación de servicios',color:C.brand,ci:true,data:loc.map(d=>({x:d.anio,y:d.tasa,li:d.li,ls:d.ls}))}
+    ],{h:wide()?Math.max(230,hBar):240,ydom:[0,35],band:true,mark:S.anio});
+  }
+
+  // ---------- KPIs
+  function drawKPIs(){
+    const r=filaReg(S.reg,S.anio), b=filaReg(S.reg,2019);
+    const dif=r.tasa-b.tasa, se=Math.hypot(r.ee,b.ee), sig=Math.abs(dif)>1.96*se;
+    const ing=D.ingresos.find(d=>d.dpto===S.reg&&d.anio===S.anio);
+    const k=[
+      {c:C.inf, lab:`Tasa de informalidad · ${S.anio}`, val:pct(r.tasa), det:`IC 95 %: ${n1(r.li)}–${n1(r.ls)} % · ${nomReg(S.reg)}`},
+      {c:C.brand, lab:'Cambio frente a 2019 (prepandemia)', val:S.anio===2019?'Año base':`${dif>0?'+':''}${n1(dif)} pp`, det:S.anio===2019?'Último año antes de la pandemia':`2019: ${pct(b.tasa)} <span class="tag ${sig?'si':'no'}">${sig?'significativo':'no significativo'}</span>`},
+      {c:C.brand, lab:`Trabajadores informales · ${S.anio}`, val:mill(r.casos), det:`de ${mill(r.ocupados)} ocupados (aprox.)`},
+      {c:C.form, lab:'Ingreso del informal frente al formal', val:ing?Math.round(100*ing.cociente)+' %':'—', det:ing?`Mediana mensual: S/ ${n0(ing.mediana_informal)} frente a S/ ${n0(ing.mediana_formal)}`:''}
+    ];
+    d3.select('#kpis').selectAll('div.kpi').data(k).join('div').attr('class','card kpi').style('border-top-color',d=>d.c)
+      .html(d=>`<div class="lab">${d.lab}</div><div class="val">${d.val}</div><div class="det">${d.det}</div>`);
+    d3.select('#kpiNote').text(`Mostrando: ${nomReg(S.reg)} · ${S.anio}. Muestra de ${n0(r.n)} ocupados encuestados.`+(S.anio>=2024?' Desde 2024, tasa reconstruida (el INEI ya no publica la variable oficial en la ENAHO).':''));
+  }
+
+  // ---------- alturas: que las columnas de cada fila terminen juntas (sin espacios en blanco)
+  const alto = id => document.getElementById(id).getBoundingClientRect().height;
+  function igualarFilaA(){
+    drawIngresos(200); drawSerie(260);
+    if(!wide()) return;
+    const extra = alto('cMap') - (alto('cSerie') + alto('cIng') + 14);
+    if(Math.abs(extra) > 2){ const hs=Math.max(200, 260+extra*.6), hi=Math.max(170, 200+extra*.4); drawSerie(hs); drawIngresos(hi); }
+  }
+  function igualarFilaB(){
+    drawGrupos(); drawComp(); drawPesas();
+    if(!wide()) return;
+    const izq = alto('cGrp') + alto('cComp') + 14, der = alto('cPesas');
+    if(der < izq - 2){ drawPesas(17 + (izq-der)/25); }
+    else if(izq < der - 2){ const n1r = document.querySelectorAll('#grupos g.r').length, n2r = document.querySelectorAll('#composicion g').length;
+      const base1 = S.dim==='rama'?28:38, base2 = S.dim==='rama'?26:34, add = (der-izq)/(n1r+n2r);
+      drawGrupos(Math.min(70, base1+add)); drawComp(Math.min(60, base2+add)); }
+  }
+
+  function update(){
+    fReg.property('value',S.reg); fAnio.property('value',S.anio);
+    d3.select('#fDim2').selectAll('button').classed('on',d=>d[0]===S.dim);
+    d3.selectAll('.yr').text(S.anio); d3.selectAll('.regName').text('· '+nomReg(S.reg));
+    const q=new URLSearchParams({reg:S.reg,anio:S.anio,dim:S.dim}); if(S.mapa!=='tasa') q.set('mapa',S.mapa); if(Q.get('font')) q.set('font',Q.get('font'));
+    history.replaceState(null,'','?'+q.toString()+location.hash);
+    drawKPIs(); drawMap(); igualarFilaA(); igualarFilaB(); drawEstado();
+  }
+  update();
+  let rt; addEventListener('resize',()=>{clearTimeout(rt); rt=setTimeout(update,150);});
+}).catch(err=>{ document.querySelector('main').insertAdjacentHTML('afterbegin',`<div class="card" style="margin-top:20px">No se pudieron cargar los datos (${err}). Si abres el archivo localmente, usa un servidor: <code>python -m http.server</code>.</div>`); });
+</script>
+</body>
+</html>

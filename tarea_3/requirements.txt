@@ -1,0 +1,7 @@
+# datos y análisis (scripts/)
+pandas>=2.2
+numpy>=1.26
+certifi
+pymupdf          # lee los diccionarios PDF del INEI (validación de ocupinf)
+# reel (reel/), en un entorno aparte: qwen-tts fija su propia versión de transformers
+# qwen-tts faster-whisper pillow imageio-ffmpeg soundfile jiwer num2words

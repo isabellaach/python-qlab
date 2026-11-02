@@ -1,0 +1,12 @@
+anio,ocupinf_en_base,ocupinf_en_diccionario,n,tasa_reconstruida,tasa_oficial,acuerdo_pct,acuerdo_con_pension_pct,diferencia_pp
+2015,True,True,61498,73.05,73.26,99.63,97.7,-0.21
+2016,True,True,67827,71.87,72.07,99.61,97.63,-0.19
+2017,True,True,64915,72.41,72.64,99.58,97.85,-0.23
+2018,True,True,70036,72.28,72.45,99.65,98.13,-0.17
+2019,True,True,64954,72.56,72.74,99.72,98.08,-0.18
+2020,True,True,56615,75.17,75.34,99.73,98.09,-0.17
+2021,True,True,59935,76.63,76.83,99.66,97.95,-0.2
+2022,True,True,61181,75.67,75.72,99.46,97.69,-0.05
+2023,True,True,59447,74.35,73.94,98.87,96.87,0.41
+2024,False,False,58579,74.14,,,,
+2025,False,False,57716,73.72,,,,

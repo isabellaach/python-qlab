@@ -1,0 +1,87 @@
+1
+00:00:00,000 --> 00:00:01,551
+En el Perú, 9 de cada 10
+
+2
+00:00:01,551 --> 00:00:04,529
+empleos creados desde 2019 son informales. ¿Qué
+
+3
+00:00:04,529 --> 00:00:06,639
+pasó con el trabajo después de la
+
+4
+00:00:06,639 --> 00:00:07,259
+pandemia?
+
+5
+00:00:07,949 --> 00:00:12,561
+Antes de la pandemia, la informalidad era
+
+6
+00:00:12,561 --> 00:00:15,526
+de 72,6 %. En 2021 subió a
+
+7
+00:00:15,526 --> 00:00:18,491
+76,6 %, y en 2025 sigue en
+
+8
+00:00:18,491 --> 00:00:19,369
+73,7 %.
+
+9
+00:00:19,739 --> 00:00:21,973
+Y crece donde menos se espera: entre
+
+10
+00:00:21,973 --> 00:00:24,751
+los universitarios, en las empresas grandes y
+
+11
+00:00:24,751 --> 00:00:26,140
+entre los asalariados.
+
+12
+00:00:26,649 --> 00:00:28,610
+Incluso en el Estado: casi 3 de
+
+13
+00:00:28,610 --> 00:00:31,428
+cada 10 asalariados públicos tienen un empleo
+
+14
+00:00:31,428 --> 00:00:34,185
+informal. La mayoría trabaja por locación de
+
+15
+00:00:34,185 --> 00:00:36,329
+servicios, sin planilla ni seguro.
+
+16
+00:00:37,079 --> 00:00:39,774
+Y la brecha territorial es enorme: va
+
+17
+00:00:39,774 --> 00:00:41,334
+de casi el 60 % en el
+
+18
+00:00:41,334 --> 00:00:43,107
+Callao a más del 90 % en
+
+19
+00:00:43,107 --> 00:00:44,099
+Huancavelica.
+
+20
+00:00:44,469 --> 00:00:46,897
+El Perú recuperó el empleo, pero no
+
+21
+00:00:46,897 --> 00:00:49,526
+la formalidad. Explora los datos de tu
+
+22
+00:00:49,526 --> 00:00:51,009
+región en el tablero.
