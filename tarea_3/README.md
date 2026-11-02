@@ -22,7 +22,7 @@ Cobertura: Perú, 25 departamentos, área urbana y rural. Periodo: 2015–2025, 
 Reconstruí la tasa de empleo informal **persona por persona** con los microdatos de la Encuesta Nacional de Hogares (ENAHO) del INEI, para 11 años y 25 departamentos. La comparé por sexo, edad, área, educación, tamaño de empresa, rama, categoría ocupacional e ingresos, con intervalos de confianza que respetan el diseño muestral. Los resultados se presentan en un dashboard interactivo y en un reel de 60 segundos.
 
 ![Portada del dashboard](capturas/dashboard_portada.png)
-![Explorar por región (Huancavelica) y por tamaño de empresa](capturas/dashboard_explorar.png)
+![Explorar: mapa de cambio frente a 2019, con Madre de Dios seleccionada](capturas/dashboard_explorar.png)
 
 ## 3. Fuentes y metodología
 

@@ -416,6 +416,9 @@ if (['a','b','c'].includes(Q.get('font'))) document.documentElement.dataset.font
 const tip = d3.select('#tip');
 function showTip(ev, html){ tip.html(html).style('opacity',1); const x=Math.min(ev.clientX+14, innerWidth-280); tip.style('left',x+'px').style('top',(ev.clientY+14)+'px'); }
 function hideTip(){ tip.style('opacity',0); }
+// en celulares no existe "sacar el mouse": el recuadro se cierra al hacer scroll o al tocar fuera de un gráfico
+addEventListener('scroll', hideTip, {passive:true});
+document.addEventListener('pointerdown', e=>{ if(!e.target.closest('svg')) hideTip(); });
 function width(id){ return Math.max(260, document.getElementById(id).clientWidth); }
 const wide = () => innerWidth > 980;
 document.getElementById('irInicio').addEventListener('click',e=>{e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'});});
@@ -687,6 +690,7 @@ Promise.all([d3.json('data/datos.json'), d3.json('data/departamentos.geojson')])
   }
 
   function update(){
+    hideTip();
     fReg.property('value',S.reg); fAnio.property('value',S.anio);
     d3.select('#fDim2').selectAll('button').classed('on',d=>d[0]===S.dim);
     d3.selectAll('.yr').text(S.anio); d3.selectAll('.regName').text('· '+nomReg(S.reg));
