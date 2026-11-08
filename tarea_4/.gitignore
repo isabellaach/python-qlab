@@ -1,0 +1,12 @@
+# microdatos y descargas (se bajan con scripts/descargar_datos.sh)
+datos/
+mcp/datos/
+*.zip
+*.dta
+# bases intermedias pesadas
+salidas/*.parquet
+# entorno y cachés
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
