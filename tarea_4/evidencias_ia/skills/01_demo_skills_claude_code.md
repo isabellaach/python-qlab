@@ -1,4 +1,4 @@
- ▐▛███▛█   Claude Code v2.1.319
+▐▛███▛█   Claude Code v2.1.319
 ▝▜██████▀  Opus 5.5 · Claude Pro
  ▝▝   ▝▝   ~/Documents/Github/python-qlab/tarea_4
 
@@ -18,7 +18,7 @@
 ⏺ Skill(limpiando-enaho)
   ⎿  Successfully loaded skill
 
-⏺ Bash(uv run /Users/isabellaalbarran/Documents/Github/python-qlab/tarea_4/.clau
+⏺ Bash(uv run ~/Documents/Github/python-qlab/tarea_4/.clau
       de/skills/limpiando-enaho/scripts/limpiar.py --anio 2024 2>&1 | tail -15;
       tail -2 salid…)
   ⎿  [APROBADA] (esencial) Factores de expansión positivos: facpob07 mín. 1
@@ -98,7 +98,7 @@
       86                   f"{mx.departamento}\nPobreza monetaria por dep
           artamento, Perú 2024", loc="left", fontsize=12,
 
-⏺ Bash(uv run /Users/isabellaalbarran/Documents/Github/python-qlab/tarea_4/.clau
+⏺ Bash(uv run ~/Documents/Github/python-qlab/tarea_4/.clau
       de/skills/mapeando-enaho/scripts/mapear.py 2>&1 | head -2)
   ⎿  Mapa: mapas/pobreza_departamento_2024.png  ·  25/25 departamentos con
      dato, unidos por código

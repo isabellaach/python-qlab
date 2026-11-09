@@ -1,4 +1,4 @@
- ▐▛███▛█   Claude Code v2.1.319
+▐▛███▛█   Claude Code v2.1.319
 ▝▜██████▀  Opus 5.5 · Claude Pro
  ▝▝   ▝▝   ~/Documents/Github/python-qlab/tarea_4
 
@@ -141,7 +141,7 @@
   Inflación de alimentos vs. IPC total en Lima, 2020–2024
   (figuras/inflacion_alimentos_lima_2020_2024.png)
 
-  Está guardada en /Users/isabellaalbarran/Documents/Github/python-qlab/tarea_4/
+  Está guardada en ~/Documents/Github/python-qlab/tarea_4/
   figuras/inflacion_alimentos_lima_2020_2024.png. La banda sombreada es la meta
   de 1 % a 3 %, aunque la leyenda la llama «Rango de referencia».
 
