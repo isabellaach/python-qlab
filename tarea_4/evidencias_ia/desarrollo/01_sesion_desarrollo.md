@@ -4144,3 +4144,357 @@ Avísame cuando termines y te pregunto por el commit.
 ## Usuaria · 03:25 UTC
 
 listo, ya marqué las casillas, haz el commit
+
+`Bash`
+
+```json
+{
+ "command": "tail -5 informes/verificacion.md; ls evidencias_ia/integracion; uv run scripts/exportar_conversaciones.py && grep -c -iE \"<usuario>|<correo>\" evidencias_ia/*/*.md | grep -v \":0\"; git add README.md evaluacion/ evidencias_ia/ informes/ scripts/ && git status --short . && git commit -q -m \"tarea 4: evaluación sin y con MCP/skills (0/10 vs 10/10), verificación manual, README y evidencias de IA\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\" && git log -1 --format=\"%h %cd %s\" && git status --short . | head",
+ "description": "Re-export transcripts, sanitize check, and commit"
+}
+```
+
+<details><summary>Resultado</summary>
+
+```text
+- [x ] Enlace 1 (PN39445PM): dic. 2024 = 119.53
+- [x ] Enlace 4 (PN09822PM): feb. 2023 = 13.16 y dic. 2024 = 1.25
+- [x ] Enlace 5 (PN01273PM): jun. 2022 = 8.81 y dic. 2024 = 1.97
+<!-- Captura opcional: evidencias_ia/integracion/02_verificacion_bcrp_web.png -->
+01_ejecucion_integrada.md
+02_transcripcion_completa_ejecucion_integrada.md
+02_verificacion_bcrp_web.png
+evidencias_ia/desarrollo/01_sesion_desarrollo.md: 267 KB
+evidencias_ia/mcp/02_transcripcion_completa_demo_mcp.md: 20 KB
+evidencias_ia/skills/02_transcripcion_completa_demo_skills.md: 27 KB
+evidencias_ia/integracion/02_transcripcion_completa_ejecucion_integrada.md: 42 KB
+A  README.md
+A  evaluacion/comparacion.md
+A  evaluacion/resultados.csv
+A  evidencias_ia/desarrollo/01_sesion_desarrollo.md
+A  evidencias_ia/evaluacion/modo_A/bcrp_ipc_set26.jsonl
+A  evidencias_ia/evaluacion/modo_A/bcrp_pbi_2025.jsonl
+A  evidencias_ia/evaluacion/modo_A/bcrp_referencia_set26.jsonl
+A  evidencias_ia/evaluacion/modo_A/bcrp_tc_15oct26.jsonl
+A  evidencias_ia/evaluacion/modo_A/enaho_cajamarca.jsonl
+A  evidencias_ia/evaluacion/modo_A/enaho_cusco.jsonl
+A  evidencias_ia/evaluacion/modo_A/enaho_extrema.jsonl
+A  evidencias_ia/evaluacion/modo_A/enaho_urbana.jsonl
+A  evidencias_ia/evaluacion/modo_A/mixta_acumulada_lima.jsonl
+A  evidencias_ia/evaluacion/modo_A/mixta_alimentos_rural.jsonl
+A  evidencias_ia/evaluacion/modo_B/bcrp_ipc_set26.jsonl
+A  evidencias_ia/evaluacion/modo_B/bcrp_pbi_2025.jsonl
+A  evidencias_ia/evaluacion/modo_B/bcrp_referencia_set26.jsonl
+A  evidencias_ia/evaluacion/modo_B/bcrp_tc_15oct26.jsonl
+A  evidencias_ia/evaluacion/modo_B/enaho_cajamarca.jsonl
+A  evidencias_ia/evaluacion/modo_B/enaho_cusco.jsonl
+A  evidencias_ia/evaluacion/modo_B/enaho_extrema.jsonl
+A  evidencias_ia/evaluacion/modo_B/enaho_urbana.jsonl
+A  evidencias_ia/evaluacion/modo_B/mixta_acumulada_lima.jsonl
+A  evidencias_ia/evaluacion/modo_B/mixta_alimentos_rural.jsonl
+M  evidencias_ia/integracion/01_ejecucion_integrada.md
+A  evidencias_ia/integracion/02_transcripcion_completa_ejecucion_integrada.md
+A  evidencias_ia/integracion/02_verificacion_bcrp_web.png
+M  evidencias_ia/mcp/01_demo_mcp_claude_code.md
+A  evidencias_ia/mcp/02_transcripcion_completa_demo_mcp.md
+M  evidencias_ia/skills/01_demo_skills_claude_code.md
+A  evidencias_ia/skills/02_transcripcion_completa_demo_skills.md
+A  informes/verificacion.md
+A  scripts/exportar_conversaciones.py
+bc9839e Sun Nov 8 22:26:03 2026 -0500 tarea 4: evaluación sin y con MCP/skills (0/10 vs 10/10), verificación
+… [34 caracteres más omitidos]
+```
+</details>
+
+`Bash`
+
+```json
+{
+ "command": "sed -i '' 's/^- \\[x \\]/- [x]/' informes/verificacion.md && sed -i '' 's|<!-- Captura opcional: evidencias_ia/integracion/02_verificacion_bcrp_web.png -->|Captura de la comprobación: [`evidencias_ia/integracion/02_verificacion_bcrp_web.png`](../evidencias_ia/integracion/02_verificacion_bcrp_web.png)|' informes/verificacion.md && tail -4 informes/verificacion.md && git add informes/verificacion.md && git commit -q --amend --no-edit && git log -2 --format=\"%h %s\" && git status --short . && git log origin/main..HEAD --oneline",
+ "description": "Fix checkbox syntax, link screenshot, amend local commit"
+}
+```
+
+<details><summary>Resultado</summary>
+
+```text
+- [x] Enlace 1 (PN39445PM): dic. 2024 = 119.53
+- [x] Enlace 4 (PN09822PM): feb. 2023 = 13.16 y dic. 2024 = 1.25
+- [x] Enlace 5 (PN01273PM): jun. 2022 = 8.81 y dic. 2024 = 1.97
+Captura de la comprobación: [`evidencias_ia/integracion/02_verificacion_bcrp_web.png`](../evidencias_ia/integracion/02_verificacion_bcrp_web.png)
+fc9c700 tarea 4: evaluación sin y con MCP/skills (0/10 vs 10/10), verificación manual, README y evidencias de IA
+d358924 tarea 4: ejecución integrada (informe final) y preguntas de evaluación fijadas antes de correrla
+fc9c700 tarea 4: evaluación sin y con MCP/skills (0/10 vs 10/10), verificación manual, README y evidencias de IA
+d358924 tarea 4: ejecución integrada (informe final) y preguntas de evaluación fijadas antes de correrla
+1873125 tarea 4: skills de la ENAHO (limpiar, graficar, mapear) y demos de MCP y skills
+0a03a44 tarea 4: entorno uv, descarga de datos y servidor MCP del BCRP (10 pruebas)
+[This command modified 1 file you've previously read: informes/verificacion.md. Call Read before editing.]
+```
+</details>
+
+**Claude** · 03:26 UTC
+
+Hice el commit local `fc9c700` a las 22:26. Antes volví a exportar esta conversación para que la evidencia quede completa.
+
+Corregí también dos detalles en `verificacion.md`:
+- Las casillas tenían un espacio de más (`[x ]`), así que GitHub no las mostraría como marcadas. Ahora dicen `[x]`.
+- Vi tu captura `02_verificacion_bcrp_web.png` y la enlacé desde el archivo.
+
+Metí esas dos correcciones en el mismo commit. Como todavía no está en GitHub, no afecta a nada.
+
+## ¿Hago el push?
+
+Hay **4 commits locales** de la tarea 4 que aún no están en GitHub. Si me das el «sí», hago `git push origin main`. Si GitHub lo rechaza, primero hago `git pull --rebase origin main` y vuelvo a intentarlo.
+
+Te dejo listo el texto del comentario de entrega; los enlaces funcionarán después del push. **No lo publico yo**: lo pegas tú en el issue #201 y pones tu nombre.
+
+```markdown
+**Tarea 4 – Individual**
+
+- **Estudiante:** [tu nombre completo]
+- **Pregunta:** ¿Cuánto subieron los precios de los alimentos en Lima entre 2021 y 2024 frente a la inflación general, y qué departamentos, áreas y grupos de población tenían más pobreza monetaria en 2024?
+- **Repositorio:** https://github.com/isabellaach/python-qlab/tree/main/tarea_4
+- **Informe final:** https://github.com/isabellaach/python-qlab/blob/main/tarea_4/informes/informe_final.md
+- **Pruebas MCP:** 10/10 (8 originales + 2 propias de `graficar_serie`)
+- **Validación ENAHO:** pobreza 27.58 % (ref. 27.6 % ± 0.1), residentes 108,664, unidades 25/25 (19/19 verificaciones aprobadas)
+- **Evaluación:** Sin MCP/Skills 0/10 · Con MCP/Skills 10/10 · [resultados.csv](https://github.com/isabellaach/python-qlab/blob/main/tarea_4/evaluacion/resultados.csv)
+- **Evidencia de integración:** https://github.com/isabellaach/python-qlab/blob/main/tarea_4/evidencias_ia/integracion/01_ejecucion_integrada.md
+- **Evidencias de uso de IA:** https://github.com/isabellaach/python-qlab/tree/main/tarea_4/evidencias_ia
+```
+
+Después del push reviso que los enlaces abran y que el README y el informe muestren bien las imágenes en GitHub.
+
+## Usuaria · 03:33 UTC
+
+cumplo con todo en esta lista de verificación? [Image #1]
+[imagen]
+
+## Usuaria · 03:33 UTC
+
+[Image: source: <tmp>/-Users-<usuario>-Documents-Github-python-qlab-tarea-4/5cfe65dd-2846-465a-9b77-7dba761f50c8/images/1.png]
+
+**Claude** · 03:33 UTC
+
+Reviso rápido lo que puedo comprobar desde aquí: que el repo sea público y que existan los archivos a los que apuntan los enlaces e imágenes del README y del informe.
+
+`Bash`
+
+```json
+{
+ "command": "curl -s -o /dev/null -w \"repo: %{http_code}\\n\" https://github.com/isabellaach/python-qlab; python3 - <<'EOF'\nimport re\nfrom pathlib import Path\nfor md in [\"README.md\",\"informes/informe_final.md\",\"informes/verificacion.md\",\"evaluacion/comparacion.md\"]:\n    p=Path(md); t=p.read_text()\n    for l in re.findall(r'\\]\\(([^)#]+)\\)', t):\n        if l.startswith(\"http\"): continue\n        ok=(p.parent/l).exists()\n        if not ok: print(\"ROTO\", md, l)\nprint(\"enlaces relativos revisados\")\nEOF\nfor u in https://github.com/d2cml-ai/Data-Science-Python/tree/main/sessions/06-geoespacial/lab/Data https://proyectos.inei.gob.pe/microdatos/; do curl -s -o /dev/null -L -w \"%{http_code} $u\\n\" \"$u\"; done",
+ "description": "Check repo visibility and README/report links"
+}
+```
+
+<details><summary>Resultado</summary>
+
+```text
+repo: 200
+enlaces relativos revisados
+200 https://github.com/d2cml-ai/Data-Science-Python/tree/main/sessions/06-geoespacial/lab/Data
+200 https://proyectos.inei.gob.pe/microdatos/
+```
+</details>
+
+**Claude** · 03:33 UTC
+
+Sí, **cumples con todo menos un punto, que se resuelve con el push**. Lo revisé contra los archivos:
+
+**Servidor MCP**
+
+| Ítem | Estado | Dónde se ve |
+|---|---|---|
+| 4 herramientas | ✅ | `buscar_series`, `serie`, `resumen`, `graficar_serie`. Captura `evidencias_ia/mcp/00_mcp_herramientas.png` |
+| Recurso y prompt funcionales | ✅ | `bcrp://serie/{codigo}` y `informe`, probados en la demo del MCP. La falla del adjunto con `@` está documentada en el README |
+| 8 + 2 pruebas | ✅ | `uv run pytest` da **10 passed**, comprobado de nuevo hoy a las 22:01 |
+| `.mcp.json` | ✅ | Lo usaron la demo, la ejecución integrada y el Modo B de la evaluación |
+| Fuentes oficiales verificables | ✅ | Cada respuesta trae el código de la serie, la URL de la API y la página web del BCRP |
+
+**Skills de ENAHO**
+
+| Ítem | Estado | Dónde se ve |
+|---|---|---|
+| 3 skills con `SKILL.md` | ✅ | `.claude/skills/{limpiando,graficando,mapeando}-enaho/` |
+| Reproduce las validaciones | ✅ | `salidas/validacion.txt`: 19/19, 27.58 %, 108,664 y 25 |
+| Factores de expansión | ✅ | `factor07 × mieperho` (método INEI) y `facpob07`, con la decisión explicada en el README |
+| Títulos, unidades y fuentes | ✅ | Los gráficos de la ENAHO, el del BCRP y el mapa llevan título, unidad en el eje o la leyenda, y fuente al pie |
+| Mapa con 25 unidades | ✅ | 25/25, con Lima y Callao separados |
+| Activación y coordinación | ✅ | Demo de skills: `mapeando-enaho` → `limpiando-enaho` |
+
+**Integración del agente**
+
+| Ítem | Estado | Dónde se ve |
+|---|---|---|
+| MCP y skills en una ejecución | ✅ | 3 herramientas del MCP y 3 skills en una misma sesión (`evidencias_ia/integracion/`) |
+| Pregunta con BCRP y ENAHO | ✅ | Precios del BCRP y pobreza de la ENAHO |
+| 3 o más hallazgos sustentados | ✅ | 5 hallazgos y una tabla de trazabilidad |
+| Gráfico del BCRP, de la ENAHO y mapa | ✅ | Revisé que todas las rutas de imágenes existan |
+| Verificación manual de 3 o más cifras | ✅ | 14 cifras, más tu revisión en el navegador y tu captura |
+
+**Evaluación y documentación**
+
+| Ítem | Estado | Dónde se ve |
+|---|---|---|
+| 10 preguntas | ✅ | 4 del BCRP, 4 de la ENAHO y 2 mixtas |
+| Comparación con y sin MCP/skills | ✅ | 0/10 frente a 10/10 |
+| Archivos reproducibles | ✅ | `evaluar.py`, `resultados.csv`, `comparacion.md` y las 20 conversaciones |
+| README con instalación, arquitectura y ejecución | ✅ | Tiene los 12 puntos |
+| **Repo público y enlaces que funcionan** | ⚠️ **Falta el push** | El repo es público (respondió 200) y todos los enlaces relativos y externos funcionan. Pero los 4 commits de la tarea 4 aún no están en GitHub |
+
+**Uso de IA**
+
+| Ítem | Estado | Dónde se ve |
+|---|---|---|
+| Exportaciones completas | ✅ | Tus 3 `/export`, sus transcripciones completas, esta sesión de desarrollo y las 20 de la evaluación |
+| Organizadas en `evidencias_ia/` | ✅ | Carpetas `mcp/`, `skills/`, `integracion/`, `evaluacion/` y `desarrollo/` |
+| Permiten revisar el proceso | ✅ | Cubren el MCP, las skills, la integración y la evaluación |
+| Sin claves, tokens ni datos personales | ✅ | El escaneo no encontró claves ni tokens. Se quitaron tu correo, tu ruta, tu usuario y tus notas de memoria |
+
+**Lo único pendiente es el push.** ¿Lo hago? Después compruebo en GitHub que el README, el informe y las imágenes se vean bien, y ya puedes pegar el comentario de entrega.
+
+## Usuaria · 03:42 UTC
+
+sí, haz el push
+
+`Bash`
+
+```json
+{
+ "command": "cd ~/Documents/Github/python-qlab && git push origin main 2>&1 | tail -5",
+ "description": "Push commits to GitHub",
+ "timeout": 180000
+}
+```
+
+<details><summary>Resultado</summary>
+
+```text
+To https://github.com/isabellaach/python-qlab.git
+   3fde770..fc9c700  main -> main
+Shell cwd was reset to ~/Documents/Github/python-qlab/tarea_4
+```
+</details>
+
+`Bash`
+
+```json
+{
+ "command": "B=https://github.com/isabellaach/python-qlab; R=https://raw.githubusercontent.com/isabellaach/python-qlab/main/tarea_4; for u in $B/tree/main/tarea_4 $B/blob/main/tarea_4/informes/informe_final.md $B/blob/main/tarea_4/evaluacion/resultados.csv $B/blob/main/tarea_4/evidencias_ia/integracion/01_ejecucion_integrada.md $B/tree/main/tarea_4/evidencias_ia $R/figuras/informe_bcrp_inflacion_alimentos.png $R/figuras/pobreza_area_2024.png $R/figuras/pobreza_edad_2024.png $R/mapas/pobreza_departamento_2024.png $R/README.md; do curl -s -o /dev/null -w \"%{http_code} $u\\n\" \"$u\"; done; curl -s $R/mcp/test_server.py | wc -l",
+ "description": "Verify delivery links and images on GitHub"
+}
+```
+
+<details><summary>Resultado</summary>
+
+```text
+200 https://github.com/isabellaach/python-qlab/tree/main/tarea_4
+200 https://github.com/isabellaach/python-qlab/blob/main/tarea_4/informes/informe_final.md
+200 https://github.com/isabellaach/python-qlab/blob/main/tarea_4/evaluacion/resultados.csv
+200 https://github.com/isabellaach/python-qlab/blob/main/tarea_4/evidencias_ia/integracion/01_ejecucion_integrada.md
+200 https://github.com/isabellaach/python-qlab/tree/main/tarea_4/evidencias_ia
+200 https://raw.githubusercontent.com/isabellaach/python-qlab/main/tarea_4/figuras/informe_bcrp_inflacion_alimentos.png
+200 https://raw.githubusercontent.com/isabellaach/python-qlab/main/tarea_4/figuras/pobreza_area_2024.png
+200 https://raw.githubusercontent.com/isabellaach/python-qlab/main/tarea_4/figuras/pobreza_edad_2024.png
+200 https://raw.githubusercontent.com/isabellaach/python-qlab/main/tarea_4/mapas/pobreza_departamento_2024.png
+200 https://raw.githubusercontent.com/isabellaach/python-qlab/main/tarea_4/README.md
+      71
+```
+</details>
+
+**Claude** · 03:43 UTC
+
+Hice el push: los 4 commits de la tarea 4 ya están en GitHub (`3fde770..fc9c700`).
+
+Revisé que todo abra bien:
+- **Los 5 enlaces del comentario de entrega** responden: el repositorio, el informe final, `resultados.csv`, la evidencia de integración y la carpeta de evidencias.
+- **Las 4 imágenes del informe y del README** cargan: el gráfico del BCRP, los dos gráficos de la ENAHO y el mapa.
+- **Los microdatos de la ENAHO no se subieron**, porque `datos/` y los `.parquet` están en `.gitignore`.
+
+## Último paso, lo haces tú
+
+Abre el [issue #201](https://github.com/d2cml-ai/Data-Science-Python/issues/201), pega este comentario, **pon tu nombre** en la línea de estudiante y publícalo:
+
+```markdown
+**Tarea 4 – Individual**
+
+- **Estudiante:** [tu nombre completo]
+- **Pregunta:** ¿Cuánto subieron los precios de los alimentos en Lima entre 2021 y 2024 frente a la inflación general, y qué departamentos, áreas y grupos de población tenían más pobreza monetaria en 2024?
+- **Repositorio:** https://github.com/isabellaach/python-qlab/tree/main/tarea_4
+- **Informe final:** https://github.com/isabellaach/python-qlab/blob/main/tarea_4/informes/informe_final.md
+- **Pruebas MCP:** 10/10 (8 originales + 2 propias de `graficar_serie`)
+- **Validación ENAHO:** pobreza 27.58 % (ref. 27.6 % ± 0.1), residentes 108,664, unidades 25/25 (19/19 verificaciones aprobadas)
+- **Evaluación:** Sin MCP/Skills 0/10 · Con MCP/Skills 10/10 · [resultados.csv](https://github.com/isabellaach/python-qlab/blob/main/tarea_4/evaluacion/resultados.csv)
+- **Evidencia de integración:** https://github.com/isabellaach/python-qlab/blob/main/tarea_4/evidencias_ia/integracion/01_ejecucion_integrada.md
+- **Evidencias de uso de IA:** https://github.com/isabellaach/python-qlab/tree/main/tarea_4/evidencias_ia
+```
+
+Son las 22:30, así que entregas con 1 hora y media de margen antes de las 23:59.
+
+## Usuaria · 03:59 UTC
+
+[Image #2] edita el comment para pegarlo que incluya los bullet points del pantallaso
+[imagen]
+
+## Usuaria · 03:59 UTC
+
+[Image: source: <tmp>/-Users-<usuario>-Documents-Github-python-qlab-tarea-4/5cfe65dd-2846-465a-9b77-7dba761f50c8/images/2.png]
+
+**Claude** · 03:59 UTC
+
+Es tu plantilla con los datos ya puestos. Solo te falta escribir tu nombre en la línea de estudiante:
+
+```markdown
+### Tarea 4 – Individual
+
+**Estudiante:** [Tu nombre completo] (@isabellaach)
+
+**Pregunta de investigación:** ¿Cuánto subieron los precios de los alimentos en Lima entre 2021 y 2024 frente a la inflación general, y qué departamentos, áreas y grupos de población tenían más pobreza monetaria en 2024?
+
+**Repositorio de GitHub:** https://github.com/isabellaach/python-qlab/tree/main/tarea_4
+
+**Informe final:** https://github.com/isabellaach/python-qlab/blob/main/tarea_4/informes/informe_final.md
+
+**Pruebas MCP:** 10/10 aprobadas
+
+**Validación ENAHO:**
+- Pobreza nacional 2024: 27.6 %
+- Residentes habituales: 108,664
+- Unidades territoriales procesadas: 25/25
+
+**Evaluación del agente:**
+- Sin MCP/Skills: 0/10 respuestas correctas
+- Con MCP/Skills: 10/10 respuestas correctas
+- Resultados completos: https://github.com/isabellaach/python-qlab/blob/main/tarea_4/evaluacion/resultados.csv
+
+**Evidencia de integración MCP + Skills:** https://github.com/isabellaach/python-qlab/blob/main/tarea_4/evidencias_ia/integracion/01_ejecucion_integrada.md
+
+**Evidencias de uso de IA:** https://github.com/isabellaach/python-qlab/tree/main/tarea_4/evidencias_ia
+```
+
+En la pobreza nacional puse 27.6 %, redondeado como en la plantilla. El valor exacto es 27.58 % y está en `salidas/validacion.txt`. Si prefieres mostrar el exacto, cámbialo por «27.58 % (referencia INEI: 27.6 %)».
+
+Antes de publicar, usa la pestaña **Preview** de GitHub para comprobar que las viñetas y los enlaces se vean bien.
+
+## Usuaria · 04:01 UTC
+
+toda esta conversación ya se exportó? donde la encuentro?
+
+**Claude** · 04:01 UTC
+
+Casi toda. La exporté a las **22:26**, justo antes del último commit, así que tiene todo hasta ese momento: desde tu primer mensaje con el enlace del issue hasta la verificación manual. Incluye también la parte anterior al resumen automático de contexto, porque salió del registro completo de la sesión.
+
+**Dónde está:**
+- En tu computadora: `tarea_4/evidencias_ia/desarrollo/01_sesion_desarrollo.md`
+- En GitHub: https://github.com/isabellaach/python-qlab/blob/main/tarea_4/evidencias_ia/desarrollo/01_sesion_desarrollo.md
+
+**Qué le falta:** lo que vino después de las 22:26, es decir, la lista de verificación, el push, el comentario de entrega y esta pregunta. No afecta la entrega, pero si quieres que quede completa puedo hacer tres cosas:
+
+1. Volver a correr `uv run scripts/exportar_conversaciones.py`, que exporta con la misma sanitización.
+2. Hacer un commit solo de ese archivo.
+3. Hacer el push.
+
+Tus enlaces del comentario no cambian. Si lo hago ahora, conviene que esta sea nuestra última interacción, porque lo que digamos después ya no quedaría incluido. ¿Te parece? Si me das el «sí», lo hago todo de una vez: export, commit y push.
+
+## Usuaria · 04:02 UTC
+
+sí, haz el export, commit y push
