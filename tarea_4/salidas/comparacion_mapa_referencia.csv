@@ -1,0 +1,26 @@
+ccdd,departamento,pobreza_pct,nombre_referencia,referencia_pct,diferencia_pp,coincide
+01,Amazonas,25.75,AMAZONAS,25.7,0.05,True
+02,Áncash,22.77,ANCASH,22.8,-0.03,True
+03,Apurímac,23.96,APURIMAC,24.0,-0.04,True
+04,Arequipa,15.78,AREQUIPA,15.8,-0.02,True
+05,Ayacucho,32.76,AYACUCHO,32.8,-0.04,True
+06,Cajamarca,45.01,CAJAMARCA,45.0,0.01,True
+07,Callao,33.86,CALLAO,33.9,-0.04,True
+08,Cusco,18.54,CUSCO,18.5,0.04,True
+09,Huancavelica,33.4,HUANCAVELICA,33.4,0.0,True
+10,Huánuco,38.96,HUANUCO,39.0,-0.04,True
+11,Ica,6.01,ICA,6.0,0.01,True
+12,Junín,18.5,JUNIN,18.5,-0.0,True
+13,La Libertad,30.19,LA LIBERTAD,30.2,-0.01,True
+14,Lambayeque,14.04,LAMBAYEQUE,14.0,0.04,True
+15,Lima,27.07,LIMA,27.1,-0.03,True
+16,Loreto,42.97,LORETO,43.0,-0.03,True
+17,Madre de Dios,11.15,MADRE DE DIOS,11.1,0.05,True
+18,Moquegua,10.97,MOQUEGUA,11.0,-0.03,True
+19,Pasco,38.97,PASCO,39.0,-0.03,True
+20,Piura,31.86,PIURA,31.9,-0.04,True
+21,Puno,39.94,PUNO,39.9,0.04,True
+22,San Martín,22.02,SAN MARTIN,22.0,0.02,True
+23,Tacna,23.99,TACNA,24.0,-0.01,True
+24,Tumbes,26.9,TUMBES,26.9,0.0,True
+25,Ucayali,27.07,UCAYALI,27.1,-0.03,True

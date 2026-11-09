@@ -211,15 +211,16 @@ def resumen(codigo: str, desde: str, hasta: str) -> dict:
 
 @mcp.tool(annotations={"readOnlyHint": False, "openWorldHint": True})
 def graficar_serie(codigo: str, desde: str, hasta: str, comparar_con: str | None = None,
-                   lineas_referencia: list[float] | None = None, titulo: str | None = None,
-                   archivo: str | None = None) -> dict:
+                   lineas_referencia: list[float] | None = None, etiqueta_referencia: str = "Rango meta del BCRP",
+                   titulo: str | None = None, archivo: str | None = None) -> dict:
     """Grafica una serie oficial del BCRP (y, si se pide, una segunda serie en el mismo eje) y guarda un PNG.
 
     Úsenla cuando pidan un gráfico, una figura o «ver la evolución» de un indicador del BCRP, o para ilustrar un
     informe. El PNG (200 dpi) queda en figuras/ con título, unidades, el periodo y la fuente con los códigos.
     - comparar_con: otro código con la misma unidad, por ejemplo IPC total frente a IPC de alimentos.
     - lineas_referencia: valores a marcar con líneas horizontales, por ejemplo [1, 3] para el rango meta de
-      inflación del BCRP.
+      inflación del BCRP; con dos valores se sombrea la banda y se rotula con etiqueta_referencia.
+    - titulo: el hallazgo en una frase; si es largo se parte en dos líneas.
     Ejemplo: graficar_serie("PN01273PM", "2020-01", "2024-12", lineas_referencia=[1, 3]).
     Devuelve la ruta del PNG y el resumen numérico de cada serie graficada, con sus fuentes.
     """
@@ -246,15 +247,17 @@ def graficar_serie(codigo: str, desde: str, hasta: str, comparar_con: str | None
     for v in lineas_referencia or []:
         ax.axhline(v, color="#999999", ls="--", lw=1)
     if len(lineas_referencia or []) == 2:
-        ax.axhspan(*sorted(lineas_referencia), color="#2A9D8F", alpha=0.10, label="Rango de referencia")
+        bajo, alto = sorted(lineas_referencia)
+        ax.axhspan(bajo, alto, color="#2A9D8F", alpha=0.10, label=f"{etiqueta_referencia} ({bajo:g}–{alto:g})")
     valores = [d["valor"] for s in series for d in s["datos"]]
     if min(valores) < 0 < max(valores):
         ax.axhline(0, color="#333333", lw=0.8)
     grupo = series[0]["nombre"].split(" - ")[0]
     unidad = re.findall(r"\(([^()]*)\)", grupo)                      # «(var% 12 meses)», «(S/ por US$)»
     unidad = unidad[-1] if unidad else grupo
-    ax.set_title(titulo or f"{series[0]['nombre'].split(' - ')[-1]}, {desde} a {hasta}", loc="left",
-                 fontsize=13, fontweight="bold")
+    import textwrap
+    ax.set_title(textwrap.fill(titulo or f"{series[0]['nombre'].split(' - ')[-1]}, {desde} a {hasta}", 70),
+                 loc="left", fontsize=13, fontweight="bold")
     ax.set_ylabel(unidad, fontsize=9)
     ax.spines[["top", "right"]].set_visible(False)
     ax.grid(axis="y", alpha=0.3)
