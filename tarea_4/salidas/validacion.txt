@@ -1,4 +1,4 @@
-VALIDACIÓN ENAHO 2024  ·  2026-11-08 19:35
+VALIDACIÓN ENAHO 2024  ·  2026-11-08 20:37
 Archivos: 966-Modulo34/sumaria-2024.dta (33,691 hogares) y 966-Modulo02/enaho01-2024-200.dta (117,721 personas)
 Unidad de análisis: residentes habituales; pobreza = pobreza <= 2; urbano = estrato <= 5.
 

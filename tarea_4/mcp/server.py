@@ -71,7 +71,9 @@ def buscar_series(texto: str, frecuencia: str | None = None, limite: int = 10) -
     """Busca series del BCRP por palabras: todas deben aparecer en la categoría, el grupo o el nombre.
 
     Ejemplos: "ipc 12 meses", "tipo de cambio interbancario venta", "reservas internacionales netas",
-    "tasa de referencia", "cobre precio". frecuencia: "Diaria", "Mensual", "Trimestral" o "Anual".
+    "tasa de referencia", "cobre precio". Para niveles de precios (y variaciones acumuladas con resumen) usen los
+    índices con base dic. 2021 = 100: "indice de precios al consumidor dic.2021" (IPC total, PN38705PM) o
+    "dic.2021 alimentos y bebidas". frecuencia: "Diaria", "Mensual", "Trimestral" o "Anual".
     Devuelve el código, el nombre completo, la frecuencia y desde cuándo hay datos. Si no hay resultados,
     prueben con menos palabras.
     """
